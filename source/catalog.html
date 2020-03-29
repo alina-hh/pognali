@@ -47,8 +47,139 @@
   <main class="catalog">
     <h1 class="catalog__title">Попутчики</h1>
 
-    <section class="filter-country">
-      <form action="https://echo.htmlacademy.ru" method="post"></form>
+    <section class="filter-country ">
+      <h2 class="filter-country__title">Фильтрация по странам</h2>
+      <button class="filter-country__button filter-country__button--close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <div class="filter-country__wrapper filter-country__wrapper--open filter-country__wrapper--close">
+        <ul class="filter-country__continent continent">
+          <li class="continent__item continent__item--active">
+            <a href="#">Европа</a>
+          </li>
+          <li class="continent__item">
+            <a href="#">Азия</a>
+          </li>
+          <li class="continent__item">
+            <a href="#">Америка</a>
+          </li>
+          <li class="continent__item">
+            <a href="#">Острова</a>
+          </li>
+        </ul>
+
+        <ul class="filter-country__alphabet">
+          <li class="alphabet__item">
+            <a href="#">А</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Б</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">В</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Г</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Д</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Е</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">З</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">И</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">К</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Л</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">М</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Н</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">О</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">П</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Р</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">С</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Т</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">У</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Ф</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Х</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Ч</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Ш</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Э</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Ю</a>
+          </li>
+          <li class="alphabet__item">
+            <a href="#">Я</a>
+          </li>
+        </ul>
+
+        <ul class="filter-country__countries-a">
+          <li class="countries-a__item">
+            <a href="europe/australia">Австралия</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Австрия</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Азербайджан</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Албания</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Алжир</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Ангола</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Андорра</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Антигуа и Барбуда</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Аргентина</a>
+          </li>
+          <li class="countries-a__item">
+            <a href="#">Афганистан</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button">Cвернуть</button>
     </section>
 
     <section class="filter-people">
@@ -97,7 +228,7 @@
 
         <fieldset class="filter-people__transport transport">
           <legend class="transport__title">Транспорт</legend>
-           <button class="transport__button transport__button--close" type="button">
+          <button class="transport__button transport__button--close" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
           <div class="transport__wrapper">
@@ -135,7 +266,7 @@
           </div>
         </fieldset>
 
-        <button class="filter-people__show" type="submit">Показать</button>
+        <a class="filter-people__show">Показать</a>
       </form>
     </section>
 
