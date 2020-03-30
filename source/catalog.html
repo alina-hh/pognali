@@ -8,28 +8,38 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-img" src="img/" alt="Логотип Погнали" width="100" height="19">
     </a>
 
-    <div class="nav__wrapper">
+    <div class="nav nav__wrapper">
       <button class="nav__toggle" type="button">Открыть меню</button>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__title">О сервисе направления попутчики</a>
+            <a class="main-nav__about-us" href="#">О сервисе</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__login">Авторизация</a>
+            <a class="main-nav__direction" href="#">Направления</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__tel" href="tel:88005558628">8 800 555-86-28</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="main-nav__companion" href="#">Попутчики</a>
           </li>
         </ul>
       </nav>
+
+      <ul class="nav__contact contact">
+        <li class="contact__item">
+          <a class="contact__login" href="#">Авторизация</a>
+        </li>
+        <li class="contact__item">
+          <a class="contact__tel" href="tel:88005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contact__item">
+          <a class="contact__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+
       <ul class="nav__social social">
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#" aria-label="Facebook"></a>
@@ -184,64 +194,102 @@
 
     <section class="filter-people">
       <h2 class="filter-people__title">Подберите идеального попутчика</h2>
-      <form class="filter-people__form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="filter-people__form" action="https://echo.htmlacademy.ru" method="get">
 
-        <fieldset class="filter-people__hobby hobby">
-          <legend class="hobby__title">Хобби</legend>
-          <button class="hobby__button hobby__button--open" type="button">
-            <span class="visually-hidden">Открыть</span>
-          </button>
-        </fieldset>
-
-        <fieldset class="filter-people__music music">
-          <legend class="music__title">Музыка</legend>
-          <button class="music__button hobby__button--close" type="button">
+        <fieldset class="filter-people__group">
+          <legend class="filter-people__title">Хобби</legend>
+          <button class="filter-people__button filter-people__button--close" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
-          <div class="music__wrapper">
-            <ul class="music__list">
-              <li class="music__item">
-                <input class="visually-hidden music__input music__input--checkbox" type="checkbox" name="music"
-                  value="rock" id="music-rock" checked>
+          <div class="filter-people__wrapper">
+            <ul class="filter-people__list">
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="hobby" value="sport" id="hobby-sport" checked>
+                <label for="hobby-sport">Спортзал</label>
+              </li>
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="hobby" value="hookah" id="hobby-hookah">
+                <label for="hobby-hookah">Кальян</label>
+              </li>
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="hobby" value="sofa" id="hobby-sofa">
+                <label for="hobby-sofa">Диван</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+
+        <fieldset class="filter-people__group">
+          <legend class="filter-people__title">Музыка</legend>
+          <button class="filter-people__button filter-people__button--close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <div class="filter-people__wrapper">
+            <ul class="filter-people__list">
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="music" value="rock" id="music-rock" checked>
                 <label for="music-rock">Тяжелый рок</label>
               </li>
-              <li class="music__item">
-                <input class="visually-hidden music__input music__input--checkbox" type="checkbox" name="music"
-                  value="rap" id="music-rap">
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="music" value="rap" id="music-rap">
                 <label for="music-rap">Русский рэп</label>
               </li>
-              <li class="music__item">
-                <input class="visually-hidden music__input music__input--checkbox" type="checkbox" name="music"
-                  value="eurodance" id="music-eurodance">
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="music" value="eurodance" id="music-eurodance">
                 <label for="music-eurodance">Евроденс</label>
               </li>
             </ul>
           </div>
         </fieldset>
 
-        <fieldset class="filter-people__food food">
-          <legend class="food__title">Еда</legend>
-          <button class="food__button food__button--open" type="button">
-            <span class="visually-hidden">Открыть</span>
-          </button>
-        </fieldset>
-
-        <fieldset class="filter-people__transport transport">
-          <legend class="transport__title">Транспорт</legend>
-          <button class="transport__button transport__button--close" type="button">
+        <fieldset class="filter-people__group">
+          <legend class="filter-people__title">Еда</legend>
+          <button class="filter-people__button filter-people__button--close" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
-          <div class="transport__wrapper">
-            <ul class="transport__list">
-              <li class="transport__item transport__fly"></li>
-              <li class="transport__item transport__train"></li>
-              <li class="transport__item transport__bike"></li>
-              <li class="transport__item transport__legs"></li>
+          <div class="filter-people__wrapper">
+            <ul class="filter-people__list">
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="food" value="meat" id="food-meat" checked>
+                <label for="food-meat">Мясоед</label>
+              </li>
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="food" value="healthy" id="food-healthy">
+                <label for="food-healthy">Сидит на ПП</label>
+              </li>
+              <li class="filter-people__item">
+                <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                  name="food" value="vegan" id="food-vegan">
+                <label for="food-vegan">Веган-сыроед</label>
+              </li>
             </ul>
           </div>
         </fieldset>
 
-        <fieldset class="filter-people__level level">
+        <fieldset class="filter-people__group">
+          <legend class="filter-people__title">Транспорт</legend>
+          <button class="filter-people__button filter-people__button--close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+          <div class="filter-people__wrapper filter-transport">
+            <ul class="filter-transport__list">
+              <li class="filter-transport__item filter-transport__fly"></li>
+              <li class="filter-transport__item filter-transport__train"></li>
+              <li class="filter-transport__item filter-transport__bike"></li>
+              <li class="filter-transport__item filter-transport__legs"></li>
+            </ul>
+          </div>
+        </fieldset>
+
+        <fieldset class="filter-people__group">
           <legend class="level__title">Левел</legend>
           <button class="level__button level__button--close" type="button">
             <span class="visually-hidden">Закрыть</span>
@@ -276,25 +324,33 @@
           <a href="#">
             <img class="users__img" src="https://via.placeholder.com/70x70" alt="Фото пользователя" width="70"
               height="70">
+          </a>
+          <a href="#">
             <h3 class="users__name">Таня Фирсова</h3>
           </a>
           <p class="users__popular">1,5 m</p>
           <p class="users__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <h4 class="users__future-travel future-travel">Хочет посетить:</h4>
-          <ul class="future-travel__list">
-            <li class="future-travel__item">Шри-ланка</li>
-            <li class="future-travel__item">Таиланд</li>
-            <li class="future-travel__item">Сейшелы</li>
-          </ul>
-          <h4 class="users__transport transport">Tранспорт:</h4>
-          <ul class="transport__list">
-            <li class="transport__item transport__fly"></li>
-            <li class="transport__item transport__train"></li>
-            <li class="transport__item transport__bike"></li>
-            <li class="transport__item transport__legs"></li>
-          </ul>
-          <h4 class="users__level level">Левел:</h4>
-          <p class="level__number">99</p>
+          <div class="users__future-travel future-travel">
+            <h4 class="future-travel__title">Хочет посетить:</h4>
+            <ul class="future-travel__list">
+              <li class="future-travel__item">Шри-ланка</li>
+              <li class="future-travel__item">Таиланд</li>
+              <li class="future-travel__item">Сейшелы</li>
+            </ul>
+          </div>
+          <div class="users__transport transport">
+            <h4 class="transport__title">Tранспорт:</h4>
+            <ul class="transport__list">
+              <li class="transport__item transport__fly"></li>
+              <li class="transport__item transport__train"></li>
+              <li class="transport__item transport__bike"></li>
+              <li class="transport__item transport__legs"></li>
+            </ul>
+          </div>
+          <div class="users__level level">
+            <h4 class="level__title">Левел:</h4>
+            <p class="level__number">99</p>
+          </div>
           <a class="users__follow" href="#">Позвать!</a>
         </li>
 
@@ -302,24 +358,32 @@
           <a href="#">
             <img class="users__img" src="https://via.placeholder.com/70x70" alt="Фото пользователя" width="70"
               height="70">
+          </a>
+          <a href="#">
             <h3 class="users__name">Петя Демин</h3>
           </a>
           <p class="users__popular">1500</p>
           <p class="users__tags">#бургер #бар #футбол #концерт #крафт</p>
-          <h4 class="users__future-travel future-travel">Хочет посетить:</h4>
-          <ul class="future-travel__list">
-            <li class="future-travel__item">Бельгия</li>
-            <li class="future-travel__item">Чехия</li>
-          </ul>
-          <h4 class="users__transport transport">Tранспорт:</h4>
-          <ul class="transport__list">
-            <li class="transport__item transport__fly"></li>
-            <li class="transport__item transport__train"></li>
-            <li class="transport__item transport__bike"></li>
-            <li class="transport__item transport__legs"></li>
-          </ul>
-          <h4 class="users__level level">Левел:</h4>
-          <p class="level__number">80</p>
+          <div class="users__future-travel future-travel">
+            <h4 class="future-travel__title">Хочет посетить:</h4>
+            <ul class="future-travel__list">
+              <li class="future-travel__item">Бельгия</li>
+              <li class="future-travel__item">Чехия</li>
+            </ul>
+          </div>
+          <div class="users__transport transport">
+            <h4 class="transport__title">Tранспорт:</h4>
+            <ul class="transport__list">
+              <li class="transport__item transport__fly"></li>
+              <li class="transport__item transport__train"></li>
+              <li class="transport__item transport__bike"></li>
+              <li class="transport__item transport__legs"></li>
+            </ul>
+          </div>
+          <div class="users__level level">
+            <h4 class="level__title">Левел:</h4>
+            <p class="level__number">80</p>
+          </div>
           <a class="users__follow" href="#">Позвать!</a>
         </li>
 
@@ -327,25 +391,33 @@
           <a href="#">
             <img class="users__img" src="https://via.placeholder.com/70x70" alt="Фото пользователя" width="70"
               height="70">
+          </a>
+          <a href="#">
             <h3 class="users__name">Марк Смолов</h3>
           </a>
           <p class="users__popular">170</p>
           <p class="users__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-          <h4 class="users__future-travel future-travel">Хочет посетить:</h4>
-          <ul class="future-travel__list">
-            <li class="future-travel__item">США</li>
-            <li class="future-travel__item">Австралия</li>
-            <li class="future-travel__item">Доминика</li>
-          </ul>
-          <h4 class="users__transport transport">Tранспорт:</h4>
-          <ul class="transport__list">
-            <li class="transport__item transport__fly"></li>
-            <li class="transport__item transport__train"></li>
-            <li class="transport__item transport__bike"></li>
-            <li class="transport__item transport__legs"></li>
-          </ul>
-          <h4 class="users__level level">Левел:</h4>
-          <p class="level__number">25</p>
+          <div class="users__future-travel future-travel">
+            <h4 class="future-travel__title">Хочет посетить:</h4>
+            <ul class="future-travel__list">
+              <li class="future-travel__item">США</li>
+              <li class="future-travel__item">Австралия</li>
+              <li class="future-travel__item">Доминика</li>
+            </ul>
+          </div>
+          <div class="users__transport transport">
+            <h4 class="transport__title">Tранспорт:</h4>
+            <ul class="transport__list">
+              <li class="transport__item transport__fly"></li>
+              <li class="transport__item transport__train"></li>
+              <li class="transport__item transport__bike"></li>
+              <li class="transport__item transport__legs"></li>
+            </ul>
+          </div>
+          <div class="users__level level">
+            <h4 class="level__title">Левел:</h4>
+            <p class="level__number">25</p>
+          </div>
           <a class="users__follow" href="#">Позвать!</a>
         </li>
 
@@ -353,24 +425,32 @@
           <a href="#">
             <img class="users__img" src="https://via.placeholder.com/70x70" alt="Фото пользователя" width="70"
               height="70">
+          </a>
+          <a href="#">
             <h3 class="users__name">Лариса Роговая</h3>
           </a>
           <p class="users__popular">23</p>
           <p class="users__tags">#образование #карьера #учеба #линкедин</p>
-          <h4 class="users__future-travel future-travel">Хочет посетить:</h4>
-          <ul class="future-travel__list">
-            <li class="future-travel__item">Великобритания</li>
-            <li class="future-travel__item">Германия</li>
-          </ul>
-          <h4 class="users__transport transport">Tранспорт:</h4>
-          <ul class="transport__list">
-            <li class="transport__item transport__fly"></li>
-            <li class="transport__item transport__train"></li>
-            <li class="transport__item transport__bike"></li>
-            <li class="transport__item transport__legs"></li>
-          </ul>
-          <h4 class="users__level level">Левел:</h4>
-          <p class="level__number">50</p>
+          <div class="users__future-travel future-travel">
+            <h4 class="future-travel__title">Хочет посетить:</h4>
+            <ul class="future-travel__list">
+              <li class="future-travel__item">Великобритания</li>
+              <li class="future-travel__item">Германия</li>
+            </ul>
+          </div>
+          <div class="users__transport transport">
+            <h4 class="transport__title">Tранспорт:</h4>
+            <ul class="transport__list">
+              <li class="transport__item transport__fly"></li>
+              <li class="transport__item transport__train"></li>
+              <li class="transport__item transport__bike"></li>
+              <li class="transport__item transport__legs"></li>
+            </ul>
+          </div>
+          <div class="users__level level">
+            <h4 class="level__title">Левел:</h4>
+            <p class="level__number">50</p>
+          </div>
           <a class="users__follow" href="#">Позвать!</a>
         </li>
       </ul>
@@ -378,14 +458,14 @@
       <a class="users__show-more" href="#">Показать еще</a>
     </section>
 
-    <section class="pagination">
+    <div class="pagination">
       <a href="#" class="pagination__back">
         <span class="visually-hidden">Назад</span>
       </a>
       <a href="#" class="pagination__next">
         <span class="visually-hidden">Вперед</span>
       </a>
-    </section>
+    </div>
   </main>
 
   <footer class="page-footer">
