@@ -12,8 +12,8 @@
       <img class="page-header__logo-img" src="img/" alt="Логотип Погнали" width="100" height="19">
     </a>
 
-    <div class="nav nav__wrapper">
-      <button class="nav__toggle" type="button">Открыть меню</button>
+    <div class="menu">
+      <button class="menu__toggle" type="button">Открыть меню</button>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -28,7 +28,7 @@
         </ul>
       </nav>
 
-      <ul class="nav__contact contact">
+      <ul class="menu__contact contact">
         <li class="contact__item">
           <a class="contact__link" href="#">Авторизация</a>
         </li>
@@ -40,7 +40,7 @@
         </li>
       </ul>
 
-      <ul class="nav__social social">
+      <ul class="menu__social social">
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#" aria-label="Facebook"></a>
         </li>
@@ -73,37 +73,38 @@
         <button class="info__button" type="button">Сменить фото</button>
 
         <div class="info__tags">
-          <p class="info__title">Тэги</p>
-          <textarea name="tags" cols="25" rows="5" placeholder="#бургер #бар #футбол #концерт #крафт"></textarea>
+          <lable class="info__title">Тэги</lable>
+          <textarea name="tags" cols="25" rows="5"
+            placeholder="#бургер #бар #футбол #концерт #крафт">#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
 
         <div class="info__transport">
           <p class="info__title">Транспорт</p>
-          <ul class="info__list">
-            <li class="info__item">
-              <input class="visually-hidden info__input info__input--checkbox" type="checkbox" name="transport"
-                value="fly" id="transport-fly" checked>
+          <ul class="info__list transport">
+            <li class="transport__item">
+              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                name="transport" value="fly" id="transport-fly" checked>
               <label for="transport-fly">
                 <span class="visually-hidden">Самолёт</span>
               </label>
             </li>
-            <li class="info__item">
-              <input class="visually-hidden info__input info__input--checkbox" type="checkbox" name="transport"
-                value="train" id="transport-train" checked>
+            <li class="transport__item">
+              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                name="transport" value="train" id="transport-train" checked>
               <label for="transport-train">
                 <span class="visually-hidden">Поезд</span>
               </label>
             </li>
-            <li class="info__item">
-              <input class="visually-hidden info__input info__input--checkbox" type="checkbox" name="transport"
-                value="bike" id="transport-bike">
+            <li class="transport__item">
+              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                name="transport" value="bike" id="transport-bike">
               <label for="transport-bike">
                 <span class="visually-hidden">Велосипед</span>
               </label>
             </li>
-            <li class="info__item">
-              <input class="visually-hidden info__input info__input--checkbox" type="checkbox" name="transport"
-                value="walk" id="transport-walk" checked>
+            <li class="transport__item">
+              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                name="transport" value="walk" id="transport-walk" checked>
               <label for="transport-walk">
                 <span class="visually-hidden">Пешком</span>
               </label>
@@ -132,47 +133,55 @@
 
       <div class="details">
         <h2 class="details__title">Добавить план:</h2>
-        <a class="details__toggle details__toggle--active" href="#step1">
-          <span class="visually-hidden">1</span>
-        </a>
-        <a class="details__toggle" href="#step2">
-          <span class="visually-hidden">2</span>
-        </a>
-        <a class="details__toggle" href="#step3">
-          <span class="visually-hidden">3</span>
-        </a>
+        <ul class="delails__list">
+          <li class="details__item">
+            <a class="details__toggle details__toggle--active" href="#step1">
+              <span class="visually-hidden">Шаг 1</span>
+            </a>
+          </li>
+          <li class="details__item">
+            <a class="details__toggle" href="#step2">
+              <span class="visually-hidden">Шаг 2</span>
+            </a>
+          </li>
+          <li class="details__item">
+            <a class="details__toggle" href="#step3">
+              <span class="visually-hidden">Шаг 3</span>
+            </a>
+          </li>
+        </ul>
 
         <section id="step1" class="term">
           <h3 class=" term__title">Шаг 1.<br>Даты пребывания</h3>
-          <p class="term__description">
-            Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую
-            длительность.
-          </p>
-
+          <p class="term__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
+            поездку и ее предполагаемую длительность.</p>
           <div class="term__group group-information">
-            <label class="group-information__title" for="people">Ищу попутчиков:</label>
+            <label class="group-information__title" for="people">Ищу попутчиков:
+              <span>чел.</span>
+            </label>
             <div class="group-information__wrapper">
               <button class="group-information__button-minus" type="button">
-                <span class="visually-hidden">-</span>
+                <span class="visually-hidden">Уменьшить</span>
               </button>
               <input class="group-information__quantity" type="number" name="people" min="0" step="1" value="2"
-                id="people" readonly>
+                id="people">
               <button class="group-information__button-plus" type="button">
-                <span class="visually-hidden">+</span>
+                <span class="visually-hidden">Увеличить</span>
               </button>
             </div>
           </div>
 
           <div class="term__group group-information">
-            <label class="group-information__title" for="days">Длительность:</label>
+            <label class="group-information__title" for="days">Длительность:
+              <span>дн.</span>
+            </label>
             <div class="group-information__wrapper">
               <button class="group-information__button-minus" type="button">
-                <span class="visually-hidden">-</span>
+                <span class="visually-hidden">Уменьшить</span>
               </button>
-              <input class="group-information__quantity" type="number" name="days" min="0" value="2" step="1" id="days"
-                readonly>
+              <input class="group-information__quantity" type="number" name="days" min="0" value="2" step="1" id="days">
               <button class="group-information__button-plus" type="button">
-                <span class="visually-hidden">+</span>
+                <span class="visually-hidden">Увеличить</span>
               </button>
             </div>
           </div>
@@ -184,9 +193,14 @@
 
           <div class="term__date date-information">
             <label for="date">Март 2020</label>
-            <input type="date" name="calendar" value="2020-03-31" min="2020-03-31" id="date">
+            <!--div calendar
+table calendar__table
+td calendar__cell
+button calendar__button
+calendar__button--active
+calendar__button--current
+calendar__button--disabled-->
           </div>
-          <!--как сделать календарь?-->
           <a class="term__button" href="#step2">Следующий шаг</a>
         </section>
 
@@ -194,6 +208,11 @@
           <h3 class="route__title">Шаг 2.<br>Маршрут</h3>
           <p class="route__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу
             несколько.</p>
+          <div>
+            <input type="text" value="Босния и Герцеговина">
+            <div class="flag"></div>
+            <button type="button">Закрыть</button>
+          </div>
           <select class="route__country country-info" name="country">
             <option class="country-info__title" value="bosnia-and-herzegovina">Босния и Герцеговина</option>
           </select>
@@ -220,15 +239,18 @@
             форме и ставить тэги.</p>
           <ul class="leisure__list leisure-country">
             <li class="leisure-country__item ">
-              <h4 class="leisure-country__title">Босния и Герцеговина</h4>
-              <textarea class="leisure-country__text" name="bosnia-and-herzegovina" cols="25" rows="12"></textarea>
+              <label class="leisure-country__title">Босния и Герцеговина</label>
+              <textarea class="leisure-country__text" name="bosnia-and-herzegovina" cols="25" rows="12" placeholder="План действий"></textarea>
             </li>
             <li class="leisure-country__item ">
-              <h4 class="leisure-country__title">Чехия</h4>
-              <textarea class="leisure-country__text" name="czech" cols="25" rows="12"></textarea>
+              <label class="leisure-country__title">Чехия</label>
+              <textarea class="leisure-country__text" name="czech" cols="25"
+                rows="12">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </li>
           </ul>
-          <input class="leisure__button" type="submit" value="Отправить">
+          <button class="leisure__button" type="submit">
+            <span class="">Отправить</span>
+          </button>
           <a class="leisure__button" href="#step2">На шаг назад</a>
         </section>
 
