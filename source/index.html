@@ -30,7 +30,7 @@
 
       <ul class="menu__contact contact">
         <li class="contact__item">
-          <a class="contact__link" href="#">Авторизация</a>
+          <a class="contact__link button" href="#">Авторизация</a>
         </li>
         <li class="contact__item">
           <a class="contact__link" href="tel:88005558628">8 800 555-86-28</a>
@@ -42,15 +42,22 @@
 
       <ul class="menu__social social">
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#" aria-label="Facebook"></a>
+          <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
+            <span class="visually-hidden">Facebook</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="#" aria-label="Instagram"></a>
+          <a class="social__link social__link--instagram" href="#" aria-label="Instagram">
+            <span class="visually-hidden">Instagram</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#" aria-label="Twitter"></a>
+          <a class="social__link social__link--twitter" href="#" aria-label="Twitter">
+            <span class="visually-hidden">Twitter</span>
+          </a>
         </li>
       </ul>
+      <!--aria-label="Twitter"  или  <span class="visually-hidden">Twitter</span>-->
     </div>
   </header>
 
@@ -61,7 +68,7 @@
       <h2 class="intro__title">В путешествие с крутыми попутчиками!</h2>
       <a class="intro__tel" aria-label="Позвонить по телефону"></a>
       <a class="intro__mail" aria-label="Написать на почту"></a>
-      <a class="intro__login" href="#">Авторизация</a>
+      <a class="intro__login button" href="#">Авторизация</a>
       <blockquote class="intro__review review">
         <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
         <cite class="review__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
@@ -143,30 +150,30 @@
           <p class="travel-mates__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
           <ul class="travel-mates__list transport">
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="fly" id="transport-fly" checked>
-              <label for="transport-fly">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="fly" checked>
                 <span class="visually-hidden">Самолёт</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="train" id="transport-train" checked>
-              <label for="transport-train">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="train" checked>
                 <span class="visually-hidden">Поезд</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="bike" id="transport-bike">
-              <label for="transport-bike">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="bike">
                 <span class="visually-hidden">Велосипед</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="walk" id="transport-walk" checked>
-              <label for="transport-walk">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="walk" checked>
                 <span class="visually-hidden">Пешком</span>
               </label>
             </li>
@@ -181,30 +188,30 @@
           <p class="travel-mates__tags">#бургер #бар #футбол #концерт #крафт</p>
           <ul class="travel-mates__list transport">
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="fly" id="transport-fly" checked>
-              <label for="transport-fly">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="fly" checked>
                 <span class="visually-hidden">Самолёт</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="train" id="transport-train" checked>
-              <label for="transport-train">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="train" checked>
                 <span class="visually-hidden">Поезд</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="bike" id="transport-bike">
-              <label for="transport-bike">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="bike">
                 <span class="visually-hidden">Велосипед</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="walk" id="transport-walk" checked>
-              <label for="transport-walk">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="walk" checked>
                 <span class="visually-hidden">Пешком</span>
               </label>
             </li>
@@ -258,11 +265,11 @@
       </p>
 
       <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
-        <p>
+        <p class="authorization__title">
           <label class="visually-hidden" for="user-login">Логин</label>
-          <input id="user-login" type="text" name="login" placeholder="E-mail">
+          <input class="authorization__login" id="user-login" type="text" name="login" placeholder="E-mail">
         </p>
-        <button class="authorization__button" type="submit" aria-label="Войти"></button>
+        <button class="authorization__button" type="submit" aria-label="Войти"><span>Регистрация</span></button>
       </form>
 
       <p class="authorization__questions">Остались вопросы? Мы с радостью на них ответим!</p>
@@ -284,16 +291,15 @@
           width="320" height="546"></iframe>
       </p>
     </section>
-
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <p class="page-footer__logo logo">
-        <img class="logo__img" src="img/" alt="Логотип Погнали" width="100" height="19">
+      <p class="page-footer__logo ">
+        <img class="page-footer__logo-img" src="img/" alt="Логотип Погнали" width="100" height="19">
       </p>
 
-      <ul class="social__list">
+      <ul class="page-footer__social social social--bg-yellow">
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
             <span class="visually-hidden">Facebook</span>

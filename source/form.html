@@ -30,7 +30,7 @@
 
       <ul class="menu__contact contact">
         <li class="contact__item">
-          <a class="contact__link" href="#">Авторизация</a>
+          <a class="contact__link button" href="#">Авторизация</a>
         </li>
         <li class="contact__item">
           <a class="contact__link" href="tel:88005558628">8 800 555-86-28</a>
@@ -42,15 +42,22 @@
 
       <ul class="menu__social social">
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#" aria-label="Facebook"></a>
+          <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
+            <span class="visually-hidden">Facebook</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="#" aria-label="Instagram"></a>
+          <a class="social__link social__link--instagram" href="#" aria-label="Instagram">
+            <span class="visually-hidden">Instagram</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#" aria-label="Twitter"></a>
+          <a class="social__link social__link--twitter" href="#" aria-label="Twitter">
+            <span class="visually-hidden">Twitter</span>
+          </a>
         </li>
       </ul>
+      <!--aria-label="Twitter"  или  <span class="visually-hidden">Twitter</span>-->
     </div>
   </header>
 
@@ -70,11 +77,11 @@
             height="100">
         </p>
 
-        <button class="info__button" type="button">Сменить фото</button>
+        <button class="info__button button button--blue" type="button">Сменить фото</button>
 
         <div class="info__tags">
-          <lable class="info__title">Тэги</lable>
-          <textarea name="tags" cols="25" rows="5"
+          <p class="info__title">Тэги</p>
+          <textarea class="info__user-tags" name="tags" cols="25" rows="5"
             placeholder="#бургер #бар #футбол #концерт #крафт">#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
 
@@ -82,30 +89,30 @@
           <p class="info__title">Транспорт</p>
           <ul class="info__list transport">
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="fly" id="transport-fly" checked>
-              <label for="transport-fly">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="fly" checked>
                 <span class="visually-hidden">Самолёт</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="train" id="transport-train" checked>
-              <label for="transport-train">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="train" checked>
                 <span class="visually-hidden">Поезд</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="bike" id="transport-bike">
-              <label for="transport-bike">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="bike">
                 <span class="visually-hidden">Велосипед</span>
               </label>
             </li>
             <li class="transport__item">
-              <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                name="transport" value="walk" id="transport-walk" checked>
-              <label for="transport-walk">
+              <label>
+                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                  name="transport" value="walk" checked>
                 <span class="visually-hidden">Пешком</span>
               </label>
             </li>
@@ -120,13 +127,13 @@
             <p class="plans__country">1. Франция, Италия</p>
             <p class="plans__companions">3 попутчика</p>
             <p class="plans__date">26 мар — 29 мар</p>
-            <button class="plans__button" type="button">Изменить</button>
+            <a class="plans__button" href="edit.html">Изменить</a>
           </li>
           <li class="plans__item">
             <p class="plans__country">2. Таиланд, Индонезия</p>
             <p class="plans__companions">1 попутчик</p>
             <p class="plans__date">1 июл — 15 июл</p>
-            <button class="plans__button" type="button">Изменить</button>
+            <a class="plans__button" href="edit.html">Изменить</a>
           </li>
         </ul>
       </section>
@@ -134,137 +141,436 @@
       <div class="details">
         <h2 class="details__title">Добавить план:</h2>
         <ul class="delails__list">
-          <li class="details__item">
-            <a class="details__toggle details__toggle--active" href="#step1">
+          <li class="details__item details__item--active">
+            <!-- <a class="details__toggle details__toggle--active" href="#step1">
               <span class="visually-hidden">Шаг 1</span>
-            </a>
+            </a> -->
           </li>
           <li class="details__item">
-            <a class="details__toggle" href="#step2">
+            <!-- <a class="details__toggle" href="#step2">
               <span class="visually-hidden">Шаг 2</span>
-            </a>
+            </a> -->
           </li>
           <li class="details__item">
-            <a class="details__toggle" href="#step3">
+            <!-- <a class="details__toggle" href="#step3">
               <span class="visually-hidden">Шаг 3</span>
-            </a>
+            </a> -->
           </li>
         </ul>
 
-        <section id="step1" class="term">
-          <h3 class=" term__title">Шаг 1.<br>Даты пребывания</h3>
-          <p class="term__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
-            поездку и ее предполагаемую длительность.</p>
-          <div class="term__group group-information">
-            <label class="group-information__title" for="people">Ищу попутчиков:
-              <span>чел.</span>
-            </label>
-            <div class="group-information__wrapper">
-              <button class="group-information__button-minus" type="button">
-                <span class="visually-hidden">Уменьшить</span>
-              </button>
-              <input class="group-information__quantity" type="number" name="people" min="0" step="1" value="2"
-                id="people">
-              <button class="group-information__button-plus" type="button">
-                <span class="visually-hidden">Увеличить</span>
-              </button>
+        <section id="step1" class="details-steps">
+          <h3 class="details-steps__title">Шаг 1.<br>Даты пребывания</h3>
+          <p class="details-steps__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
+            позвать в поездку и ее предполагаемую длительность.</p>
+
+          <div class="details-steps__term term">
+            <div class="term__group">
+              <label class="term__title" for="people">Ищу попутчиков:
+                <span>чел.</span>
+              </label>
+              <div class="term__wrapper">
+                <button class="term__button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="term__quantity" type="number" name="people" min="0" step="1" value="2" id="people">
+                <button class="term__button-plus" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="term__group">
+              <label class="term__title" for="days">Длительность:
+                <span>дн.</span>
+              </label>
+              <div class="term__wrapper">
+                <button class="term__button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="term__quantity" type="number" name="people" min="0" step="1" value="2" id="days">
+                <button class="term__button-plus" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="term__group term-kids">
+              <input class="term-kids__choose" type="checkbox" name="with-kids" id="kids" checked>
+              <label class="term-kids__title" for="kids">Можно с детьми</label>
+            </div>
+
+            <div class="term__group term-calendar">
+              <div class="term-calendar__wrapper">
+                <button class="term-calendar__button-minus" type="button">
+                  <span class="visually-hidden">Назад</span>
+                </button>
+                <p class="term-calendar__title">Март 2020</p>
+                <button class="term-calendar__button-plus" type="button">
+                  <span class="visually-hidden">Вперед</span>
+                </button>
+              </div>
+
+              <div class="term-calendar__calendar calendar">
+                <table class="calendar__table">
+                  <tr class="calendar__header-cells">
+                    <th>П</th>
+                    <th>В</th>
+                    <th>С</th>
+                    <th>Ч</th>
+                    <th>П</th>
+                    <th>С</th>
+                    <th>В</th>
+                  </tr>
+                  <tr class="calendar__cells">
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>23</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>24</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>25</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>26</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>27</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>28</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>1</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar__cells">
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>2</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>3</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>4</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>5</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>6</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>7</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>8</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar__cells">
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>9</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>10</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>11</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>12</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>13</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>14</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>15</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar__cells">
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>16</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>17</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>18</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>19</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>20</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>21</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>22</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar__cells">
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>23</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>24</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>25</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--active calendar__button--current"
+                        type="button">26</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--active" type="button">27</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--active" type="button">28</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button" type="button">29</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar__cells">
+                    <td class="calendar__cell">
+                      <button class="calendar__button" type="button">30</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button" type="button">31</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button" type="button">1</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button" type="button">2</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button" type="button">3</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button" type="button">4</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button" type="button">5</button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
 
-          <div class="term__group group-information">
-            <label class="group-information__title" for="days">Длительность:
-              <span>дн.</span>
-            </label>
-            <div class="group-information__wrapper">
-              <button class="group-information__button-minus" type="button">
-                <span class="visually-hidden">Уменьшить</span>
-              </button>
-              <input class="group-information__quantity" type="number" name="days" min="0" value="2" step="1" id="days">
-              <button class="group-information__button-plus" type="button">
-                <span class="visually-hidden">Увеличить</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="term__kids kids-information">
-            <input class="kids-information__choose" type="checkbox" name="with-kids" id="kids" checked>
-            <label class="kids-information__title" for="kids">Можно с детьми</label>
-          </div>
-
-          <div class="term__date date-information">
-            <label for="date">Март 2020</label>
-            <!--div calendar
-table calendar__table
-td calendar__cell
-button calendar__button
-calendar__button--active
-calendar__button--current
-calendar__button--disabled-->
-          </div>
-          <a class="term__button" href="#step2">Следующий шаг</a>
+          <a class="details-steps__button button" href="#step2">Следующий шаг</a>
         </section>
 
-        <section id="step2" class="route">
-          <h3 class="route__title">Шаг 2.<br>Маршрут</h3>
-          <p class="route__description">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу
+        <section id="step2" class="details-steps">
+          <h3 class="details-steps__title">Шаг 2.<br>Маршрут</h3>
+          <p class="details-steps__description">Укажите страны, которые вы хотели посетить. Это может быть одна или
+            сразу
             несколько.</p>
-          <div>
-            <input type="text" value="Босния и Герцеговина">
-            <div class="flag"></div>
-            <button type="button">Закрыть</button>
+
+          <div class="details-steps__route route">
+            <div class="route__wrapper">
+              <input class="route__country" type="text" name="country" value="Босния и Герцеговина">
+              <div class="route__flag"></div>
+              <button class="route__button-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+              </button>
+            </div>
+            <div class="route__wrapper">
+              <input class="route__country" type="text" name="country" value="Чехия">
+              <div class="route__flag"></div>
+              <button class="route__button-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+              </button>
+            </div>
+            <div class="route__wrapper">
+              <input class="route__country" type="text" name="country" value="Выберите страну" readonly>
+              <button class="route__button-open-popup" type="button">
+                <span class="visually-hidden">Открыть</span>
+              </button>
+              <button class="route__button-close" type="button">
+                <span class="visually-hidden">Закрыть</span>
+              </button>
+            </div>
+
+            <div class="pop-up-choose">
+              <div class="pop-up-choose__wrapper">
+                <input class="pop-up-choose__country" type="text" name="country" value="Выберите страну" readonly>
+                <button class="pop-up-choose__button-close" type="button">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+              </div>
+              <ul class="pop-up-choose__alphabet alphabet">
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">А</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Б</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">В</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Г</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Д</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Е</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">З</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">И</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">К</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Л</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">М</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Н</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">О</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">П</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Р</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">С</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Т</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">У</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Ф</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Х</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Ч</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Ш</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Э</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Ю</a>
+                </li>
+                <li class="alphabet__item">
+                  <a class="alphabet__link" href="#">Я</a>
+                </li>
+              </ul>
+
+              <ul class="pop-up-choose__countries countries-info">
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="europe/australia">Австралия</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Австрия</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Азербайджан</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Албания</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Алжир</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Ангола</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Андорра</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Антигуа и Барбуда</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Аргентина</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Армения</a>
+                </li>
+                <li class="countries-info__item">
+                  <a class="countries-info__link" href="#">Афганистан</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="route__wrapper">
+              <input class="roude__country route__country--active" type="text" name="country" value="Добавить страну"
+                readonly>
+              <button class="roude__button-add" type="button">
+                <span class="visually-hidden">Добавить</span>
+              </button>
+            </div>
           </div>
-          <select class="route__country country-info" name="country">
-            <option class="country-info__title" value="bosnia-and-herzegovina">Босния и Герцеговина</option>
-          </select>
-          <select class="route__country country-info" name="country">
-            <option class="country-info__title" value="czech">Чехия</option>
-          </select>
-          <select class="route__choose" name="country">
-            <option>Выберите страну</option>
-            <!--здесь есть выпадающее меню - может сделать параграф и книопку?-->
-          </select>
-          <p class="route__add add-info">
-            <input class="add-info__countre" type="text" name="country" placeholder="Добавить страну">
-            <button class="add-info__button" type="button">
-              <span class="visually-hidden">Добавить</span>
-            </button>
-          </p>
-          <a class="route__button" href="#step3">Следующий шаг</a>
-          <a class="route__button" href="#step1">На шаг назад</a>
+
+          <a class="details-steps__button button" href="#step3">Следующий шаг</a>
+          <a class="details-steps__button button button--transparent" href="#step1">На шаг назад</a>
         </section>
 
-        <section id="step3" class="leisure">
-          <h3 class="leisure__title">Шаг 3.<br>Развлечения</h3>
-          <p class="leisure__description">Наконец, расскажите о своих планах времяпровождения.Можно писать в свободной
+        <section id="step3" class="details-steps">
+          <h3 class="details-steps__title">Шаг 3.<br>Развлечения</h3>
+          <p class="details-steps__description">Наконец, расскажите о своих планах времяпровождения.Можно писать в
+            свободной
             форме и ставить тэги.</p>
-          <ul class="leisure__list leisure-country">
-            <li class="leisure-country__item ">
-              <label class="leisure-country__title">Босния и Герцеговина</label>
-              <textarea class="leisure-country__text" name="bosnia-and-herzegovina" cols="25" rows="12" placeholder="План действий"></textarea>
-            </li>
-            <li class="leisure-country__item ">
-              <label class="leisure-country__title">Чехия</label>
-              <textarea class="leisure-country__text" name="czech" cols="25"
-                rows="12">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            </li>
-          </ul>
-          <button class="leisure__button" type="submit">
+
+          <div class="details-steps__leisure leisure">
+            <ul class="leisure__list">
+              <li class="leisure__item ">
+                <label class="leisure__title">Босния и Герцеговина</label>
+                <textarea class="leisure__text" name="bosnia-and-herzegovina" cols="25" rows="12"
+                  placeholder="План действий"></textarea>
+              </li>
+              <li class="leisure__item ">
+                <label class="leisure-__title">Чехия</label>
+                <textarea class="leisure__text" name="czech" cols="25"
+                  rows="12">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              </li>
+            </ul>
+          </div>
+
+          <button class="details-steps__button button" type="submit">
             <span class="">Отправить</span>
           </button>
-          <a class="leisure__button" href="#step2">На шаг назад</a>
+          <a class="details-steps__button button button--transparent" href="#step2">На шаг назад</a>
         </section>
-
       </div>
     </form>
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <p class="page-footer__logo logo">
-        <img class="logo__img" src="img/" alt="Логотип Погнали" width="100" height="19">
+      <p class="page-footer__logo ">
+        <img class="page-footer__logo-img" src="img/" alt="Логотип Погнали" width="100" height="19">
       </p>
 
-      <ul class="social__list">
+      <ul class="page-footer__social social social--bg-yellow">
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#" aria-label="Facebook">
             <span class="visually-hidden">Facebook</span>
