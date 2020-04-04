@@ -1,0 +1,23 @@
+.menu {
+  display: none;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+
+
+  &__top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-bottom: 53px;
+  }
+
+  // &__toggle {}
+
+  // &__contact {}
+
+  // &__social {}
+}

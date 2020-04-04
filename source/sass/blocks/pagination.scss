@@ -1,0 +1,15 @@
+.pagination {
+  margin: 0 auto;
+  padding-bottom: 46px;
+  width: 320px;
+  min-height: 50px;
+  background-color: $pale-grey;
+
+  &__wrapper {
+    margin: 0 auto;
+    width: 270px;
+    min-height: 50px;
+    border-radius: 20px;
+    background-color: $white;
+  }
+}

@@ -1,0 +1,49 @@
+.travel-mates {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  // margin-top: -45px;
+  width: 320px;
+  min-height: 1369px;
+  background-color: $dark-blue-grey;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px; 
+
+  &__wrapper {
+    margin: 0 auto;
+    width: 270px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    margin-left: 24px;
+    padding-top: 116px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    color: $mango;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+    margin-left: 24px;
+    margin-bottom: 20px;    
+    width: 215px;
+    line-height: 1.38;
+    color: $white;
+  }
+
+  &__slogan {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-left: 24px;
+    margin-bottom: 58px;
+    width: 192px;
+    line-height: 1.38;
+    color: $white;
+  }
+}

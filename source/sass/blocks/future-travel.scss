@@ -1,0 +1,27 @@
+.future-travel {
+  margin-bottom: 11px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    text-transform: lowercase;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.2;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 9px;
+    padding-left: 38px;
+    color: $dark-slate-blue;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}

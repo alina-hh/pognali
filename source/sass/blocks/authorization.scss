@@ -1,0 +1,113 @@
+.authorization {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  // margin-top: -59px;
+  width: 320px;
+  min-height: 560px;
+  background-color: $dark-blue-grey;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  &__wrapper {
+    margin: 0 auto;
+    width: 270px;
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-top: 128px;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    color: $mango;
+  }
+
+  &__description {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 190px;
+    color: $white;
+    line-height: 1.38;
+    text-align: center;
+  }
+
+  &__login {
+    color: $light-gold;
+    text-decoration: underline;
+  }
+
+  &__form {
+    margin-bottom: 29px;
+  }
+
+  &__form p {
+    margin: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__user-login {
+    width: 270px;
+    padding: 23px;
+    border: 0;
+    background-color: $white;
+    border-radius: 10px;
+
+    &::placeholder {
+      font-size: 18px;
+      font-weight: bold;
+      opacity: 0.3;
+      line-height: 1;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 290px;
+    right: 0;
+    width: 60px;
+    height: 61px;
+    background-color: $light-gold;
+    border: 0;
+    border-radius: 10px;
+    // z-index: 10;
+
+    & span {
+      display: none;
+    }
+  }
+
+  &__questions {
+    padding: 0;
+    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 31px;
+    width: 215px;
+    line-height: 1.38;
+    color: $white;
+    text-align: center;
+  }
+
+  &__tel {
+    display: block;
+    margin-bottom: 25px;
+    padding-left: 61px;
+    font-weight: bold;
+    color: $light-gold;
+  }
+
+  &__mail {
+    display: block;
+    padding-left: 61px;
+    font-weight: bold;
+    color: $light-gold;
+    text-transform: uppercase;
+  }
+
+}

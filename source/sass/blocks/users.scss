@@ -1,0 +1,101 @@
+.users {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 27px;
+ 
+  width: 320px;
+  background-color: $pale-grey;
+
+  &__wrapper {
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 270px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 270px;
+    min-height: 415px;
+    border-radius: 20px;
+    background-color: $white;
+  }
+
+  &__top-wrapper {
+    display: flex;
+    padding-top: 15px;
+    margin-bottom: 9px;
+  }
+
+  &__img-wrapper {
+    display: block;
+    margin-right: 16px;
+    padding-left: 18px;
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 5px;
+    width: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    color: $dark-slate-blue;
+  }
+
+  &__popular {
+    margin: 0;
+    color: $dark-two;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+  &__tags {
+    margin: 0;
+    margin-bottom: 13px;
+    padding-left: 26px;
+    width: 220px;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  &__future-travel {
+    padding-left: 26px;
+  }
+
+  &__wrapper-bottom {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__transport {
+    margin: 0;
+    width: 170px;
+    padding-left: 26px;
+  }
+
+  &__level {
+    margin: 0;
+    width: 50px;
+  }
+
+  &__button {
+    
+    margin: 0 auto;
+    width: 230px;
+  }
+}
