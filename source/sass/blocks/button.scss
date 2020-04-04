@@ -1,0 +1,29 @@
+.button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px 38px;
+  height: 40px;
+  color: $dark-two;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $light-gold;
+  border-radius: 25px;
+  border:none;
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &--blue {
+    background-color: $light-blue-grey-three;
+  }
+
+  &--white {
+    background-color: $white;
+  }
+}

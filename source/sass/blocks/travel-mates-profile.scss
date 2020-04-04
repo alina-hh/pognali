@@ -1,0 +1,77 @@
+.travel-mates-profile {
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img-wrapper {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 270px;
+  }
+
+  &__img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  &__wrapper {
+    margin: 0;
+    padding: 0;
+    height: 157px;
+    background-color: $white;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &__user-name {
+    display: block;
+    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    padding-top: 22px;
+    width: 180px;
+    font-size: 21px;
+    font-weight: bold;
+    color: $dark-slate-blue;
+    text-align: center;
+  }
+
+  &__tags {
+    margin: 0;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 180px;
+    text-align: center;
+    line-height: 1.13;
+  }
+
+  &__list {
+    margin: 0 auto;
+  }
+
+  &__show-all {
+    display: block;
+    padding-top: 20px;
+    padding-left: 23px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $dark-slate-blue;
+    background-color: $light-gold;
+    border-radius: 10px;
+  }
+
+
+}

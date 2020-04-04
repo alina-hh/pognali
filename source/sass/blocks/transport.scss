@@ -1,0 +1,81 @@
+.transport {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 130px;
+  list-style: none;
+
+  &__item {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: $white;
+
+    &--grey {
+      background-color: $pale-grey;
+    }
+
+    &--fly {
+      position: relative;
+
+      &::after {
+        content: url(../../img/plane.svg);
+        position: absolute;
+        top: 9px;
+        left: 8px;
+        width: 14px;
+        height: 16px;
+        opacity: 0.15;
+      }
+
+    }
+
+    &--train {
+      position: relative;
+
+      &::after {
+        content: url(../../img/bus.svg);
+        position: absolute;
+        top: 9px;
+        left: 10px;
+        width: 13px;
+        height: 16px;
+        opacity: 0.15;
+      }
+    }
+
+    &--bike {
+      position: relative;
+
+      &::after {
+        content: url(../../img/bike.svg);
+        position: absolute;
+        top: 7px;
+        left: 8px;
+        width: 19px;
+        height: 17px;
+        opacity: 0.15;
+      }
+    }
+
+    &--walk {
+      position: relative;
+
+      &::after {
+        content: url(../../img/run.svg);
+        position: absolute;
+        top: 9px;
+        left: 7px;
+        width: 15px;
+        height: 17px;
+        opacity: 0.15;
+      }
+    }
+
+    &--active::after {
+      opacity: 1;
+    }
+
+  }
+}

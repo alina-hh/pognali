@@ -1,0 +1,40 @@
+.alphabet {
+  margin-left: 25px;
+  margin-bottom: 13px;
+  width: 220px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+
+  &__link {
+    display: block;
+    width: 44px;
+    height: 41px;
+    border: 1px solid $cloudy-blue;
+    background-color: $white;
+    padding-top: 10px;
+    padding-left: 5px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: $dark-blue-grey;
+    text-transform: uppercase;
+
+    &--active {
+      padding-top: 11px;
+      padding-left: 4px;
+      background-color: $dark-blue-grey;
+      color: $white;
+      border: 0px solid $cloudy-blue;
+    }
+  }
+
+
+}

@@ -1,0 +1,90 @@
+.country {
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 11px;
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__img-wrapper {
+    margin: 0;
+    height: 110px;
+    // z-index: -10;
+  }
+
+  &__img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    // z-index: -10;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -11px;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-height: 90px;
+    border-radius: 10px;
+    background-color: $white;
+    // z-index: 10;
+
+
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+    margin-bottom: 2px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: $dark-two;
+  }
+
+  &__slogan {
+    opacity: 0.3;
+    line-height: 1.13;
+    font-weight: 500;
+  }
+
+  &__stats {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-top: 23px;
+    opacity: 0.3;
+    line-height: 1.88;
+
+  //   &::before {
+  //     content: url(../../img/user.svg);
+  //     position: absolute;
+  //     top: 24px;
+  //     left: -20px;
+  //     width: 11px;
+  //     height: 11px;
+  //     opacity: 0.3;
+  // }
+}
+
+&__show-all {
+  display: block;
+  padding-top: 20px;
+  padding-left: 23px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: $dark-slate-blue;
+  background-color: $light-gold;
+  border-radius: 10px;
+}
+}
