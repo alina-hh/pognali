@@ -1,0 +1,117 @@
+.info {
+  @include container;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  background-color: $pale-grey;
+}
+
+.info__top-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.info__level {
+  padding-top: 32px;
+  width: 100px;
+  height: 100px;
+}
+
+.info__number {
+  margin: 0;
+  margin-bottom: 3px;
+  color: $dark-two;
+  font-size: 38px;
+  font-weight: $fw-bold;
+  line-height: 1;
+  text-align: center;
+}
+
+.info__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+}
+
+.info__img-wrapper {
+  margin: 0;
+  margin-top: 12px;
+  width: 99px;
+  height: 100px;
+}
+
+.info__img {
+  border-radius: 50%;
+}
+
+.info__button {
+  margin-bottom: 22px;
+  width: 270px;
+  letter-spacing: -1.4px;
+}
+
+.info__tags-wrapper {
+  @include container-inside;
+  margin-bottom: 5px;
+
+}
+
+.info__tags {
+  margin: 0 auto;
+  width: 70px;
+  background-color: $pale-grey;
+  color: $dark-slate-blue;
+  text-align: center;
+  line-height: 1.13;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.info__user-tags {
+  position: relative;
+  top: -8px;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 26px;
+  padding-bottom: 22px;
+  width: 270px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1.38;
+  border-radius: 10px;
+  border: solid 1px $cloudy-blue;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.info__transport {
+  margin: 0 auto;
+  padding-bottom: 24px;
+  width: 270px;
+}
+
+.info__title {
+  margin: 0 auto;
+  width: 110px;
+  background-color: $pale-grey;
+  color: $dark-slate-blue;
+  text-align: center;
+  line-height: 1.13;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.info__list {
+  position: relative;
+  top: -10px;
+  padding-left: 69px;
+  padding-right: 69px;
+  padding-top: 15px;
+  padding-bottom: 13px;
+  width: 270px;
+  border-radius: 10px;
+  border: solid 1px $cloudy-blue;
+}
