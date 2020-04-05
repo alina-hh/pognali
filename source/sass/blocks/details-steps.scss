@@ -1,0 +1,38 @@
+.details-steps {
+  @include container-inside;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.details-steps__title {
+  margin: 0;
+  padding-top: 21px;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: $dark-slate-blue;
+  font-size: 20px;
+  font-weight: $fw-bold;
+  line-height: 1;
+}
+
+.details-steps__description {
+  margin-bottom: 21px;
+  padding-left: 25px;
+  padding-right: 30px;
+  font-size: 16px;
+  line-height: 1.38;
+}
+
+.details-steps__term {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.details-steps__button {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 230px;
+
+}

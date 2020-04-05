@@ -1,0 +1,34 @@
+.calendar__table {
+  margin-bottom: 23px;
+  border-collapse: collapse;
+}
+
+.calendar__header-cells {
+  background-color: lavender;
+
+
+  th {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.calendar__cells {
+  table-layout: fixed;
+}
+
+.calendar__cell {
+  background-color: $white;
+  border: 1px solid $light-blue-grey-five;
+
+}
+
+.calendar__button {
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: none;
+}

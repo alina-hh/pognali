@@ -9,58 +9,71 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-img" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100"
-        height="19">
-    </a>
+    <div class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-img" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100"
+          height="19">
+      </a>
+      <button class="page-header__menu-open" type="button">
+        <span class="visually-hidden">Oткрыть меню</span>
+      </button>
+    </div>
 
     <div class="menu">
-      <button class="menu__toggle" type="button">Открыть меню</button>
-      <nav class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">О сервисе</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Направления</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Попутчики</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="menu__wrapper ">
 
-      <ul class="menu__contact contact">
-        <li class="contact__item">
-          <a class="contact__link button" href="#">Авторизация</a>
-        </li>
-        <li class="contact__item">
-          <a class="contact__link" href="tel:88005558628">8 800 555-86-28</a>
-        </li>
-        <li class="contact__item">
-          <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </li>
-      </ul>
+        <nav class="main-nav ">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">О сервисе</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Направления</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Попутчики</a>
+            </li>
+          </ul>
+        </nav>
 
-      <ul class="menu__social social">
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
-            <span class="visually-hidden">Instagram</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
-            <span class="visually-hidden">Twitter</span>
-          </a>
-        </li>
-      </ul>
+        <div class="menu__contact contact">
+          <p class="contact__button-wrapper">
+            <a class="contact__button button" href="#">Авторизация</a>
+          </p>
+          <ul class="contact__list">
+            <li class="contact__item">
+              <a class="contact__link" href="tel:88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contact__item">
+              <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </header>
+
 
   <main>
     <h1 class="main-title">Направления</h1>
@@ -68,20 +81,21 @@
 
       <section class="info">
         <h2 class="visually-hidden">Информация об аккаунте</h2>
-        <div class="info__level level">
-          <p class="level__number">80</p>
-          <p class="level__title">level</p>
+        <div class="info__top-wrapper">
+          <div class="info__level">
+            <p class="info__number">80</p>
+            <p class="info__text">level</p>
+          </div>
+
+          <p class="info__img-wrapper">
+            <img class="info__img" src="img/demin-mobile@1x.jpg" alt="Фото пользователя" width="99" height="100">
+          </p>
         </div>
-
-        <p class="info__img">
-          <img class="info__user-img" src="img/demin-mobile@1x.jpg" alt="Фото пользователя" width="99" height="100">
-        </p>
-
         <button class="info__button button button--blue" type="button">Сменить фото</button>
 
-        <div class="info__tags">
-          <p class="info__title">Тэги</p>
-          <textarea class="info__user-tags" name="tags" cols="25" rows="5"
+        <div class="info__tags-wrapper">
+          <p class="info__tags">Тэги</p>
+          <textarea class="info__user-tags" name="tags" cols="5" rows="2"
             placeholder="#бургер #бар #футбол #концерт #крафт">#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
 
@@ -139,18 +153,20 @@
       </section>
 
       <div class="details">
-        <h2 class="details__title">Добавить план:</h2>
-        <ul class="delails__list">
-          <li class="details__item details__item--active">
-            <span class="visually-hidden">Шаг 1</span>
-          </li>
-          <li class="details__item">
-            <span class="visually-hidden">Шаг 2</span>
-          </li>
-          <li class="details__item">
-            <span class="visually-hidden">Шаг 3</span>
-          </li>
-        </ul>
+        <div class="details__top-wrapper">
+          <h2 class="details__title">Добавить план:</h2>
+          <ul class="delails__list">
+            <li class="details__item details__item--active">
+              <span class="visually-hidden">Шаг 1</span>
+            </li>
+            <li class="details__item">
+              <span class="visually-hidden">Шаг 2</span>
+            </li>
+            <li class="details__item">
+              <span class="visually-hidden">Шаг 3</span>
+            </li>
+          </ul>
+        </div>
 
         <section id="step1" class="details-steps">
           <h3 class="details-steps__title">Шаг 1.<br>Даты пребывания</h3>
@@ -189,7 +205,7 @@
             </div>
 
             <div class="term__group term-kids">
-              <input class="term-kids__choose" type="checkbox" name="with-kids" id="kids" checked>
+              <input class="visually-hidden term-kids__choose " type="checkbox" name="with-kids" id="kids" checked>
               <label class="term-kids__title" for="kids">Можно с детьми</label>
             </div>
 
@@ -356,6 +372,7 @@
                   </tr>
                 </table>
               </div>
+
             </div>
           </div>
 
@@ -384,7 +401,7 @@
               </button>
             </div>
             <div class="route__wrapper">
-              <input class="route__country" type="text" name="country" value="Выберите страну" readonly>
+              <input class="route__country" type="text" name="country" value="Выберите страну">
               <button class="route__button-open-popup" type="button">
                 <span class="visually-hidden">Открыть</span>
               </button>
@@ -394,125 +411,131 @@
             </div>
 
             <div class="pop-up-choose">
-              <div class="pop-up-choose__wrapper">
+              <!-- <div class="pop-up-choose__wrapper">
                 <input class="pop-up-choose__country" type="text" name="country" value="Выберите страну" readonly>
                 <button class="pop-up-choose__button-close" type="button">
                   <span class="visually-hidden">Закрыть</span>
                 </button>
-              </div>
-              <ul class="pop-up-choose__alphabet alphabet">
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">А</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Б</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">В</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Г</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Д</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Е</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">З</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">И</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">К</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Л</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">М</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Н</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">О</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">П</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Р</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">С</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Т</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">У</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Ф</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Х</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Ч</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Ш</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Э</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Ю</a>
-                </li>
-                <li class="alphabet__item">
-                  <a class="alphabet__link" href="#">Я</a>
-                </li>
-              </ul>
+              </div> -->
+              <div class="pop-up-choose__hidden">
+                <div class="pop-up-choose__alphabet alphabet">
+                  <ul class="alphabet__list">
+                    <li class="alphabet__item">
+                      <a class="alphabet__link alphabet__link--active" href="#">А</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Б</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">В</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Г</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Д</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Е</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">З</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">И</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">К</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Л</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">М</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Н</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">О</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">П</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Р</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">С</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Т</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">У</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Ф</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Х</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Ч</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Ш</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Э</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Ю</a>
+                    </li>
+                    <li class="alphabet__item">
+                      <a class="alphabet__link" href="#">Я</a>
+                    </li>
+                  </ul>
+                </div>
 
-              <ul class="pop-up-choose__countries countries-info">
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="europe/australia">Австралия</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Австрия</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Азербайджан</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Албания</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Алжир</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Ангола</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Андорра</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Антигуа и Барбуда</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Аргентина</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Армения</a>
-                </li>
-                <li class="countries-info__item">
-                  <a class="countries-info__link" href="#">Афганистан</a>
-                </li>
-              </ul>
+                <div class="pop-up-choose__countries countries-info">
+                  <ul class="countries-info__list">
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="europe/australia">Австралия</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Австрия</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Азербайджан</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Албания</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Алжир</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Ангола</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Андорра</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Антигуа и Барбуда</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Аргентина</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Армения</a>
+                    </li>
+                    <li class="countries-info__item">
+                      <a class="countries-info__link" href="#">Афганистан</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <div class="route__wrapper">
@@ -530,7 +553,7 @@
 
         <section id="step3" class="details-steps">
           <h3 class="details-steps__title">Шаг 3.<br>Развлечения</h3>
-          <p class="details-steps__description">Наконец, расскажите о своих планах времяпровождения.Можно писать в
+          <p class="details-steps__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
             свободной
             форме и ставить тэги.</p>
 
@@ -565,27 +588,29 @@
           height="19">
       </p>
 
-      <ul class="page-footer__social social social--bg-yellow">
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">
-            <span class="visually-hidden">Instagram</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
-            <span class="visually-hidden">Twitter</span>
-          </a>
-        </li>
-      </ul>
+      <div class="page-footer__social social social--bg-yellow ">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--vk" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <div class="page-footer__copyright">
+        <p class="page-footer__text">Разработано</p>
+        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img src="img/htmlacademy.svg" alt="Логотип htmlacademy" width="27" height="34">
         </a>
       </div>

@@ -1,0 +1,46 @@
+.term__title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  font-weight: $fw-medium;
+  color: $dark-slate-blue;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 1.6px;
+
+  span {
+    color: $dark-slate-blue;
+    opacity: 0.3;
+  }
+}
+
+.term__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 21px;
+  width: 220px;
+  min-height: 41px;
+  border-radius: 4px;
+  border: solid 1px $cloudy-blue;
+}
+
+.term__button-minus,
+.term__button-plus {
+  display: block;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+.term__quantity {
+  width: 130px;
+  padding: 0;
+  padding-left: 17px;
+  text-align: center;
+  font-weight: $fw-medium;
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  border: none;
+}
