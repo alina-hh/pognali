@@ -96,10 +96,8 @@
   }
 
   .country__img {
-    /**/
     width: 186px;
     height: 140px;
-    /**/
     border-top-right-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-right-radius: 20px;
@@ -110,7 +108,7 @@
     width: 435px;
     height: 140px;
     padding-left: 29px;
-    border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
   }
@@ -176,7 +174,7 @@
     width: 380px;
     height: 140px;
     padding-left: 29px;
-    border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
   }

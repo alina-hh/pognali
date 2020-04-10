@@ -1,7 +1,7 @@
 .steps {
   @include container;
   padding: 0;
-  margin-top: 0px;
+  margin-top: 0;
   min-height: 390px;
   background-color: $dark-blue-grey;
 }
@@ -47,10 +47,10 @@
   color: $dark-two;
 }
 
-@media(min-width: $tablet-width) {
+@media (min-width: $tablet-width) {
   .steps {
     @include container-tablet;
-    margin-top: 0px;
+    margin-top: 0;
     min-height: 375px;
     background-color: $dark-blue-grey;
   }
@@ -93,7 +93,7 @@
   }
 }
 
-@media(min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
   .steps {
     @include container-desktop;
     margin-top: 0;
