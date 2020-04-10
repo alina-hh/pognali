@@ -1,11 +1,40 @@
 .map {
-  margin: 0;
+  @include container;
   padding: 0;
-  margin: 0 auto;
-  width: 320px;
-  min-height: 560px;
+  min-height: 320px;
+}
 
-  &__img {
-    margin: 0;
+.map__img {
+  margin: 0;
+}
+
+.map__wrapper {
+  border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    @include container-tablet;
+    padding: 0;
+    width: 768px;
+    min-height: 462px;
+  }
+
+  .map__wrapper {
+    min-height: 462px;
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    @include container-desktop;
+    width: 1440px;
+    min-height: 395px;
+  }
+
+  .map__wrapper {
+    min-height: 395px;
+    width: 1440px;
   }
 }

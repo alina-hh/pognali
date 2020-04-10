@@ -1,77 +1,139 @@
-.travel-mates-profile {
+.travel-mates-profile__list {
+  @include list-reset;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.travel-mates-profile__item {
+  margin-bottom: 10px;
+}
+
+.travel-mates-profile__img-wrapper {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 270px;
+}
+
+.travel-mates-profile__img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.travel-mates-profile__wrapper {
+  margin: 0;
+  padding: 0;
+  min-height: 157px;
+  background-color: $white;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.travel-mates-profile__user-name {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  padding-top: 22px;
+  width: 180px;
+  font-size: 21px;
+  font-weight: $fw-bold;
+  color: $dark-slate-blue;
+  text-align: center;
+}
+
+.travel-mates-profile__tags {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  width: 180px;
+  text-align: center;
+  line-height: 1.13;
+}
+
+.travel-mates-profile__show-all {
+  display: block;
+  padding-top: 20px;
+  padding-left: 23px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: $fw-bold;
+  color: $dark-slate-blue;
+  background-color: $light-gold;
+  border-radius: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .travel-mates-profile__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 620px;
+    margin-bottom: 70px;
   }
 
-  &__item {
+  .travel-mates-profile__item {
     margin-bottom: 10px;
-
-    &:last-child {
-      margin-bottom: 20px;
-    }
   }
 
-  &__img-wrapper {
-    display: block;
-    margin: 0;
-    padding: 0;
-    height: 270px;
+  .travel-mates-profile__img-wrapper {
+    min-height: 285px;
   }
 
-  &__img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+  .travel-mates-profile__img {
+    width: 285px;
+    height: 285px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
-  &__wrapper {
-    margin: 0;
-    padding: 0;
-    height: 157px;
-    background-color: $white;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+  .travel-mates-profile__wrapper {
+    width: 285px;
+    min-height: 198px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 
-  &__user-name {
-    display: block;
-    margin: 0;
-    margin: 0 auto;
-    margin-bottom: 14px;
-    padding-top: 22px;
-    width: 180px;
-    font-size: 21px;
-    font-weight: bold;
-    color: $dark-slate-blue;
-    text-align: center;
+  .travel-mates-profile__user-name {
+    margin-bottom: 21px;
+    padding-top: 30px;
+    line-height: 1;
+    font-size: 24px;
   }
 
-  &__tags {
-    margin: 0;
-    margin: 0 auto;
+  .travel-mates-profile__tags {
     margin-bottom: 15px;
-    width: 180px;
-    text-align: center;
-    line-height: 1.13;
+    width: 230px;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
-  &__list {
+  .travel-mates-profile__list-transport {
     margin: 0 auto;
+    width: 130px;
   }
 
-  &__show-all {
-    display: block;
-    padding-top: 20px;
-    padding-left: 23px;
-    padding-bottom: 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: $dark-slate-blue;
-    background-color: $light-gold;
-    border-radius: 10px;
+  .travel-mates-profile__show-all {
+    margin: 0 auto;
+    width: 618px;
+    min-height: 81px;
+    padding-top: 29px;
+    padding-left: 33px;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travel-mates-profile__list {
+    margin-top: 134px;
+    width: 630px;
+   margin-bottom: 0;
   }
 
-
+  .travel-mates-profile__show-all {
+    position: relative;
+    left: -795px;
+    top: -92px;
+    width: 280px;
+  }
 }

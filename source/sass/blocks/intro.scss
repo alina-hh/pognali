@@ -1,102 +1,247 @@
 .intro {
-  margin: 0;
+  @include container;
+  position: relative;
   padding: 0;
   padding-top: 14px;
+  min-height: 605px;
   background-color: $dark-two;
+}
 
-  &__wrapper {
-    margin: 0 auto;
-    width: 270px;
+.intro__wrapper {
+  @include container-inside;
+}
+
+.intro__title {
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  width: 237px;
+  font-size: 36px;
+  font-weight: $fw-bold;
+  line-height: 1.12;
+  text-align: center;
+  color: $white;
+}
+
+.intro__wrapper-bg-img {
+  @include container-inside;
+  position: relative;
+  padding-left: 54px;
+}
+
+.intro__bg-img {
+  width: 192px;
+  height: 255px;
+  background-image: url("../img/traveller-illustration-mobile@1x.png");
+  background-repeat: no-repeat;
+}
+
+.intro__wrapper-contact {
+  @include container-inside;
+  display: flex;
+  margin-top: -20px;
+  margin-bottom: 27px;
+}
+
+.intro__tel {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $mango;
+
+  &::after {
+    content: url("../img/topmenu-phone.svg");
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.intro__mail {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $mango-two;
+
+  &::after {
+    content: url("../img/topmenu-mail.svg");
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.intro__button {
+  width: 189px;
+  z-index: 1;
+}
+
+.intro__review {
+  margin: 0;
+  padding: 0;
+  margin-left: 25px;
+  width: 167px;
+  color: $white;
+  line-height: 1.38;
+}
+
+.intro__author {
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .intro {
+    @include container-tablet;
+    padding-top: 26px;
+    min-height: 723px;
   }
 
-  &__title {
-    margin: 0;
+  .intro__wrapper {
+    @include container-inside-tablet;
+  }
+
+  .intro__title {
     padding: 0;
     margin: 0 auto;
     margin-bottom: 12px;
-    width: 237px;
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 1.12;
-    letter-spacing: normal;
-    text-align: center;
-    color: $white;
+    width: 395px;
+    font-size: 60px;
+    line-height: 1.17;
   }
 
-  &__wrapper-bg-img {
+  .intro__wrapper-bg-img {
+    @include container-inside-tablet;
     position: relative;
-    width: 270px;
     padding-left: 54px;
-
+    margin-bottom: 59px;
   }
 
-  &__bg-img {
-    width: 192px;
-    height: 255px;
-    background-image: url(../../img/traveller-illustration-mobile@1x.png);
-    background-repeat: no-repeat;
+  .intro__bg-img {
+    width: 0;
+    height: 0;
+    // background-image: url("../img/traveller-illustration-mobile@1x.png");
+    background-image: none;
   }
 
-  &__wrapper-contact {
+  .intro__wrapper-contact {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .intro__tel {
+    display: none;
+  }
+
+  .intro__mail {
+    display: none;
+  }
+
+  .intro__button {
+    display: none;
+    padding-top: 13px;
+    padding-left: 30px;
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .intro__review {
+    margin-left: 35px;
+    line-height: 1.18;
+    font-size: 28px;
+  }
+
+  .intro__text {
+    margin-bottom: 47px;
+    width: 259px;
+  }
+
+  .intro__author {
+    display: block;
+    width: 247px;
+    font-size: 21px;
+    line-height: 1.19;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    @include container-desktop;
+    padding-top: 90px;
+    min-height: 420px;
+    z-index: 10;
+  }
+
+  .intro__wrapper {
+    @include container-inside-desktop;
+    position: relative;
     display: flex;
-    margin-top: -20px;
-    margin-bottom: 27px;
-    width: 270px;
+    justify-content: space-between;
   }
 
-  &__tel {
-    position: relative;
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: $mango;
-
-    // &::after {
-    //   content: url(../../img/topmenu-phone.svg);
-    //   position: absolute;
-    //   top: 11px;
-    //   left: 12px;
-    //   width: 18px;
-    //   height: 18px;
-    // }
-  }
-
-  &__mail {
-    position: relative;
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: $mango-two;
-
-    // &::after {
-    //   content: url(../../img/topmenu-mail.svg);
-    //   position: absolute;
-    //   top: 12px;
-    //   left: 12px;
-    //   width: 18px;
-    //   height: 18px;
-    // }
-  }
-
-  &__button {
-    width: 189px;
-    z-index: 1;
-  }
-
-  &__review {
+  .intro__title {
     margin: 0;
-    padding: 0;
-    margin-left: 25px;
-    width: 167px;
-    color: $white;
-    line-height: 1.38;
+    margin-left: 67px;
+    padding-top: 15px;
+    width: 400px;
+    text-align: left;
   }
 
-  &__author {
-    font-weight: bold;
-    font-style: normal;
+  .intro__wrapper-bg-img {
+    display: none;
   }
 
+  .intro__wrapper-contact {
+    position: absolute;
+    top: -140px;
+    right: -135px;
+    width: 425px;
+  }
+
+  .intro__tel {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    &::after {
+      top: 15px;
+      left: 17px;
+    }
+  }
+
+  .intro__mail {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    &::after {
+      top: 16px;
+      left: 17px;
+    }
+  }
+
+  .intro__button {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 13px;
+    padding-left: 30px;
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .intro__review {
+    margin-right: 120px;
+    margin-left: 0px;
+  }
 }

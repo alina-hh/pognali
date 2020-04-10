@@ -1,40 +1,91 @@
 .address {
+  @include container;
+  padding: 0;
+  min-height: 185px;
+  background-color: $light-gold;
+}
+
+.address__wrapper {
+  @include container-inside;
+}
+
+.address__street {
   margin: 0;
   padding: 0;
-  margin: 0 auto;
-  // margin-top: -43px;
-  width: 320px;
-  min-height: 250px;
-  background-color: $light-gold;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  padding-top: 32px;
+  margin-left: 62px;
+  margin-bottom: 31px;
+  width: 145px;
+  line-height: 1.38;
+  font-weight: $fw-bold;
+  color: $dark-blue-grey;
+  text-transform: uppercase;
+}
 
-  &__wrapper {
-    margin: 0 auto;
-    width: 270px;
+.address__route {
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: $fw-bold;
+  color: $dark-blue-grey;
+  border: 3px solid $dark-blue-grey;
+  border-radius: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .address {
+    @include container-tablet;
+    min-height: 325px;
   }
 
-  &__street {
-    margin: 0;
-    padding: 0;
-    padding-top: 77px;
-    margin-left: 62px;
-    margin-bottom: 31px;
-    width: 145px;
-    line-height: 1.38;
-    font-weight: bold;
-    color: $dark-blue-grey;
-    text-transform: uppercase;
+  .address__wrapper {
+    @include container-inside-tablet;
   }
 
-  &__route {
-    display: block;
-    padding: 20px;
-    font-size: 18px;
+  .address__street {
+    padding-top: 66px;
+    margin-left: 129px;
+    margin-bottom: 64px;
+    width: 430px;
     line-height: 1;
-    font-weight: bold;
-    color: $dark-blue-grey;
+    font-size: 28px;
+  }
+
+  .address__route {
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-left: 33px;
+    width: 618px;
+    min-height: 81px;
+    font-size: 24px;
     border: 3px solid $dark-blue-grey;
-    border-radius: 10px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address {
+    @include container-desktop;
+    min-height: 200px;
+  }
+
+  .address__wrapper {
+    @include container-inside-desktop;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 59px;
+  }
+
+  .address__street {
+    padding-top: 23px;
+    margin-left: 343px;
+    margin-right: 67px;
+    margin-bottom: 0px;
+    width: 440px;
+  }
+
+  .address__route {
+    width: 325px;
   }
 }

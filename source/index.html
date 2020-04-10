@@ -14,71 +14,59 @@
         <img class="page-header__logo-img" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100"
           height="19">
       </a>
-      <button class="page-header__menu-open" type="button">
+      <button class="page-header__menu-open page-header__menu-close" type="button">
         <span class="visually-hidden">Oткрыть меню</span>
       </button>
     </div>
 
     <div class="menu">
-      <div class="menu__wrapper ">
-        <div class="menu__top-wrapper">
-          <a class="menu__logo">
-            <img class="menu__logo-img" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
-          </a>
-          <button class="menu__menu-close" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
-          </button>
-        </div>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">О сервисе</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Направления</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Попутчики</a>
+          </li>
+        </ul>
+      </nav>
 
-        <nav class="main-nav ">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">О сервисе</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Направления</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Попутчики</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="menu__contact contact">
-          <p class="contact__button-wrapper">
-            <a class="contact__button button" href="#">Авторизация</a>
-          </p>
-          <ul class="contact__list">
-            <li class="contact__item">
-              <a class="contact__link" href="tel:88005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contact__item">
-              <a class="contact__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="menu__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--vk" href="#">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">
-                <span class="visually-hidden">Instagram</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="menu__contact">
+        <p class="menu__button-wrapper">
+          <a class="menu__button button" href="#">Авторизация</a>
+        </p>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__tel" href="tel:88005558628">8 800 555-86-28</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
       </div>
 
+      <div class="menu__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -101,9 +89,8 @@
 
         <blockquote class="intro__review">
           <p class="intro__text">«Лучшее приложение, что я видел в жизни!»</p>
-          <cite class="intro__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+          <cite class="intro__author">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</cite>
         </blockquote>
-
       </div>
     </section>
 
@@ -131,14 +118,17 @@
         <p class="about-us__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
           Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
         <p class="about-us__offer">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        <a class="about-us__show-all" href="#">Подробнее</a>
       </div>
     </section>
 
     <section class="countries">
       <div class="countries__wrapper">
-        <h2 class="countries__title">Направления</h2>
-        <p class="countries__desciption">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда
-          хотели бы отправиться и чем можно там заняться.</p>
+        <div>
+          <h2 class="countries__title">Направления</h2>
+          <p class="countries__desciption">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда
+            хотели бы отправиться и чем можно там заняться.</p>
+        </div>
         <div class="countries__list country">
           <ul class="country__list">
             <li class="country__item">
@@ -194,10 +184,12 @@
 
     <section class="travel-mates">
       <div class="travel-mates__wrapper">
-        <h2 class="travel-mates__title">Попутчики</h2>
-        <p class="travel-mates__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному
-          нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <b class="travel-mates__slogan">Теперь можно легко найти единомышленников!</b>
+        <div>
+          <h2 class="travel-mates__title">Попутчики</h2>
+          <p class="travel-mates__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному
+            нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <b class="travel-mates__slogan">Теперь можно легко найти единомышленников!</b>
+        </div>
         <div class="travel-mates__list travel-mates-profile">
           <ul class="travel-mates-profile__list">
             <li class="travel-mates-profile__item">
@@ -208,7 +200,7 @@
               <div class="travel-mates-profile__wrapper">
                 <a class="travel-mates-profile__user-name" href="#">Таня Фирсова</a>
                 <p class="travel-mates-profile__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-                <ul class="travel-mates-profile__list transport">
+                <ul class="travel-mates-profile__list-transport transport">
                   <li class="transport__item transport__item--active transport__item--fly">
                     <label>
                       <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
@@ -216,21 +208,21 @@
                       <span class="visually-hidden">Самолёт</span>
                     </label>
                   </li>
-                  <li class="transport__item   transport__item--train">
+                  <li class="transport__item transport__item--train">
                     <label>
                       <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
                         name="transport" value="train" checked>
                       <span class="visually-hidden">Поезд</span>
                     </label>
                   </li>
-                  <li class="transport__item  transport__item--bike">
+                  <li class="transport__item transport__item--bike">
                     <label>
                       <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
                         name="transport" value="bike">
                       <span class="visually-hidden">Велосипед</span>
                     </label>
                   </li>
-                  <li class="transport__item    transport__item--walk">
+                  <li class="transport__item transport__item--walk">
                     <label>
                       <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
                         name="transport" value="walk" checked>
@@ -248,7 +240,7 @@
               <div class="travel-mates-profile__wrapper">
                 <a class="travel-mates-profile__user-name" href="#">Петя Демин</a>
                 <p class="travel-mates-profile__tags">#бургер #бар #футбол #концерт #крафт</p>
-                <ul class="travel-mates-profile__list transport">
+                <ul class="travel-mates-profile__list-transport transport">
                   <li class="transport__item transport__item--active transport__item--fly">
                     <label>
                       <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
@@ -283,7 +275,6 @@
           </ul>
           <a class="travel-mates-profile__show-all" href="catalog.html">Показать всеx</a>
         </div>
-
       </div>
     </section>
 
@@ -292,20 +283,29 @@
         <h2 class="rates__title">Добавьте свой профиль</h2>
         <ul class="rates__list">
           <li class="rates__item">
-            <p class="rates__proposition">Базовое размещение Бесплатно</p>
+            <p class="rates__proposition">
+              <span>Базовое размещение</span>
+              <span> Бесплатно</span>
+            </p>
           </li>
           <li class="rates__item">
-            <p class="rates__proposition">Вывод на первых позициях 99 руб./мес</p>
+            <p class="rates__proposition">
+              <span> Вывод на первых позициях </span>
+              <span> 99 руб./мес</span>
+            </p>
           </li>
           <li class="rates__item">
-            <p class="rates__proposition">Кастомный цвет карточки 59 руб./мес</p>
+            <p class="rates__proposition">
+              <span> Кастомный цвет карточки </span>
+              <span> 59 руб./мес</span>
+            </p>
           </li>
         </ul>
         <a class="rates__button rates__button--open-popup" href="rates.html">Показать тарифы для бизнеса</a>
       </div>
     </section>
 
-    <section class="business-rates business-rates--popup">
+    <!-- <section class="business-rates business-rates--popup">
       <div class="business-rates__wrapper">
         <h2 class="business-rates__title">Бизнес-тарифы</h2>
         <ul class="business-rates__list">
@@ -326,10 +326,10 @@
           <button class="business-rates__button business-rates__button--close-popup" type="button">Закрыть окно</button>
         </p>
       </div>
-    </section>
+    </section> -->
 
     <section class="authorization">
-      <div class="authorization__wrapper">
+      <div class="authorization__wrapper-top">
         <h2 class="visually-hidden">Зарегистрируйтесь или авторизуйтесь</h2>
         <b class="authorization__title">Заинтересовались?</b>
         <p class="authorization__description">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда
@@ -345,10 +345,11 @@
           <button class="authorization__button" type="submit" aria-label="Войти"><span>Регистрация</span></button>
         </form>
 
-        <p class="authorization__questions">Остались вопросы?<br>Мы с радостью на них ответим!</p>
-
-        <a class="authorization__tel" href="tel:88005558628">8 800 555-86-28</a>
-        <a class="authorization__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <p class="authorization__questions">Остались вопросы? Мы с радостью на них ответим!</p>
+        <div class="authorization__wrapper-bottom">
+          <a class="authorization__tel" href="tel:88005558628">8 800 555-86-28</a>
+          <a class="authorization__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
       </div>
     </section>
 
@@ -366,9 +367,9 @@
       <p class="map__img">
         <!-- <img src="https://via.placeholder.com/320x546" alt="Адрес компании - ул. Большая Конюшенная, 19/8" width="320"
           height="546"> -->
-        <iframe
+        <iframe class="map__wrapper"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056816!2d30.32085335189756!3d59.93871916896506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sfr!4v1585415407249!5m2!1sru!2sfr"
-          width="320" height="546"></iframe>
+          width="320" height="320"></iframe>
       </p>
     </div>
   </main>

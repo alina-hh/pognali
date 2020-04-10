@@ -1,72 +1,109 @@
 .social {
-  margin: 0;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 40px;
   width: 270px;
+}
 
-  &--bg-yellow {
-    & .social__link {
-      background-color: $light-gold;
+.social--bg-yellow .social__link {
+  background-color: $light-gold;
+}
+
+.social__list {
+  display: flex;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  width: 137px;
+}
+
+.social__link {
+  display: block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.social__link--facebook {
+  position: relative;
+
+  &::after {
+    content: url("../img/facebook.svg");
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    width: 11px;
+    height: 21px;
+  }
+}
+
+.social__link--vk {
+  position: relative;
+
+  &::after {
+    content: url("../img/vk.svg");
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    width: 23px;
+    height: 12px;
+  }
+}
+
+.social__link--instagram {
+  position: relative;
+
+  &::after {
+    content: url("../img/instagram.svg");
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    width: 270px;
+    /**/
+  }
+
+  .social__list {
+    width: 183px;
+  }
+
+  .social__link {
+    width: 60px;
+    height: 60px;
+  }
+
+  .social__link--facebook {
+
+    &::after {
+      top: 19px;
+      left: 24px;
+      width: 14px;
+      height: 28px;
     }
   }
 
-  &__list {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    margin: 0 auto;
-    list-style: none;
-    width: 137px;
+  .social__link--vk {
+
+    &::after {
+      top: 25px;
+      left: 15px;
+      width: 31px;
+      height: 16px;
+    }
   }
 
-  &__link {
-    display: block;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
+  .social__link--instagram {
 
-
-    &--facebook {
-      position: relative;
-
-      &::after {
-        content: url('../../img/facebook.svg');
-        position: absolute;
-        top: 11px;
-        left: 17px;
-        width: 11px;
-        height: 21px;
-      }
+    &::after {
+      top: 20px;
+      left: 20px;
+      width: 24px;
+      height: 24px;
     }
-
-    &--vk {
-      position: relative;
-
-      &::after {
-        content: url('../../img/vk.svg');
-        position: absolute;
-        top: 14px;
-        left: 12px;
-        width: 23px;
-        height: 12px;
-      }
-    }
-
-    &--instagram {
-      position: relative;
-
-      &::after {
-        content: url('../../img/instagram.svg');
-        position: absolute;
-        top: 13px;
-        left: 14px;
-        width: 18px;
-        height: 18px;
-      }
-    }
-
-
   }
-
 }

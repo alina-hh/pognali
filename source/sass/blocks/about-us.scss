@@ -1,60 +1,121 @@
 .about-us {
-  margin: 0 auto;
-  min-height: 352px;
-  width: 320px;
-  background-color: #141b3b; //*maybe its img*//
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  // z-index: 10;
+  @include container;
+  min-height: 353px;
+  background-color: $dark-blue-grey;
+  background-image: url("../img/about-mobile@1x.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
 
-  &__wrapper {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    padding-left: 24px;
-    padding-top: 30px;
-    margin: 0 auto;
-    width: 270px;
-    min-height: 352px;
-    // z-index: 1;
-    background-color: #141b3b; //*maybe its img*//
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
+.about-us__wrapper {
+  @include container-inside;
+  padding-left: 24px;
+  padding-top: 30px;
+}
 
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: -7px;
-    //   background-image: url(../../img/about-mobile@1x.png);
-    //   width: 292px;
-    //   height: 352px;
-    //   z-index: -1;
-    // }
+.about-us__title {
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+  color: $mango;
+}
+
+.about-us__description {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 19px;
+  width: 210px;
+  color: $white;
+  line-height: 1.38;
+}
+
+.about-us__offer {
+  margin: 0;
+  padding: 0;
+  width: 195px;
+  font-weight: $fw-bold;
+  color: $white;
+  line-height: 1.38;
+}
+
+.about-us__show-all {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about-us {
+    @include container-tablet;
+    min-height: 684px;
+    background-image: url("../img/about-tablet@1x.png");
+    background-position: 98% 35%;
   }
 
-  &__title {
-    margin: 0;
-    margin-bottom: 18px;
-    padding: 0;
-    color: $mango;
+  .about-us__wrapper {
+    @include container-inside-tablet;
+    padding-left: 35px;
+    padding-top: 38px;
   }
 
-  &__description {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 19px;
-    width: 210px;
-    color: $white;
-    line-height: 1.38;
+  .about-us__title {
+    margin-bottom: 41px;
+    font-size: 45px;
+    line-height: 1;
   }
 
-  &__offer {
-    margin: 0;
-    padding: 0;
-    width: 195px;
-    font-weight: bold;
-    color: $white;
-    line-height: 1.38;
+  .about-us__description {
+    margin-bottom: 35px;
+    font-size: 28px;
+    width: 300px;
+    line-height: 1.18;
+  }
+
+  .about-us__offer {
+    margin-bottom: 52px;
+    width: 257px;
+    font-size: 21px;
+    line-height: 1.19;
+  }
+
+  .about-us__show-all {
+    display: block;
+    padding-top: 29px;
+    padding-left: 33px;
+    width: 274px;
+    min-height: 81px;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: $fw-bold;
+    color: $dark-slate-blue;
+    background-color: $light-gold;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    @include container-desktop;
+    min-height: 873px;
+    background-image: url("../img/about-desktop@1x.png");
+    background-position: 93% 100%;
+  }
+
+  .about-us__wrapper {
+    @include container-inside-desktop;
+    padding-left: 70px;
+    padding-top: 250px;
+  }
+
+  .about-us__title {
+    margin-bottom: 60px;
+  }
+
+  .about-us__description {
+    margin-bottom: 40px;
+    width: 625px;
+  }
+
+  .about-us__offer {
+    margin-bottom: 86px;
+    width: 420px;
   }
 }
