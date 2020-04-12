@@ -54,12 +54,12 @@
   }
 
   .main-nav__list {
+    @include container-desktop;
     position: absolute;
     top: -70px;
     left: 30px;
-    @include container-desktop;
     display: flex;
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: -2px;
     padding-top: 0;
     padding-left: 0;

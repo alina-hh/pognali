@@ -46,6 +46,7 @@
     @include container-tablet;
     min-height: 1093px;
     padding-top: 159px;
+
     &::after {
       width: 768px;
       height: 89px;
@@ -76,6 +77,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+
     &::after {
       width: 1440px;
       height: 55px;

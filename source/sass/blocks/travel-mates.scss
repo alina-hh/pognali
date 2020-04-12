@@ -58,6 +58,7 @@
     @include container-tablet;
     min-height: 1255px;
     padding-top: 81px;
+
     &::after {
       width: 768px;
       height: 80px;
@@ -96,6 +97,7 @@
     display: flex;
     justify-content: space-between;
     min-height: 730px;
+
     &::after {
       width: 1440px;
       height: 56px;

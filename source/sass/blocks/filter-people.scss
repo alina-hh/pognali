@@ -183,14 +183,14 @@
 
   .filter-people__list {
     display: flex;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     width: 500px;
   }
 
   .filter-people__item {
     width: 33.3%;
     padding-left: 26px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .filter-people__item label {
@@ -269,5 +269,4 @@
   .filter-people__button {
     width: 225px;
   }
-
 }

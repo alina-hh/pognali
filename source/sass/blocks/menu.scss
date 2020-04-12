@@ -98,9 +98,11 @@
     min-height: 778px;
     top: 132px;
   }
+
   .menu__wrapper {
     @include container-tablet;
   }
+
   .menu__contact {
     margin-bottom: 132px;
   }

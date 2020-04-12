@@ -57,6 +57,7 @@
     @include container-tablet;
     padding-left: 130px;
     min-height: 556px;
+
     &::after {
       width: 768px;
       height: 80px;
@@ -104,6 +105,7 @@
     @include container-desktop;
     min-height: 738px;
     padding-left: 186px;
+
     &::after {
       width: 1440px;
       height: 44px;
@@ -123,7 +125,8 @@
     width: 850px;
     padding-left: 35px;
   }
-  .rates__button{
+
+  .rates__button {
     padding-left: 34px;
   }
 }
