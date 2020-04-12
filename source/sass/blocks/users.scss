@@ -1,99 +1,93 @@
 .users {
-  margin: 0;
+  @include container;
   padding: 0;
-  margin: 0 auto;
   padding-top: 27px;
-  width: 320px;
   background-color: $pale-grey;
+}
 
-  &__wrapper {
-    margin: 0;
-    padding: 0;
-    margin: 0 auto;
-    width: 270px;
-  }
+.users__wrapper {
+  @include container-inside;
+  padding: 0;
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+.users__list {
+  @include list-reset;
+}
 
-  &__item {
-    margin: 0 auto;
-    margin-bottom: 10px;
-    width: 270px;
-    min-height: 415px;
-    border-radius: 20px;
-    background-color: $white;
-  }
+.users__item {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-bottom: 22px;
+  width: 270px;
+  border-radius: 20px;
+  background-color: $white;
+}
 
-  &__top-wrapper {
-    display: flex;
-    padding-top: 15px;
-    margin-bottom: 9px;
-  }
+.users__top-wrapper {
+  display: flex;
+  padding-top: 15px;
+  margin-bottom: 9px;
+}
 
-  &__img-wrapper {
-    display: block;
-    margin-right: 16px;
-    padding-left: 18px;
-  }
+.users__img-wrapper {
+  display: block;
+  margin-right: 16px;
+  padding-left: 18px;
+}
 
-  &__img {
-    border-radius: 50%;
-  }
+.users__img {
+  border-radius: 50%;
+}
 
-  &__name {
-    margin: 0;
-    margin-bottom: 5px;
-    width: 80px;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1;
-    color: $dark-slate-blue;
-  }
+.users__name {
+  margin: 0;
+  margin-bottom: 5px;
+  width: 80px;
+  font-size: 20px;
+  font-weight: $fw-bold;
+  line-height: 1;
+  color: $dark-slate-blue;
+}
 
-  &__popular {
-    margin: 0;
-    color: $dark-two;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.5;
-  }
+.users__popular {
+  margin: 0;
+  color: $dark-two;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  line-height: 1.5;
+}
 
-  &__tags {
-    margin: 0;
-    margin-bottom: 13px;
-    padding-left: 26px;
-    width: 220px;
-    font-size: 15px;
-    line-height: 1.2;
-  }
+.users__tags {
+  margin: 0;
+  margin-bottom: 13px;
+  padding-left: 26px;
+  width: 220px;
+  font-size: 15px;
+  line-height: 1.2;
+}
 
-  &__future-travel {
-    padding-left: 26px;
-  }
+.users__future-travel {
+  padding-left: 26px;
+}
 
-  &__wrapper-bottom {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-  }
+.users__wrapper-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
 
-  &__transport {
-    margin: 0;
-    width: 170px;
-    padding-left: 26px;
-  }
+.users__transport {
+  margin: 0;
+  padding-left: 26px;
+}
 
-  &__level {
-    margin: 0;
-    width: 50px;
-  }
+.users__level {
+  padding-right: 17px;
+  padding-top: 2px;
+  margin: 0;
+}
 
-  &__button {
-    margin: 0 auto;
-    width: 230px;
-  }
+.users__button {
+  margin: 0 auto;
+  width: 230px;
 }

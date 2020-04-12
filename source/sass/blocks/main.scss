@@ -1,0 +1,71 @@
+.main {
+  @include container;
+  background-color: $dark-two;
+}
+
+.main__wrapper {
+  padding-left: 25px;
+  padding-top: 20px;
+}
+
+.main__title {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  line-height: 1.11;
+  color: $white;
+}
+
+.main__button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main {
+    @include container-tablet;
+    min-height: 169px;
+  }
+
+  .main__wrapper {
+    @include container-inside-tablet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 82px;
+    padding-left: 34px;
+  }
+
+  .main__title {
+    font-size: 60px;
+    width: 290px;
+    line-height: 1.17;
+  }
+
+  .main__button {
+    display: block;
+    padding-top: 10px;
+    width: 211px;
+  }
+
+  .main__link {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: $fw-bold;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main {
+    @include container-desktop;
+    min-height: 251px;
+  }
+
+  .main__wrapper {
+    @include container-inside-desktop;
+    padding-top: 115px;
+    padding-left: 66px;
+    padding-right: 29px;
+  }
+}

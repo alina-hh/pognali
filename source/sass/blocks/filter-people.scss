@@ -1,76 +1,272 @@
 .filter-people {
+  @include container;
+  padding: 0;
+  padding-top: 23px;
+  background-color: $pale-grey;
+}
+
+.filter-people__wrapper {
+  @include container-inside;
+  padding-top: 25px;
+  padding-left: 26px;
+  background-color: $light-gold;
+  padding-bottom: 19px;
+  border-radius: 20px;
+}
+
+.filter-people__main-title {
+  margin: 0;
+  margin-bottom: 24px;
+  width: 118px;
+  font-size: 22.5px;
+  font-weight: $fw-bold;
+  line-height: 1;
+  color: $dark-slate-blue;
+}
+
+.filter-people__form {
+  width: 220px;
+}
+
+.filter-people__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-people__title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 220px;
+  text-transform: uppercase;
+  font-weight: $fw-bold;
+  line-height: 1.13;
+  color: $dark-slate-blue;
+}
+
+.filter-people__button-pop-up {
+  display: block;
+}
+
+.filter-people__list {
+  @include list-reset;
+  margin-bottom: 20px;
+}
+
+.filter-people__item {
+  padding-left: 26px;
+  margin-bottom: 10px;
+}
+
+.filter-people__item label {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.filter-transport {
+  margin: 0;
+}
+
+.filter-people__range {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+.filter-people__level {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.min-level input,
+.max-level input {
   padding: 0;
   margin: 0;
-  padding-top: 23px;
-  margin: 0 auto;
-  width: 320px;
-  background-color: $pale-grey;
+  padding-left: 15px;
+  width: 109px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: $fw-medium;
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: $dark-slate-blue;
+  border: none;
+  border-top: solid 1px $cloudy-blue;
+  border-bottom: solid 1px $cloudy-blue;
+  background-color: #ffffff;
+}
 
-  &__wrapper {
-    margin: 0;
-    padding-top: 25px;
+.min-level input {
+  border-left: solid 1px $cloudy-blue;
+}
+
+.max-level input {
+  border-right: solid 1px $cloudy-blue;
+}
+
+.filter-people__controls {
+  position: relative;
+  padding-top: 15px;
+  margin-bottom: 1px;
+}
+
+.scale {
+  margin: 0;
+  padding: 0;
+  width: 220px;
+  height: 2px;
+  opacity: 0.2;
+  border-radius: 0.5px;
+  background-color: $dark-slate-blue;
+}
+
+// .bar {
+//   margin: 0;
+//   padding: 0;
+//   width: 20%;
+//   height: 2px;
+//   border-radius: 1px;
+//   opacity: 1;
+//   background: $dark-slate-blue;
+//   z-index: 3;
+// }
+
+.filter-people__button {
+  width: 225px;
+}
+
+@media (min-width: $tablet-width) {
+  .filter-people {
+    @include container-tablet;
+    padding-top: 46px;
+  }
+
+  .filter-people__wrapper {
+    @include container-inside-tablet;
+    padding-top: 35px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 39px;
+  }
+
+  .filter-people__main-title {
+    margin-bottom: 59px;
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .filter-people__form {
+    width: 100%;
+  }
+
+  .filter-people__group {
+    display: flex;
+    width: 620px;
+  }
+
+  .filter-people__title {
+    padding-top: 12px;
+    padding-bottom: 8px;
+    width: 120px;
+    font-size: 20px;
+    font-weight: $fw-medium;
+    line-height: 1.5;
+  }
+
+  .filter-people__button-pop-up {
+    display: none;
+  }
+
+  .filter-people__list {
+    display: flex;
+    margin-bottom: 0;
+    width: 500px;
+  }
+
+  .filter-people__item {
+    width: 33.3%;
     padding-left: 26px;
-    margin: 0 auto;
-    width: 270px;
-    background-color: $light-gold;
-    border-radius: 20px;
+    margin-bottom: 0;
   }
 
-  &__main-title {
-    margin: 0;
-    margin-bottom: 20px;
-    width: 118px;
-    font-size: 22.5px;
-    font-weight: bold;
-    line-height: 1;
-    color: $dark-slate-blue;
-  }
-
-  &__form {
-    width: 220px;
-  }
-
-  &__group {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-
-
-  &__title {
-    margin: 0;
-    padding: 0;
-    padding-top: 13px;
-    padding-bottom: 13px;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 1.13;
-    color: $dark-slate-blue;
-  }
-
-  &__button-pop-up {
-    position: relative;
-    display: block;
-    right: -207px;
-    top: -12px;
-  }
-
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  &__item {
-    padding-left: 26px;
-  }
-
-  &__item label {
+  .filter-people__item label {
     font-size: 15px;
     line-height: 1;
   }
 
-  &__button {
-    width: 230px;
+  .filter-transport {
+    margin: 0;
+  }
+
+  .filter-people__range {
+    width: 220px;
+    margin-bottom: 10px;
+  }
+
+  .filter-people__level {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .min-level input,
+  .max-level input {
+    padding: 0;
+    margin: 0;
+    padding-left: 15px;
+    width: 109px;
+    height: 35px;
+    font-size: 15px;
+    font-weight: $fw-medium;
+    line-height: 0.9;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: $dark-slate-blue;
+    border: none;
+    border-top: solid 1px $cloudy-blue;
+    border-bottom: solid 1px $cloudy-blue;
+    background-color: #ffffff;
+  }
+
+  .min-level input {
+    border-left: solid 1px $cloudy-blue;
+  }
+
+  .max-level input {
+    border-right: solid 1px $cloudy-blue;
+  }
+
+  .filter-people__controls {
+    position: relative;
+    padding-top: 15px;
+    margin-bottom: 1px;
+  }
+
+  .scale {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    height: 2px;
+    opacity: 0.2;
+    border-radius: 0.5px;
+    background-color: $dark-slate-blue;
+  }
+
+  // .bar {
+  //   margin: 0;
+  //   padding: 0;
+  //   width: 20%;
+  //   height: 2px;
+  //   border-radius: 1px;
+  //   opacity: 1;
+  //   background: $dark-slate-blue;
+  //   z-index: 3;
+  // }
+
+  .filter-people__button {
+    width: 225px;
   }
 }

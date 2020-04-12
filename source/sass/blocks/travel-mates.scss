@@ -1,49 +1,122 @@
 .travel-mates {
+  background-color: $dark-blue-grey;
+}
+
+.travel-mates__wrapper {
+  @include container;
+  position: relative;
+  min-height: 1322px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 29px;
+    background-color: $pale-grey;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+}
+
+.travel-mates__title {
   margin: 0;
   padding: 0;
-  margin: 0 auto;
-  // margin-top: -45px;
-  width: 320px;
-  min-height: 1369px;
-  background-color: $dark-blue-grey;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  margin-bottom: 20px;
+  margin-left: 24px;
+  padding-top: 99px;
+  font-size: 24px;
+  font-weight: $fw-bold;
+  line-height: 1;
+  color: $mango;
+}
 
-  &__wrapper {
-    margin: 0 auto;
-    width: 270px;
+.travel-mates__description {
+  margin: 0;
+  padding: 0;
+  margin-left: 24px;
+  margin-bottom: 20px;
+  width: 215px;
+  line-height: 1.38;
+  color: $white;
+}
+
+.travel-mates__slogan {
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-left: 24px;
+  margin-bottom: 58px;
+  width: 192px;
+  line-height: 1.38;
+  color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .travel-mates__wrapper {
+    @include container-tablet;
+    min-height: 1255px;
+    padding-top: 81px;
+
+    &::after {
+      width: 768px;
+      height: 80px;
+      border-bottom-right-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
   }
 
-  &__title {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
-    margin-left: 24px;
-    padding-top: 116px;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1;
-    color: $mango;
+  .travel-mates__title {
+    margin-bottom: 56px;
+    margin-left: 32px;
+    padding-top: 138px;
+    font-size: 45px;
   }
 
-  &__description {
-    margin: 0;
-    padding: 0;
-    margin-left: 24px;
-    margin-bottom: 20px;
-    width: 215px;
-    line-height: 1.38;
-    color: $white;
+  .travel-mates__description {
+    margin-left: 35px;
+    margin-bottom: 43px;
+    width: 425px;
+    font-size: 28px;
+    line-height: 1.18;
   }
 
-  &__slogan {
-    display: block;
-    margin: 0;
-    padding: 0;
-    margin-left: 24px;
+  .travel-mates__slogan {
+    margin-left: 35px;
+    margin-bottom: 59px;
+    font-size: 21px;
+    width: 252px;
+    line-height: 1.19;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travel-mates__wrapper {
+    @include container-desktop;
+    display: flex;
+    justify-content: space-between;
+    min-height: 730px;
+
+    &::after {
+      width: 1440px;
+      height: 56px;
+      border-bottom-right-radius: 200px;
+      border-bottom-left-radius: 200px;
+    }
+  }
+
+  .travel-mates__title {
+    margin-left: 70px;
+    padding-top: 181px;
     margin-bottom: 58px;
-    width: 192px;
-    line-height: 1.38;
-    color: $white;
+  }
+
+  .travel-mates__description {
+    margin-left: 70px;
+  }
+
+  .travel-mates__slogan {
+    margin-left: 70px;
   }
 }

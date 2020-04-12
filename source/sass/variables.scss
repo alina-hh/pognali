@@ -1,3 +1,56 @@
+@mixin container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@mixin container-tablet {
+  width: 768px;
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@mixin container-desktop {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@mixin container-inside {
+  // width: 270px;
+  // margin: 0 auto;
+}
+
+@mixin container-inside-tablet {
+  // width: 688px;
+  // margin: 0 auto;
+}
+
+@mixin container-inside-desktop {
+  // width: 1320px;
+  // margin: 0 auto;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
 $greyish-brown: #444444;
 $steel-grey: #808285;
 $black: #000000;
@@ -20,27 +73,3 @@ $pale-grey-four: #e2e5f2;
 $pale-grey-five: #f3f4f8;
 $light-blue-grey-three: #d6daed;
 $light-blue-grey-five: #d4d9eb;
-
-
-$fw-light: 300;
-$fw-normal: 400;
-$fw-medium: 500;
-$fw-bold: 700;
-
-@mixin container {
-  width: 320px;
-  margin: 0 auto;
-}
-
-@mixin container-inside {
-    width: 270px;
-    margin: 0 auto;
-  }
-
-@mixin list-reset {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-// $tablet-width: ;
-// $desktop-width: ;

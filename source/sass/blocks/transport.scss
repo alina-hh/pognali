@@ -1,10 +1,9 @@
 .transport {
+  @include list-reset;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
   width: 130px;
-  list-style: none;
 
   &__item {
     width: 33px;
@@ -20,7 +19,7 @@
       position: relative;
 
       &::after {
-        content: url(../../img/plane.svg);
+        content: url("../img/plane.svg");
         position: absolute;
         top: 9px;
         left: 8px;
@@ -28,14 +27,13 @@
         height: 16px;
         opacity: 0.15;
       }
-
     }
 
     &--train {
       position: relative;
 
       &::after {
-        content: url(../../img/bus.svg);
+        content: url("../img/bus.svg");
         position: absolute;
         top: 9px;
         left: 10px;
@@ -49,7 +47,7 @@
       position: relative;
 
       &::after {
-        content: url(../../img/bike.svg);
+        content: url("../img/bike.svg");
         position: absolute;
         top: 7px;
         left: 8px;
@@ -63,7 +61,7 @@
       position: relative;
 
       &::after {
-        content: url(../../img/run.svg);
+        content: url("../img/run.svg");
         position: absolute;
         top: 9px;
         left: 7px;
@@ -76,6 +74,48 @@
     &--active::after {
       opacity: 1;
     }
+  }
+}
 
+@media (min-width: $tablet-width) {
+  .transport {
+    width: 170px;
+
+    &__item {
+      width: 43px;
+      height: 43px;
+
+      &--fly {
+        &::after {
+          top: 11px;
+          width: 19px;
+          height: 21px;
+        }
+      }
+
+      &--train {
+        &::after {
+          top: 11px;
+          width: 17px;
+          height: 21px;
+        }
+      }
+
+      &--bike {
+        &::after {
+          top: 10px;
+          width: 24px;
+          height: 21px;
+        }
+      }
+
+      &--walk {
+        &::after {
+          top: 11px;
+          width: 20px;
+          height: 21px;
+        }
+      }
+    }
   }
 }

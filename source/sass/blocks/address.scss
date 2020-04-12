@@ -1,40 +1,108 @@
 .address {
+  background-color: $light-gold;
+}
+
+.address__wrapper {
+  @include container;
+  position: relative;
+  min-height: 185px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 28px;
+    background-color: $dark-blue-grey;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+}
+
+.address__street {
   margin: 0;
   padding: 0;
-  margin: 0 auto;
-  // margin-top: -43px;
-  width: 320px;
-  min-height: 250px;
-  background-color: $light-gold;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  padding-top: 61px;
+  margin-left: 62px;
+  margin-bottom: 31px;
+  width: 145px;
+  line-height: 1.38;
+  font-weight: $fw-bold;
+  color: $dark-blue-grey;
+  text-transform: uppercase;
+}
 
-  &__wrapper {
-    margin: 0 auto;
-    width: 270px;
+.address__route {
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: $fw-bold;
+  color: $dark-blue-grey;
+  border: 3px solid $dark-blue-grey;
+  border-radius: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .address__wrapper {
+    @include container-tablet;
+    min-height: 325px;
+
+    &::after {
+      width: 768px;
+      height: 78px;
+      border-bottom-right-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
   }
 
-  &__street {
-    margin: 0;
-    padding: 0;
-    padding-top: 77px;
-    margin-left: 62px;
-    margin-bottom: 31px;
-    width: 145px;
-    line-height: 1.38;
-    font-weight: bold;
-    color: $dark-blue-grey;
-    text-transform: uppercase;
-  }
-
-  &__route {
-    display: block;
-    padding: 20px;
-    font-size: 18px;
+  .address__street {
+    padding-top: 145px;
+    margin-left: 129px;
+    margin-bottom: 64px;
+    width: 430px;
     line-height: 1;
-    font-weight: bold;
-    color: $dark-blue-grey;
+    font-size: 28px;
+  }
+
+  .address__route {
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-left: 33px;
+    width: 618px;
+    min-height: 81px;
+    font-size: 24px;
     border: 3px solid $dark-blue-grey;
-    border-radius: 10px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address__wrapper {
+    @include container-desktop;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 59px;
+
+    &::after {
+      width: 1440px;
+      height: 54px;
+    }
+  }
+
+  .address__street {
+    padding-top: 77px;
+    margin-left: 343px;
+    margin-right: 67px;
+    margin-bottom: 0;
+    width: 440px;
+  }
+
+  .address__route {
+    width: 325px;
+    margin-top: 54px;
+    margin-bottom: 10px;
   }
 }
