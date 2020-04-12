@@ -1,14 +1,12 @@
 .intro {
-  @include container;
-  position: relative;
-  padding: 0;
-  padding-top: 14px;
-  min-height: 605px;
   background-color: $dark-two;
 }
 
 .intro__wrapper {
-  @include container-inside;
+  @include container;
+  position: relative;
+  min-height: 606px;
+  padding-top: 14px;
 }
 
 .intro__title {
@@ -24,7 +22,6 @@
 }
 
 .intro__wrapper-bg-img {
-  @include container-inside;
   position: relative;
   padding-left: 54px;
 }
@@ -37,7 +34,6 @@
 }
 
 .intro__wrapper-contact {
-  @include container-inside;
   display: flex;
   margin-top: -20px;
   margin-bottom: 27px;
@@ -100,13 +96,13 @@
 
 @media (min-width: $tablet-width) {
   .intro {
-    @include container-tablet;
-    padding-top: 26px;
-    min-height: 723px;
+    background-color: $dark-blue-grey;
   }
 
   .intro__wrapper {
-    @include container-inside-tablet;
+    @include container-tablet;
+    padding-top: 26px;
+    min-height: 723px;
   }
 
   .intro__title {
@@ -119,7 +115,6 @@
   }
 
   .intro__wrapper-bg-img {
-    @include container-inside-tablet;
     position: relative;
     padding-left: 54px;
     margin-bottom: 59px;
@@ -128,8 +123,7 @@
   .intro__bg-img {
     width: 0;
     height: 0;
-    // background-image: url("../img/traveller-illustration-mobile@1x.png");
-    background-image: none;
+    // background-image: url("../img/traveller-illustration-tablet@1x.png");
   }
 
   .intro__wrapper-contact {
@@ -147,7 +141,10 @@
   }
 
   .intro__button {
-    display: none;
+    position: relative;
+    top: -387px;
+    left: 499px;
+    display: block;
     padding-top: 13px;
     padding-left: 30px;
     font-size: 20px;
@@ -175,17 +172,15 @@
 
 @media (min-width: $desktop-width) {
   .intro {
+    background-color: $dark-two;
+  }
+  .intro__wrapper {
     @include container-desktop;
+    display: flex;
+    justify-content: space-between;
     padding-top: 90px;
     min-height: 420px;
     z-index: 10;
-  }
-
-  .intro__wrapper {
-    @include container-inside-desktop;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
   }
 
   .intro__title {
@@ -202,8 +197,8 @@
 
   .intro__wrapper-contact {
     position: absolute;
-    top: -140px;
-    right: -135px;
+    top: -51px;
+    right: -76px;
     width: 425px;
   }
 
@@ -230,14 +225,8 @@
   }
 
   .intro__button {
-    display: block;
-    position: relative;
     top: 0;
     left: 0;
-    padding-top: 13px;
-    padding-left: 30px;
-    font-size: 20px;
-    height: 50px;
   }
 
   .intro__review {

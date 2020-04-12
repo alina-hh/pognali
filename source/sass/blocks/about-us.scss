@@ -1,22 +1,28 @@
 .about-us {
-  @include container;
-  min-height: 353px;
   background-color: $dark-blue-grey;
-  background-image: url("../img/about-mobile@1x.png");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 .about-us__wrapper {
-  @include container-inside;
-  padding-left: 24px;
+  @include container;
+  position: relative;
   padding-top: 30px;
+  min-height: 323px;
+  z-index: 1;
+
+  &::after {
+    content: url("../img/about-mobile@1x.png");
+    position: absolute;
+    top: 0;
+    left: 19px;
+    z-index: -1;
+  }
 }
 
 .about-us__title {
   margin: 0;
   margin-bottom: 18px;
   padding: 0;
+  padding-left: 24px;
   color: $mango;
 }
 
@@ -24,7 +30,8 @@
   padding: 0;
   margin: 0;
   margin-bottom: 19px;
-  width: 210px;
+  padding-left: 24px;
+  width: 240px;
   color: $white;
   line-height: 1.38;
 }
@@ -32,7 +39,8 @@
 .about-us__offer {
   margin: 0;
   padding: 0;
-  width: 195px;
+  padding-left: 24px;
+  width: 220px;
   font-weight: $fw-bold;
   color: $white;
   line-height: 1.38;
@@ -43,17 +51,15 @@
 }
 
 @media (min-width: $tablet-width) {
-  .about-us {
-    @include container-tablet;
-    min-height: 684px;
-    background-image: url("../img/about-tablet@1x.png");
-    background-position: 98% 35%;
-  }
-
   .about-us__wrapper {
-    @include container-inside-tablet;
-    padding-left: 35px;
-    padding-top: 38px;
+    @include container-tablet;
+    padding-left: 50px;
+    padding-top: 133px;
+    min-height: 674px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .about-us__title {
@@ -65,19 +71,20 @@
   .about-us__description {
     margin-bottom: 35px;
     font-size: 28px;
-    width: 300px;
+    width: 310px;
     line-height: 1.18;
   }
 
   .about-us__offer {
     margin-bottom: 52px;
-    width: 257px;
+    width: 300px;
     font-size: 21px;
     line-height: 1.19;
   }
 
   .about-us__show-all {
     display: block;
+    margin-left: 25px;
     padding-top: 29px;
     padding-left: 33px;
     width: 274px;
@@ -92,30 +99,30 @@
 }
 
 @media (min-width: $desktop-width) {
-  .about-us {
-    @include container-desktop;
-    min-height: 873px;
-    background-image: url("../img/about-desktop@1x.png");
-    background-position: 93% 100%;
-  }
-
   .about-us__wrapper {
-    @include container-inside-desktop;
-    padding-left: 70px;
-    padding-top: 250px;
+    @include container-desktop;
+    min-height: 725px;
+    padding-left: 106px;
+    padding-top: 158px;
+    &::after {
+      display: block;
+      content: url("../img/about-desktop@1x.png");
+      top: 115px;
+      left: 750px;
+    }
   }
 
   .about-us__title {
-    margin-bottom: 60px;
+    margin-bottom: 59px;
   }
 
   .about-us__description {
     margin-bottom: 40px;
-    width: 625px;
+    width: 640px;
   }
 
   .about-us__offer {
     margin-bottom: 86px;
-    width: 420px;
+    width: 415px;
   }
 }

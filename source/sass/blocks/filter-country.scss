@@ -26,6 +26,10 @@
     font-size: 16px;
     line-height: 1.38;
     text-transform: uppercase;
+
+    span {
+      display: none;
+    }
   }
 
   &__button-pop-up {
@@ -38,5 +42,53 @@
     padding-left: 63px;
     width: 270px;
     font-size: 15.5px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .filter-country {
+    @include container-tablet;
+    min-height: 185px;
+
+    &__wrapper {
+      @include container-inside-tablet;
+    }
+
+    &__wrapper-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__wrapper-pop-up {
+      display: none;
+      min-height: 680px;
+    }
+
+    &__title {
+      margin: 0;
+      padding-top: 29px;
+      padding-left: 27px;
+      padding-bottom: 15px;
+      color: $dark-blue-grey;
+      font-size: 16px;
+      line-height: 1.38;
+      text-transform: uppercase;
+
+      span {
+        display: none;
+      }
+    }
+
+    &__button-pop-up {
+      margin-top: 33px;
+      width: 12px;
+      height: 12px;
+    }
+
+    &__button {
+      padding-left: 63px;
+      width: 270px;
+      font-size: 15.5px;
+    }
   }
 }

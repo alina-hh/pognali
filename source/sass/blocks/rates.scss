@@ -1,19 +1,30 @@
 .rates {
-  @include container;
-  padding: 0;
-  min-height: 451px;
   background-color: $pale-grey;
 }
 
 .rates__wrapper {
-  @include container-inside;
-  padding-left: 24px;
+  @include container;
+  position: relative;
+  padding-left: 50px;
+  min-height: 451px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 29px;
+    background-color: $dark-blue-grey;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
 }
 
 .rates__title {
   margin: 0;
   margin-bottom: 55px;
-  padding-top: 50px;
+  padding-top: 80px;
   width: 101px;
   font-size: 24px;
   font-weight: $fw-bold;
@@ -42,19 +53,21 @@
 }
 
 @media (min-width: $tablet-width) {
-  .rates {
-    @include container-tablet;
-    min-height: 556px;
-  }
-
   .rates__wrapper {
-    @include container-inside-tablet;
-    padding-left: 90px;
+    @include container-tablet;
+    padding-left: 130px;
+    min-height: 556px;
+    &::after {
+      width: 768px;
+      height: 80px;
+      border-bottom-right-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
   }
 
   .rates__title {
     margin-bottom: 91px;
-    padding-top: 70px;
+    padding-top: 150px;
     padding-left: 16px;
     width: 500px;
     font-size: 45px;
@@ -87,25 +100,30 @@
 }
 
 @media (min-width: $desktop-width) {
-  .rates {
-    @include container-desktop;
-    min-height: 750px;
-  }
-
   .rates__wrapper {
-    @include container-inside-desktop;
-    padding-left: 160px;
+    @include container-desktop;
+    min-height: 738px;
+    padding-left: 186px;
+    &::after {
+      width: 1440px;
+      height: 44px;
+      border-bottom-right-radius: 180px;
+      border-bottom-left-radius: 180px;
+    }
   }
 
   .rates__title {
     margin: 0 auto;
     margin-bottom: 152px;
-    padding-top: 103px;
-    padding-left: 0;
+    padding-top: 145px;
     width: 635px;
   }
 
   .rates__list {
-    width: 815px;
+    width: 850px;
+    padding-left: 35px;
+  }
+  .rates__button{
+    padding-left: 34px;
   }
 }

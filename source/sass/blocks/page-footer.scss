@@ -1,20 +1,30 @@
 .page-footer {
-  @include container;
-  padding: 0;
-  margin-bottom: 10px;
-  min-height: 200px;
   background-color: $white;
 }
 
 .page-footer__wrapper {
-  @include container-inside;
+  @include container;
+  min-height: 210px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 320px;
+    height: 30px;
+    background-color: $white;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+  }
 }
 
 
 .page-footer__logo {
   margin: 0 auto;
   margin-bottom: 33px;
-  padding-top: 6px;
+  padding-top: 20px;
   width: 100px;
 }
 
@@ -36,23 +46,34 @@
 
 .page-footer__link {
   display: block;
+  padding-top: 2px;
 }
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    @include container-tablet;
-    margin-bottom: 0;
-    min-height: 155px;
+    margin-top: -30px;
   }
 
   .page-footer__wrapper {
-    @include container-inside-tablet;
+    @include container-tablet;
+    min-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
-  }
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 50px;
+    background-color: $white;
 
+    &::after {
+      top: -45px;
+      width: 768px;
+      height: 45px;
+      border-top-right-radius: 180px;
+      border-top-left-radius: 180px;
+      background-color: $white;
+    }
+  }
 
   .page-footer__logo {
     margin: 0;
@@ -81,15 +102,23 @@
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    @include container-desktop;
-
-    min-height: 155px;
+    margin-top: 23px;
   }
-
   .page-footer__wrapper {
-    @include container-inside-desktop;
+    @include container-desktop;
+    min-height: 155px;
     padding-top: 42px;
+
+    &::after {
+      top: -25px;
+      width: 1440px;
+      height: 55px;
+      border-top-right-radius: 180px;
+      border-top-left-radius: 180px;
+      background-color: $white;
+    }
   }
+
 
   .page-footer__text {
     padding-left: 65px;

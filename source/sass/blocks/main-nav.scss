@@ -6,8 +6,9 @@
 
 .main-nav__list {
   @include list-reset;
-  @include container-inside;
-  padding-top: 38px;
+  @include container;
+  padding-top: 48px;
+  padding-left: 0;
 }
 
 .main-nav__item {
@@ -29,8 +30,8 @@
   }
 
   .main-nav__list {
-    @include container-inside-tablet;
-    padding-top: 75px;
+    @include container-tablet;
+    padding-top: 48px;
     padding-left: 57px;
   }
 
@@ -47,22 +48,27 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
+    position: relative;
     margin-bottom: 0;
-    width: 426px;
+    width: 600px;
   }
 
   .main-nav__list {
-    @include container-inside-desktop;
+    position: absolute;
+    top: -70px;
+    left: 30px;
+    @include container-desktop;
     display: flex;
-    margin-left: 405px;
+    margin-left: 0px;
     margin-top: -2px;
     padding-top: 0;
     padding-left: 0;
-    width: 426px;
+    width: 500px;
   }
 
   .main-nav__item {
     margin-right: 34px;
+    min-width: 100px;
   }
 
   .main-nav__link {

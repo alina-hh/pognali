@@ -1,14 +1,11 @@
 .steps {
-  @include container;
-  padding: 0;
-  margin-top: 0;
-  min-height: 390px;
-  background-color: $dark-blue-grey;
+  background-image: linear-gradient($dark-two 0, $dark-two 80px, $dark-blue-grey 80px, $dark-blue-grey 200px);
 }
 
 .steps__list {
   @include list-reset;
-  @include container-inside;
+  @include container;
+  min-height: 359px;
 }
 
 .steps__item {
@@ -49,22 +46,19 @@
 
 @media (min-width: $tablet-width) {
   .steps {
-    @include container-tablet;
-    margin-top: 0;
-    min-height: 375px;
-    background-color: $dark-blue-grey;
+    background-image: linear-gradient( $dark-blue-grey 0, $dark-blue-grey 100px);
   }
 
   .steps__list {
-    @include container-inside-tablet;
+    @include container-tablet;
     display: flex;
     flex-wrap: wrap;
-    width: 690px;
+    min-height: 280px;
   }
 
   .steps__item {
     min-height: 140px;
-    width: 345px;
+    width: 344px;
 
     &:first-child {
       border-top-left-radius: 20px;
@@ -95,15 +89,14 @@
 
 @media (min-width: $desktop-width) {
   .steps {
-    @include container-desktop;
-    margin-top: 0;
-    min-height: 107px;
-    background-color: $dark-blue-grey;
+    background-image: linear-gradient($dark-two 0, $dark-two 200px);
+    min-height: 200px;
   }
 
   .steps__list {
-    @include container-inside-desktop;
-    width: 1320px;
+    @include container-desktop;
+    margin-top: 0;
+    min-height: 107px;
   }
 
   .steps__item {

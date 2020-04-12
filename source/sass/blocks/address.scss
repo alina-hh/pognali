@@ -1,18 +1,29 @@
 .address {
-  @include container;
-  padding: 0;
-  min-height: 185px;
   background-color: $light-gold;
 }
 
 .address__wrapper {
-  @include container-inside;
+  @include container;
+  position: relative;
+  min-height: 185px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 28px;
+    background-color: $dark-blue-grey;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
 }
 
 .address__street {
   margin: 0;
   padding: 0;
-  padding-top: 32px;
+  padding-top: 61px;
   margin-left: 62px;
   margin-bottom: 31px;
   width: 145px;
@@ -34,17 +45,20 @@
 }
 
 @media (min-width: $tablet-width) {
-  .address {
+  .address__wrapper {
     @include container-tablet;
     min-height: 325px;
-  }
 
-  .address__wrapper {
-    @include container-inside-tablet;
+    &::after {
+      width: 768px;
+      height: 78px;
+      border-bottom-right-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
   }
 
   .address__street {
-    padding-top: 66px;
+    padding-top: 145px;
     margin-left: 129px;
     margin-bottom: 64px;
     width: 430px;
@@ -65,20 +79,21 @@
 }
 
 @media (min-width: $desktop-width) {
-  .address {
+  .address__wrapper {
     @include container-desktop;
     min-height: 200px;
-  }
-
-  .address__wrapper {
-    @include container-inside-desktop;
     display: flex;
     justify-content: space-between;
     padding-top: 59px;
+
+    &::after {
+      width: 1440px;
+      height: 54px;
+    }
   }
 
   .address__street {
-    padding-top: 23px;
+    padding-top: 77px;
     margin-left: 343px;
     margin-right: 67px;
     margin-bottom: 0;
@@ -87,5 +102,7 @@
 
   .address__route {
     width: 325px;
+    margin-top: 54px;
+    margin-bottom: 10px;
   }
 }

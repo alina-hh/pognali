@@ -1,18 +1,30 @@
 .authorization {
-  @include container;
-  min-height: 504px;
   background-color: $dark-blue-grey;
 }
 
 .authorization__wrapper-top {
-  @include container-inside;
+  @include container;
+  min-height: 504px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 29px;
+    background-color: $pale-grey;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
 }
 
 .authorization__title {
   display: block;
   margin: 0;
   margin-bottom: 20px;
-  padding-top: 70px;
+  padding-top: 99px;
   font-size: 24px;
   line-height: 1;
   font-weight: $fw-bold;
@@ -100,18 +112,21 @@
 }
 
 @media (min-width: $tablet-width) {
-  .authorization {
+  .authorization__wrapper-top {
     @include container-tablet;
     min-height: 714px;
-  }
 
-  .authorization__wrapper-top {
-    @include container-inside-tablet;
+    &::after {
+      width: 768px;
+      height: 80px;
+      border-bottom-right-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
   }
 
   .authorization__title {
     margin-bottom: 57px;
-    padding-top: 71px;
+    padding-top: 153px;
     font-size: 45px;
   }
 
@@ -184,25 +199,28 @@
 }
 
 @media (min-width: $desktop-width) {
-  .authorization {
+  .authorization__wrapper-top {
     @include container-desktop;
     min-height: 751px;
-  }
 
-  .authorization__wrapper-top {
-    @include container-inside-desktop;
+    &::after {
+      width: 1440px;
+      height: 53px;
+      border-bottom-right-radius: 60px;
+      border-bottom-left-radius: 60px;
+    }
   }
 
   .authorization__title {
-    padding-top: 104px;
+    padding-top: 156px;
   }
 
   .authorization__description {
-    margin-bottom: 60px;
+    margin-bottom: 61px;
   }
 
   .authorization__form {
-    margin-bottom: 65px;
+    margin-bottom: 66px;
     width: 1175px;
   }
 
@@ -215,7 +233,7 @@
   }
 
   .authorization__questions {
-    margin-bottom: 74px;
+    margin-bottom: 73px;
   }
 
   .authorization__wrapper-bottom {
