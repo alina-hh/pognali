@@ -1,27 +1,64 @@
 .future-travel {
   margin-bottom: 11px;
+}
 
-  &__title {
-    margin: 0;
-    margin-bottom: 16px;
-    text-transform: lowercase;
-    font-size: 15px;
-    font-weight: normal;
-    line-height: 1.2;
+.future-travel__title {
+  margin: 0;
+  margin-bottom: 16px;
+  text-transform: lowercase;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.future-travel__list {
+  @include list-reset;
+}
+
+.future-travel__item {
+  margin-bottom: 9px;
+  padding-left: 38px;
+  color: $dark-slate-blue;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: $tablet-width) {
+  .future-travel {
+    margin-bottom: 0;
   }
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  .future-travel__title {
+    margin-bottom: 17px;
+    padding-left: 45px;
   }
 
-  &__item {
+  .future-travel__list {
+    display: flex;
+  }
+
+  .future-travel__item {
     margin-bottom: 9px;
-    padding-left: 38px;
-    color: $dark-slate-blue;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: 1.2;
+    margin-right: 28px;
+    padding-left: 45px;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .future-travel__title {
+    display: none;
+  }
+
+  .future-travel__list {
+    display: block;
+    margin-top: 45px;
+  }
+
+  .future-travel__item {
+    margin-right: 0;
+    padding-left: 45px;
   }
 }

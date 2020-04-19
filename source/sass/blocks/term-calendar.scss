@@ -9,6 +9,7 @@
 
 .term-calendar__title {
   margin: 0;
+  padding-left: 5px;
   padding-top: 10px;
   padding-bottom: 12px;
   font-size: 20px;
@@ -22,4 +23,36 @@
 .term-calendar__button-plus {
   background-color: transparent;
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .term-calendar__wrapper {
+    margin-bottom: 30px;
+    min-height: 87px;
+    min-width: 530px;
+  }
+
+  .term-calendar__title {
+    padding-left: 0;
+    padding-top: 25px;
+    font-size: 36px;
+  }
+
+  .term-calendar__button-minus,
+  .term-calendar__button-plus {
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .term-calendar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .term-calendar__wrapper {
+    margin-bottom: 10px;
+    width: 1000px;
+    min-height: 87px;
+  }
 }

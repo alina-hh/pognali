@@ -2,119 +2,152 @@
   @include list-reset;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   width: 130px;
+}
 
-  &__item {
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    background-color: $white;
+.transport__item {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background-color: $white;
 
-    &--grey {
-      background-color: $pale-grey;
-    }
+  &--grey {
+    background-color: $pale-grey;
+  }
 
-    &--fly {
-      position: relative;
+  &--fly {
+    position: relative;
 
-      &::after {
-        content: url("../img/plane.svg");
-        position: absolute;
-        top: 9px;
-        left: 8px;
-        width: 14px;
-        height: 16px;
-        opacity: 0.15;
-      }
-    }
-
-    &--train {
-      position: relative;
-
-      &::after {
-        content: url("../img/bus.svg");
-        position: absolute;
-        top: 9px;
-        left: 10px;
-        width: 13px;
-        height: 16px;
-        opacity: 0.15;
-      }
-    }
-
-    &--bike {
-      position: relative;
-
-      &::after {
-        content: url("../img/bike.svg");
-        position: absolute;
-        top: 7px;
-        left: 8px;
-        width: 19px;
-        height: 17px;
-        opacity: 0.15;
-      }
-    }
-
-    &--walk {
-      position: relative;
-
-      &::after {
-        content: url("../img/run.svg");
-        position: absolute;
-        top: 9px;
-        left: 7px;
-        width: 15px;
-        height: 17px;
-        opacity: 0.15;
-      }
-    }
-
-    &--active::after {
-      opacity: 1;
+    &::after {
+      content: url("../img/plane.svg");
+      position: absolute;
+      top: 9px;
+      left: 8px;
+      width: 14px;
+      height: 16px;
+      opacity: 0.15;
     }
   }
+
+  &--train {
+    position: relative;
+
+    &::after {
+      content: url("../img/bus.svg");
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      width: 13px;
+      height: 16px;
+      opacity: 0.15;
+    }
+  }
+
+  &--bike {
+    position: relative;
+
+    &::after {
+      content: url("../img/bike.svg");
+      position: absolute;
+      top: 7px;
+      left: 8px;
+      width: 19px;
+      height: 17px;
+      opacity: 0.15;
+    }
+  }
+
+  &--walk {
+    position: relative;
+
+    &::after {
+      content: url("../img/run.svg");
+      position: absolute;
+      top: 9px;
+      left: 7px;
+      width: 15px;
+      height: 17px;
+      opacity: 0.15;
+    }
+  }
+
+  &--active::after {
+    opacity: 1;
+  }
 }
+
 
 @media (min-width: $tablet-width) {
   .transport {
     width: 170px;
+  }
 
-    &__item {
-      width: 43px;
-      height: 43px;
+  .transport__item {
+    width: 43px;
+    height: 43px;
 
-      &--fly {
-        &::after {
-          top: 11px;
-          width: 19px;
-          height: 21px;
-        }
+    &--grey {
+      background-color: $white;
+    }
+
+    &--fly {
+      &::after {
+        top: 11px;
+        width: 19px;
+        height: 21px;
       }
+    }
 
-      &--train {
-        &::after {
-          top: 11px;
-          width: 17px;
-          height: 21px;
-        }
+    &--train {
+      &::after {
+        top: 11px;
+        width: 17px;
+        height: 21px;
       }
+    }
 
-      &--bike {
-        &::after {
-          top: 10px;
-          width: 24px;
-          height: 21px;
-        }
+    &--bike {
+      &::after {
+        top: 10px;
+        width: 24px;
+        height: 21px;
       }
+    }
 
-      &--walk {
-        &::after {
-          top: 11px;
-          width: 20px;
-          height: 21px;
-        }
+    &--walk {
+      &::after {
+        top: 11px;
+        width: 20px;
+        height: 21px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .transport__item {
+    &--fly {
+      &::after {
+        left: 11px;
+      }
+    }
+
+    &--train {
+      &::after {
+        left: 13px;
+      }
+    }
+
+    &--bike {
+      &::after {
+        left: 10px;
+      }
+    }
+
+    &--walk {
+      &::after {
+        top: 11px;
+        left: 10px;
       }
     }
   }

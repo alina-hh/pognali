@@ -1,0 +1,12 @@
+@media (min-width: $desktop-width) {
+  .wrapper-decor {
+    background-color: $pale-grey;
+  }
+
+  .wrapper-decor__user-filter {
+    @include container-desktop;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}

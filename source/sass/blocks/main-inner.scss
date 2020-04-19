@@ -1,14 +1,13 @@
-.main {
-  @include container;
+.main-inner {
   background-color: $dark-two;
 }
 
-.main__wrapper {
-  padding-left: 25px;
-  padding-top: 20px;
+.main-inner__wrapper {
+  @include container;
+  padding-top: 22px;
 }
 
-.main__title {
+.main-inner__title {
   margin: 0;
   padding: 0;
   font-size: 36px;
@@ -16,38 +15,35 @@
   color: $white;
 }
 
-.main__button {
+.main-inner__button {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
-  .main {
+  .main-inner__wrapper {
     @include container-tablet;
     min-height: 169px;
-  }
-
-  .main__wrapper {
-    @include container-inside-tablet;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 82px;
-    padding-left: 34px;
+    padding-top: 66px;
+    padding-left: 74px;
   }
 
-  .main__title {
+  .main-inner__title {
     font-size: 60px;
     width: 290px;
     line-height: 1.17;
   }
 
-  .main__button {
+  .main-inner__button {
     display: block;
     padding-top: 10px;
     width: 211px;
   }
 
-  .main__link {
+  .main-inner__link {
+    display: block;
     color: $white;
     text-transform: uppercase;
     font-size: 20px;
@@ -57,15 +53,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .main {
+  .main-inner__wrapper {
     @include container-desktop;
-    min-height: 251px;
-  }
-
-  .main__wrapper {
-    @include container-inside-desktop;
-    padding-top: 115px;
-    padding-left: 66px;
-    padding-right: 29px;
+    min-height: 195px;
+    padding-top: 105px;
+    padding-left: 126px;
+    padding-right: 89px;
   }
 }

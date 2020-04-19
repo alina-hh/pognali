@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Погнали</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 </head>
 
 <body>
@@ -71,11 +73,11 @@
   </header>
 
   <main>
-    <div class="main">
-      <div class="main__wrapper">
-        <h1 class="main__title">Попутчики</h1>
-        <p class="main__button">
-          <a class="main__link" href="index.html">На главную</a>
+    <div class="main-inner">
+      <div class="main-inner__wrapper">
+        <h1 class="main-inner__title">Попутчики</h1>
+        <p class="main-inner__button">
+          <a class="main-inner__link" href="index.html">На главную</a>
         </p>
       </div>
     </div>
@@ -87,29 +89,6 @@
             Фильтрация по странам
             <span>:</span>
           </h2>
-          <!-- <ul class="filter-country__list">
-            <li class="filter-country__item">
-              <a class="filter-country__link" href="#">Европа</a>
-            </li>
-            <li class="filter-country__item">
-              <a class="filter-country__link" href="#">Азия</a>
-            </li>
-            <li class="filter-country__item">
-              <a class="filter-country__link" href="#">Америка</a>
-            </li>
-            <li class="filter-country__item">
-              <a class="filter-country__link" href="#">Острова</a>
-            </li>
-          </ul> -->
-          <button class="filter-country__button-pop-up filter-country__button-pop-up--close" type="button">
-            <span class="visually-hidden">Светнуть</span>
-          </button>
-        </div>
-
-        <div class="filter-country__wrapper-pop-up">
-          <button class="filter-country__button-pop-up filter-country__button-pop-up--open" type="button">
-            <span>Показать все</span>
-          </button>
           <div class="filter-country__continent continent">
             <ul class="continent__list">
               <li class="continent__item continent__item">
@@ -126,6 +105,16 @@
               </li>
             </ul>
           </div>
+          <button class="filter-country__button-pop-up filter-country__button-pop-up--close" type="button">
+            <span class="visually-hidden">Показать все</span>
+          </button>
+        </div>
+
+        <div class="filter-country__wrapper-pop-up">
+          <button class="filter-country__button-pop-up filter-country__button-pop-up--open" type="button">
+            <span>Светнуть</span>
+          </button>
+
 
           <div class="filter-country__alphabet alphabet">
             <ul class="alphabet__list">
@@ -250,455 +239,472 @@
 
       </div>
     </section>
+    <div class="wrapper-decor">
+      <div class="wrapper-decor__user-filter">
+        <section class="filter-people">
+          <div class="filter-people__wrapper">
+            <h2 class="filter-people__main-title">Подберите идеального попутчика</h2>
 
-    <section class="filter-people">
-      <div class="filter-people__wrapper">
-        <h2 class="filter-people__main-title">Подберите идеального попутчика</h2>
+            <form class="filter-people__form" action="https://echo.htmlacademy.ru" method="get">
 
-        <form class="filter-people__form" action="https://echo.htmlacademy.ru" method="get">
-
-          <fieldset class="filter-people__group">
-            <legend class="filter-people__title">
-              <span>Хобби</span>
-              <button class="filter-people__button-pop-up filter-people__button--close" type="button">
-                <span class="visually-hidden">Закрыть</span>
-              </button>
-            </legend>
-
-            <div class="filter-people__wrapper-list">
-              <ul class="filter-people__list">
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="hobby" value="sport" id="hobby-sport" checked>
-                  <label for="hobby-sport">Спортзал</label>
-                </li>
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="hobby" value="hookah" id="hobby-hookah">
-                  <label for="hobby-hookah">Кальян</label>
-                </li>
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="hobby" value="sofa" id="hobby-sofa">
-                  <label for="hobby-sofa">Диван</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-
-          <fieldset class="filter-people__group">
-
-            <legend class="filter-people__title">
-              <span>Музыка</span>
-              <button class="filter-people__button-pop-up  filter-people__button--close" type="button">
-                <span class="visually-hidden">Закрыть</span>
-              </button>
-            </legend>
-
-
-            <div class="filter-people__wrapper-list">
-              <ul class="filter-people__list">
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="music" value="rock" id="music-rock" checked>
-                  <label for="music-rock">Тяжелый рок</label>
-                </li>
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="music" value="rap" id="music-rap">
-                  <label for="music-rap">Русский рэп</label>
-                </li>
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="music" value="eurodance" id="music-eurodance">
-                  <label for="music-eurodance">Евроденс</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-
-          <fieldset class="filter-people__group">
-
-            <legend class="filter-people__title">
-              <span>Еда</span>
-              <button class="filter-people__button-pop-up  filter-people__button--close" type="button">
-                <span class="visually-hidden">Закрыть</span>
-              </button>
-            </legend>
-            <div class="filter-people__wrapper-list">
-              <ul class="filter-people__list">
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="food" value="meat" id="food-meat" checked>
-                  <label for="food-meat">Мясоед</label>
-                </li>
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="food" value="healthy" id="food-healthy">
-                  <label for="food-healthy">Сидит на ПП</label>
-                </li>
-                <li class="filter-people__item">
-                  <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
-                    name="food" value="vegan" id="food-vegan">
-                  <label for="food-vegan">Веган-сыроед</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-
-          <fieldset class="filter-people__group">
-
-            <legend class="filter-people__title">
-              <span>Транспорт</span>
-              <button class="filter-people__button-pop-up  filter-people__button--close" type="button">
-                <span class="visually-hidden">Закрыть</span>
-              </button>
-            </legend>
-
-            <div class="filter-people__wrapper-list filter-transport">
-              <ul class="filter-people__list transport">
-                <li class="transport__item transport__item--active transport__item--fly">
-                  <label>
-                    <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                      name="transport" value="fly" checked>
-                    <span class="visually-hidden">Самолёт</span>
-                  </label>
-                </li>
-                <li class="transport__item transport__item--active   transport__item--train">
-                  <label>
-                    <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                      name="transport" value="train" checked>
-                    <span class="visually-hidden">Поезд</span>
-                  </label>
-                </li>
-                <li class="transport__item  transport__item--bike">
-                  <label>
-                    <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                      name="transport" value="bike">
-                    <span class="visually-hidden">Велосипед</span>
-                  </label>
-                </li>
-                <li class="transport__item transport__item--active   transport__item--walk">
-                  <label>
-                    <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                      name="transport" value="walk" checked>
-                    <span class="visually-hidden">Пешком</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-
-          <fieldset class="filter-people__group">
-
-            <legend class="filter-people__title">
-              <span>Левел</span>
-              <button class="filter-people__button-pop-up filter-people__button--close" type="button">
-                <span class="visually-hidden">Закрыть</span>
-              </button>
-            </legend>
-
-
-            <div class="filter-people__range">
-              <div class="filter-people__level">
-                <label class="min-level">
-                  <input name="min-level" type="number" value="30">
-                </label>
-                <label class="max-level">
-                  <input name="max-level" type="number" value="100">
-                </label>
-              </div>
-
-              <div class="filter-people__controls">
-                <div class="scale">
-                  <div class="bar"></div>
+              <div class="filter-people__group">
+                <div class="filter-people__wrapper-top">
+                  <h3 class="filter-people__title">Хобби</h3>
+                  <button class="filter-people__button-pop-up filter-people__button--close" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
                 </div>
-                <button type="button" class="toggle toggle-min">
-                  <span class="visually-hidden">Увеличить</span>
-                </button>
-                <button type="button" class="toggle toggle-max">
-                  <span class="visually-hidden">Уменьшить</span>
-                </button>
-              </div>
-            </div>
-          </fieldset>
 
-          <button class="filter-people__button button button--white" type="submit">Показать</button>
-        </form>
-      </div>
-    </section>
-
-    <section class="users">
-      <div class="users__wrapper">
-        <ul class="users__list">
-          <li class="users__item">
-            <div class="users__top-wrapper">
-              <a class="users__img-wrapper" href="#">
-                <img class="users__img" src="img/firsova-mobile@1x.jpg" alt="Фото пользователя" width="70" height="70">
-              </a>
-              <div>
-                <a href="#">
-                  <h3 class="users__name">Таня Фирсова</h3>
-                </a>
-                <p class="users__popular">1,5 M</p>
+                <div class="filter-people__wrapper-list">
+                  <ul class="filter-people__list">
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="hobby" value="sport" id="hobby-sport" checked>
+                      <label for="hobby-sport">Спортзал</label>
+                    </li>
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="hobby" value="hookah" id="hobby-hookah">
+                      <label for="hobby-hookah">Кальян</label>
+                    </li>
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="hobby" value="sofa" id="hobby-sofa">
+                      <label for="hobby-sofa">Диван</label>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <p class="users__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <div class="users__future-travel future-travel">
-              <h4 class="future-travel__title">Хочет посетить:</h4>
-              <ul class="future-travel__list">
-                <li class="future-travel__item">Шри-ланка</li>
-                <li class="future-travel__item">Таиланд</li>
-                <li class="future-travel__item">Сейшелы</li>
+
+              <div class="filter-people__group">
+                <div class="filter-people__wrapper-top">
+                  <h3 class="filter-people__title">Музыка</h3>
+                  <button class="filter-people__button-pop-up filter-people__button--close" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
+                </div>
+
+                <div class="filter-people__wrapper-list">
+                  <ul class="filter-people__list">
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="music" value="rock" id="music-rock" checked>
+                      <label for="music-rock">Тяжелый рок</label>
+                    </li>
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="music" value="rap" id="music-rap">
+                      <label for="music-rap">Русский рэп</label>
+                    </li>
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="music" value="eurodance" id="music-eurodance">
+                      <label for="music-eurodance">Евроденс</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="filter-people__group">
+
+                <div class="filter-people__wrapper-top">
+                  <h3 class="filter-people__title">Еда</h3>
+                  <button class="filter-people__button-pop-up filter-people__button--close" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
+                </div>
+                <div class="filter-people__wrapper-list">
+                  <ul class="filter-people__list">
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="food" value="meat" id="food-meat" checked>
+                      <label for="food-meat">Мясоед</label>
+                    </li>
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="food" value="healthy" id="food-healthy">
+                      <label for="food-healthy">Сидит на ПП</label>
+                    </li>
+                    <li class="filter-people__item">
+                      <input class="visually-hidden filter-people__input filter-people__input--checkbox" type="checkbox"
+                        name="food" value="vegan" id="food-vegan">
+                      <label for="food-vegan">Веган-сыроед</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="filter-people__group">
+
+                <div class="filter-people__wrapper-top">
+                  <h3 class="filter-people__title">Транспорт</h3>
+                  <button class="filter-people__button-pop-up filter-people__button--close" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
+                </div>
+
+                <div class="filter-people__wrapper-list filter-transport">
+                  <ul class="filter-people__list transport">
+                    <li class="transport__item transport__item--active transport__item--fly">
+                      <label>
+                        <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                          name="transport" value="fly" checked>
+                        <span class="visually-hidden">Самолёт</span>
+                      </label>
+                    </li>
+                    <li class="transport__item transport__item--active   transport__item--train">
+                      <label>
+                        <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                          name="transport" value="train" checked>
+                        <span class="visually-hidden">Поезд</span>
+                      </label>
+                    </li>
+                    <li class="transport__item  transport__item--bike">
+                      <label>
+                        <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                          name="transport" value="bike">
+                        <span class="visually-hidden">Велосипед</span>
+                      </label>
+                    </li>
+                    <li class="transport__item transport__item--active   transport__item--walk">
+                      <label>
+                        <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                          name="transport" value="walk" checked>
+                        <span class="visually-hidden">Пешком</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="filter-people__group">
+
+                <div class="filter-people__wrapper-top">
+                  <h3 class="filter-people__title">Левел</h3>
+                  <button class="filter-people__button-pop-up filter-people__button--close" type="button">
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
+                </div>
+
+
+                <div class="filter-people__range">
+                  <div class="filter-people__level">
+                    <label class="min-level">
+                      <input name="min-level" type="number" value="30">
+                    </label>
+                    <label class="max-level">
+                      <input name="max-level" type="number" value="100">
+                    </label>
+                  </div>
+
+                  <div class="filter-people__controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                    <button type="button" class="toggle toggle-min">
+                      <span class="visually-hidden">Увеличить</span>
+                    </button>
+                    <button type="button" class="toggle toggle-max">
+                      <span class="visually-hidden">Уменьшить</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <button class="filter-people__button button button--white" type="submit">Показать</button>
+            </form>
+          </div>
+        </section>
+        <div>
+          <section class="users">
+            <div class="users__wrapper">
+              <ul class="users__list">
+                <li class="users__item">
+                  <div class="users__top-wrapper">
+                    <a class="users__img-wrapper" href="#">
+                      <img class="users__img" src="img/firsova-mobile@1x.jpg" alt="Фото пользователя" width="70"
+                        height="70">
+                    </a>
+                    <a href="#">
+                      <h3 class="users__name">Таня Фирсова</h3>
+                    </a>
+                    <p class="users__popular">1,5 M</p>
+                  </div>
+                  <p class="users__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                  <div class="users__future-travel future-travel">
+                    <h4 class="future-travel__title">Хочет посетить:</h4>
+                    <ul class="future-travel__list">
+                      <li class="future-travel__item">Шри-ланка</li>
+                      <li class="future-travel__item">Таиланд</li>
+                      <li class="future-travel__item">Сейшелы</li>
+                    </ul>
+                  </div>
+
+                  <div class="users__wrapper-bottom">
+                    <div class="users__transport transport-info">
+                      <h4 class="transport-info__title">Транспорт:</h4>
+                      <ul class="transport-info__list transport">
+                        <li class="transport__item transport__item--active transport__item--grey transport__item--fly">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="fly" checked>
+                            <span class="visually-hidden">Самолёт</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--grey transport__item--train">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="train" checked>
+                            <span class="visually-hidden">Поезд</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--grey transport__item--bike">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="bike">
+                            <span class="visually-hidden">Велосипед</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--grey transport__item--walk">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="walk" checked>
+                            <span class="visually-hidden">Пешком</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="users__level level">
+                      <h4 class="level__title">Левел:</h4>
+                      <p class="level__number">99</p>
+                    </div>
+                  </div>
+
+                  <a class="users__button button" href="#">Позвать!</a>
+                </li>
+
+                <li class="users__item">
+                  <div class="users__top-wrapper">
+                    <a class="users__img-wrapper" href="#">
+                      <img class="users__img" src="img/demin-mobile@1x.jpg" alt="Фото пользователя" width="70"
+                        height="70">
+                    </a>
+                    <a href="#">
+                      <h3 class="users__name">Петя Демин</h3>
+                    </a>
+                    <p class="users__popular">1500</p>
+                  </div>
+                  <p class="users__tags">#бургер #бар #футбол #концерт #крафт</p>
+                  <div class="users__future-travel future-travel">
+                    <h4 class="future-travel__title">Хочет посетить:</h4>
+                    <ul class="future-travel__list">
+                      <li class="future-travel__item">Бельгия</li>
+                      <li class="future-travel__item">Чехия</li>
+                    </ul>
+                  </div>
+                  <div class="users__wrapper-bottom">
+                    <div class="users__transport transport-info">
+                      <h4 class="transport-info__title">Транспорт:</h4>
+                      <ul class="transport-info__list transport">
+                        <li class="transport__item transport__item--active transport__item--grey transport__item--fly">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="fly" checked>
+                            <span class="visually-hidden">Самолёт</span>
+                          </label>
+                        </li>
+                        <li
+                          class="transport__item transport__item--active  transport__item--grey transport__item--train">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="train" checked>
+                            <span class="visually-hidden">Поезд</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--grey transport__item--bike">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="bike">
+                            <span class="visually-hidden">Велосипед</span>
+                          </label>
+                        </li>
+                        <li
+                          class="transport__item transport__item--active  transport__item--grey transport__item--walk">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="walk" checked>
+                            <span class="visually-hidden">Пешком</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="users__level level">
+                      <h4 class="level__title">Левел:</h4>
+                      <p class="level__number">80</p>
+                    </div>
+                  </div>
+
+                  <a class="users__button button" href="#">Позвать!</a>
+                </li>
+
+                <li class="users__item">
+                  <div class="users__top-wrapper">
+                    <a class="users__img-wrapper" href="#">
+                      <img class="users__img" src="img/smolov-mobile@1x.jpg" alt="Фото пользователя" width="70"
+                        height="70">
+                    </a>
+                    <a href="#">
+                      <h3 class="users__name">Марк Смолов</h3>
+                    </a>
+                    <p class="users__popular">170</p>
+                  </div>
+                  <p class="users__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+                  <div class="users__future-travel future-travel">
+                    <h4 class="future-travel__title">Хочет посетить:</h4>
+                    <ul class="future-travel__list">
+                      <li class="future-travel__item">США</li>
+                      <li class="future-travel__item">Австралия</li>
+                      <li class="future-travel__item">Доминика</li>
+                    </ul>
+                  </div>
+                  <div class="users__wrapper-bottom">
+                    <div class="users__transport transport-info">
+                      <h4 class="transport-info__title">Транспорт:</h4>
+                      <ul class="transport-info__list transport">
+                        <li class="transport__item transport__item--active transport__item--grey transport__item--fly">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="fly" checked>
+                            <span class="visually-hidden">Самолёт</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--grey transport__item--train">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="train" checked>
+                            <span class="visually-hidden">Поезд</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--active transport__item--grey transport__item--bike">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="bike">
+                            <span class="visually-hidden">Велосипед</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--grey transport__item--walk">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="walk" checked>
+                            <span class="visually-hidden">Пешком</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="users__level level">
+                      <h4 class="level__title">Левел:</h4>
+                      <p class="level__number">25</p>
+                    </div>
+                  </div>
+                  <a class="users__button button" href="#">Позвать!</a>
+                </li>
+
+                <li class="users__item">
+                  <div class="users__top-wrapper">
+                    <a class="users__img-wrapper" href="#">
+                      <img class="users__img" src="img/rogovaya-mobile@1x.jpg" alt="Фото пользователя" width="70"
+                        height="70">
+                    </a>
+                    <a href="#">
+                      <h3 class="users__name">Лариса Роговая</h3>
+                    </a>
+                    <p class="users__popular">23</p>
+                  </div>
+                  <p class="users__tags">#образование #карьера #учеба #линкедин</p>
+                  <div class="users__future-travel future-travel">
+                    <h4 class="future-travel__title">Хочет посетить:</h4>
+                    <ul class="future-travel__list">
+                      <li class="future-travel__item">Великобритания</li>
+                      <li class="future-travel__item">Германия</li>
+                    </ul>
+                  </div>
+                  <div class="users__wrapper-bottom">
+                    <div class="users__transport transport-info">
+                      <h4 class="transport-info__title">Транспорт:</h4>
+                      <ul class="transport-info__list transport">
+                        <li class="transport__item transport__item--active transport__item--grey transport__item--fly">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="fly" checked>
+                            <span class="visually-hidden">Самолёт</span>
+                          </label>
+                        </li>
+                        <li
+                          class="transport__item transport__item--active transport__item--grey transport__item--train">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="train" checked>
+                            <span class="visually-hidden">Поезд</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--grey transport__item--bike">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="bike">
+                            <span class="visually-hidden">Велосипед</span>
+                          </label>
+                        </li>
+                        <li class="transport__item transport__item--grey transport__item--walk">
+                          <label>
+                            <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                              name="transport" value="walk" checked>
+                            <span class="visually-hidden">Пешком</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="users__level level">
+                      <h4 class="level__title">Левел:</h4>
+                      <p class="level__number">50</p>
+                    </div>
+                  </div>
+                  <a class="users__button button" href="#">Позвать!</a>
+                </li>
               </ul>
+              <a class="users__button users__button-more button button--transparent" href="#">Показать еще</a>
             </div>
+          </section>
 
-            <div class="users__wrapper-bottom">
-              <div class="users__transport transport-info">
-                <h4 class="transport-info__title">Транспорт:</h4>
-                <ul class="transport-info__list transport">
-                  <li class="transport__item transport__item--active transport__item--grey transport__item--fly">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="fly" checked>
-                      <span class="visually-hidden">Самолёт</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--grey transport__item--train">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="train" checked>
-                      <span class="visually-hidden">Поезд</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--grey transport__item--bike">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="bike">
-                      <span class="visually-hidden">Велосипед</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--grey transport__item--walk">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="walk" checked>
-                      <span class="visually-hidden">Пешком</span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="users__level level">
-                <h4 class="level__title">Левел:</h4>
-                <p class="level__number">99</p>
-              </div>
-            </div>
-
-            <a class="users__button button" href="#">Позвать!</a>
-          </li>
-
-          <li class="users__item">
-            <div class="users__top-wrapper">
-              <a class="users__img-wrapper" href="#">
-                <img class="users__img" src="img/demin-mobile@1x.jpg" alt="Фото пользователя" width="70" height="70">
-              </a>
-              <div>
-                <a href="#">
-                  <h3 class="users__name">Петя Демин</h3>
-                </a>
-                <p class="users__popular">1500</p>
-              </div>
-            </div>
-            <p class="users__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <div class="users__future-travel future-travel">
-              <h4 class="future-travel__title">Хочет посетить:</h4>
-              <ul class="future-travel__list">
-                <li class="future-travel__item">Бельгия</li>
-                <li class="future-travel__item">Чехия</li>
+          <div class="pagination">
+            <div class="pagination__wrapper">
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--active">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">4</a>
+                </li>
               </ul>
-            </div>
-            <div class="users__wrapper-bottom">
-              <div class="users__transport transport-info">
-                <h4 class="transport-info__title">Транспорт:</h4>
-                <ul class="transport-info__list transport">
-                  <li class="transport__item transport__item--active transport__item--grey transport__item--fly">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="fly" checked>
-                      <span class="visually-hidden">Самолёт</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--active  transport__item--grey transport__item--train">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="train" checked>
-                      <span class="visually-hidden">Поезд</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--grey transport__item--bike">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="bike">
-                      <span class="visually-hidden">Велосипед</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--active  transport__item--grey transport__item--walk">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="walk" checked>
-                      <span class="visually-hidden">Пешком</span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="users__level level">
-                <h4 class="level__title">Левел:</h4>
-                <p class="level__number">80</p>
-              </div>
-            </div>
 
-            <a class="users__button button" href="#">Позвать!</a>
-          </li>
-
-          <li class="users__item">
-            <div class="users__top-wrapper">
-              <a class="users__img-wrapper" href="#">
-                <img class="users__img" src="img/smolov-mobile@1x.jpg" alt="Фото пользователя" width="70" height="70">
-              </a>
-              <div>
-                <a href="#">
-                  <h3 class="users__name">Марк Смолов</h3>
+              <div class="pagination__wrapper-bottom">
+                <a class="pagination__back" href="#">
+                  <span class="visually-hidden">Назад</span>
                 </a>
-                <p class="users__popular">170</p>
-              </div>
-            </div>
-            <p class="users__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <div class="users__future-travel future-travel">
-              <h4 class="future-travel__title">Хочет посетить:</h4>
-              <ul class="future-travel__list">
-                <li class="future-travel__item">США</li>
-                <li class="future-travel__item">Австралия</li>
-                <li class="future-travel__item">Доминика</li>
-              </ul>
-            </div>
-            <div class="users__wrapper-bottom">
-              <div class="users__transport transport-info">
-                <h4 class="transport-info__title">Транспорт:</h4>
-                <ul class="transport-info__list transport">
-                  <li class="transport__item transport__item--active transport__item--grey transport__item--fly">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="fly" checked>
-                      <span class="visually-hidden">Самолёт</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--grey transport__item--train">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="train" checked>
-                      <span class="visually-hidden">Поезд</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--active transport__item--grey transport__item--bike">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="bike">
-                      <span class="visually-hidden">Велосипед</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--grey transport__item--walk">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="walk" checked>
-                      <span class="visually-hidden">Пешком</span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="users__level level">
-                <h4 class="level__title">Левел:</h4>
-                <p class="level__number">25</p>
-              </div>
-            </div>
-            <a class="users__button button" href="#">Позвать!</a>
-          </li>
-
-          <li class="users__item">
-            <div class="users__top-wrapper">
-              <a class="users__img-wrapper" href="#">
-                <img class="users__img" src="img/rogovaya-mobile@1x.jpg" alt="Фото пользователя" width="70" height="70">
-              </a>
-              <div>
-                <a href="#">
-                  <h3 class="users__name">Лариса Роговая</h3>
+                <a class="pagination__next" href="#">
+                  <span class="visually-hidden">Вперед</span>
                 </a>
-                <p class="users__popular">23</p>
               </div>
             </div>
-            <p class="users__tags">#образование #карьера #учеба #линкедин</p>
-            <div class="users__future-travel future-travel">
-              <h4 class="future-travel__title">Хочет посетить:</h4>
-              <ul class="future-travel__list">
-                <li class="future-travel__item">Великобритания</li>
-                <li class="future-travel__item">Германия</li>
-              </ul>
-            </div>
-            <div class="users__wrapper-bottom">
-              <div class="users__transport transport-info">
-                <h4 class="transport-info__title">Транспорт:</h4>
-                <ul class="transport-info__list transport">
-                  <li class="transport__item transport__item--active transport__item--grey transport__item--fly">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="fly" checked>
-                      <span class="visually-hidden">Самолёт</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--active transport__item--grey transport__item--train">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="train" checked>
-                      <span class="visually-hidden">Поезд</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--grey transport__item--bike">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="bike">
-                      <span class="visually-hidden">Велосипед</span>
-                    </label>
-                  </li>
-                  <li class="transport__item transport__item--grey transport__item--walk">
-                    <label>
-                      <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                        name="transport" value="walk" checked>
-                      <span class="visually-hidden">Пешком</span>
-                    </label>
-                  </li>
-                </ul>
-              </div>
-              <div class="users__level level">
-                <h4 class="level__title">Левел:</h4>
-                <p class="level__number">50</p>
-              </div>
-            </div>
-            <a class="users__button button" href="#">Позвать!</a>
-          </li>
-        </ul>
-        <a class="users__button button button--transparent" href="#">Показать еще</a>
-      </div>
-    </section>
-
-    <div class="pagination">
-      <div class="pagination__wrapper">
-        <a class="pagination__back" href="#">
-          <span class="visually-hidden">Назад</span>
-        </a>
-        <a class="pagination__next" href="#">
-          <span class="visually-hidden">Вперед</span>
-        </a>
+          </div>
+        </div>
       </div>
     </div>
-
   </main>
 
   <footer class="page-footer">

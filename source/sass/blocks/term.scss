@@ -1,6 +1,7 @@
 .term__title {
   display: flex;
   justify-content: space-between;
+  padding-left: 5px;
   margin-bottom: 9px;
   font-weight: $fw-medium;
   color: $dark-slate-blue;
@@ -17,11 +18,12 @@
 .term__wrapper {
   display: flex;
   justify-content: space-between;
+  margin-left: 5px;
   margin-bottom: 21px;
   width: 220px;
   min-height: 41px;
   border-radius: 4px;
-  border: solid 1px $cloudy-blue;
+  border: 1px solid $cloudy-blue;
 }
 
 .term__button-minus,
@@ -43,4 +45,103 @@
   line-height: 0.9;
   letter-spacing: 1.5px;
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .term__wrapper-top {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .term__group-people {
+    order: -1;
+    margin-bottom: 0;
+  }
+
+  .term__group-date {
+    margin-bottom: 51px;
+  }
+
+  .term__title {
+    padding-left: 0;
+    margin-bottom: 26px;
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .term__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-bottom: 9px;
+    width: 531px;
+    min-height: 70px;
+  }
+
+  .term__button-minus,
+  .term__button-plus {
+    display: block;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .term__quantity {
+    width: 130px;
+    padding: 0;
+    padding-left: 17px;
+    text-align: center;
+    font-weight: $fw-medium;
+    line-height: 0.9;
+    letter-spacing: 1.5px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .term__wrapper-top {
+    justify-content: space-between;
+    width: 1000px;
+    margin-bottom: 30px;
+  }
+
+  .term__group {
+    display: flex;
+  }
+
+  .term__group-people {
+    order: 0;
+    margin-bottom: 15px;
+    width: 530px;
+  }
+
+  .term__group-date {
+    margin-bottom: 0;
+    width: 530px;
+  }
+
+  .term__title {
+    position: relative;
+    margin-top: 23px;
+    margin-right: 20px;
+    margin-bottom: 0;
+    width: 200px;
+
+
+    span {
+      position: absolute;
+      left: 440px;
+      opacity: 1;
+    }
+  }
+
+  .term__wrapper {
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 180px;
+    min-height: 70px;
+  }
 }

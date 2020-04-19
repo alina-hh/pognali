@@ -1,25 +1,25 @@
 .details {
-  @include container;
   background-color: $light-blue-grey-five;
+  padding-bottom: 65px;
 }
 
 .details__top-wrapper {
-  @include container-inside;
+  @include container;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 31px;
+  margin-bottom: 29px;
 }
 
 .details__title {
   margin: 0;
-  padding-top: 25px;
+  padding-top: 5px;
 }
 
 .delails__list {
   @include list-reset;
   display: flex;
   justify-content: space-between;
-  margin-top: 39px;
+  margin-top: 18px;
   padding-right: 18px;
   padding-left: 5px;
   width: 70px;
@@ -36,5 +36,41 @@
   &--active {
     background-color: $dark-slate-blue;
     opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .details__top-wrapper {
+    @include container-tablet;
+    margin-bottom: 55px;
+  }
+
+  .details__title {
+    padding-top: 25px;
+    padding-left: 34px;
+    font-size: 36px;
+  }
+
+  .delails__list {
+    margin-top: 45px;
+    margin-right: 15px;
+    padding-right: 18px;
+    width: 97px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .details__top-wrapper {
+    @include container-desktop;
+    margin-bottom: 55px;
+  }
+
+  .details__title {
+    padding-top: 7px;
+    padding-left: 70px;
+  }
+
+  .delails__list {
+    display: none;
   }
 }
