@@ -1,26 +1,47 @@
 .continent {
   margin-left: 25px;
   margin-bottom: 20px;
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.continent__list {
+  @include list-reset;
+}
+
+.continent__item {
+  margin-bottom: 5px;
+}
+
+.continent__link {
+  font-weight: $fw-bold;
+  line-height: 1.38;
+  color: $dark-blue-grey;
+  text-transform: uppercase;
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .continent {
+    margin-top: 57px;
+    margin-left: 34px;
+    margin-bottom: 0;
   }
 
-  &__item {
-    margin-bottom: 5px;
+  .continent__list {
+    display: flex;
+    justify-content: space-between;
+    width: 363px;
   }
 
-  &__link {
-    font-weight: bold;
-    line-height: 1.38;
-    color: $dark-blue-grey;
-    text-transform: uppercase;
-    opacity: 0.3;
+  .continent__item {
+    margin-bottom: 0;
+  }
 
-    &--active {
-      opacity: 1;
-    }
+  .continent__link {
+    line-height: 1.2;
+    font-size: 20px;
   }
 }

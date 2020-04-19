@@ -1,9 +1,11 @@
 .info {
-  @include container;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 25px;
   background-color: $pale-grey;
+}
+
+.info__wrapper {
+  @include container;
+  padding-top: 25px;
+  min-height: 455px;
 }
 
 .info__top-wrapper {
@@ -47,17 +49,21 @@
 }
 
 .info__button {
-  margin-bottom: 22px;
+  margin-bottom: 32px;
   width: 270px;
   letter-spacing: -1.4px;
+  cursor: pointer;
 }
 
 .info__tags-wrapper {
-  @include container-inside;
-  margin-bottom: 5px;
+  position: relative;
+  margin-bottom: 22px;
 }
 
 .info__tags {
+  position: absolute;
+  top: -8px;
+  left: 100px;
   margin: 0 auto;
   width: 70px;
   background-color: $pale-grey;
@@ -70,8 +76,6 @@
 }
 
 .info__user-tags {
-  position: relative;
-  top: -8px;
   padding-top: 20px;
   padding-right: 30px;
   padding-left: 26px;
@@ -83,16 +87,19 @@
   border-radius: 10px;
   border: solid 1px $cloudy-blue;
   background-color: transparent;
-  z-index: 1;
 }
 
 .info__transport {
+  position: relative;
   margin: 0 auto;
   padding-bottom: 24px;
   width: 270px;
 }
 
 .info__title {
+  position: absolute;
+  top: -8px;
+  left: 80px;
   margin: 0 auto;
   width: 110px;
   background-color: $pale-grey;
@@ -101,11 +108,10 @@
   line-height: 1.13;
   font-weight: bold;
   text-transform: uppercase;
+  z-index: 2;
 }
 
 .info__list {
-  position: relative;
-  top: -10px;
   padding-left: 69px;
   padding-right: 69px;
   padding-top: 15px;
@@ -113,4 +119,178 @@
   width: 270px;
   border-radius: 10px;
   border: solid 1px $cloudy-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .info__wrapper {
+    @include container-tablet;
+    position: relative;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 100px;
+    min-height: 550px;
+  }
+
+  .info__top-wrapper {
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  .info__level {
+    padding-right: 9px;
+  }
+
+  .info__img-wrapper {
+    margin-top: 15px;
+    width: 94px;
+    height: 94px;
+  }
+
+  .info__img {
+    border-radius: 7px;
+  }
+
+  .info__button {
+    margin-bottom: 52px;
+    width: 100%;
+    min-height: 60px;
+    border-radius: 10px;
+    letter-spacing: 0;
+    font-size: 20px;
+    font-weight: $fw-medium;
+  }
+
+  .info__tags-wrapper {
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .info__tags {
+    position: absolute;
+    top: 82px;
+    left: 269px;
+    width: 80px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .info__user-tags {
+    padding-top: 32px;
+    padding-left: 39px;
+    padding-bottom: 0;
+    width: 618px;
+    min-height: 94px;
+    line-height: 1.2;
+    font-size: 20px;
+  }
+
+  .info__transport {
+    position: absolute;
+    top: 114px;
+    left: 230px;
+    padding-bottom: 0;
+  }
+
+  .info__title {
+    top: 84px;
+    left: 97px;
+    width: 110px;
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 1.4px;
+  }
+
+  .info__list {
+    padding-top: 24px;
+    width: 308px;
+    min-height: 94px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .info__wrapper {
+    @include container-desktop;
+    position: relative;
+    padding-left: 80px;
+    padding-right: 0;
+    padding-top: 56px;
+    min-height: 330px;
+  }
+
+  .info__top-wrapper {
+    position: absolute;
+    top: -134px;
+    right: 155px;
+    margin-bottom: 0;
+    width: 330px;
+  }
+
+  .info__level {
+    padding-top: 60px;
+    padding-right: 6px;
+  }
+
+  .info__number,
+  .info__text {
+    color: $white;
+  }
+
+  .info__img-wrapper {
+    margin-top: 0;
+    width: 190px;
+    height: 190px;
+  }
+
+  .info__img {
+    border-radius: 0;
+    width: 190px;
+    height: 190px;
+  }
+
+  .info__button {
+    position: relative;
+    left: 1015px;
+    padding-top: 13px;
+    padding-bottom: 35px;
+    width: 190px;
+    min-height: 16px;
+    margin-bottom: 0;
+    border-radius: 0;
+
+    span {
+      display: none;
+    }
+  }
+
+  .info__tags-wrapper {
+    margin-bottom: 0;
+    margin-left: 43px;
+    margin-top: 25px;
+  }
+
+  .info__tags {
+    top: 83px;
+    left: 25px;
+  }
+
+  .info__user-tags {
+    width: 730px;
+  }
+
+  .info__transport {
+    top: 129px;
+    left: 995px;
+    padding-bottom: 0;
+  }
+
+  .info__title {
+    left: 137px;
+  }
+
+  .info__list {
+    padding-top: 24px;
+    padding-left: 108px;
+    width: 385px;
+    min-height: 94px;
+  }
 }

@@ -21,3 +21,42 @@
   border-radius: 50%;
   border: 3px solid $mango;
 }
+
+@media (min-width: $tablet-width) {
+  .level__title {
+    display: none;
+  }
+
+  .level__number {
+    position: relative;
+    margin: 0;
+    padding-top: 7px;
+    padding-left: 14px;
+    width: 60px;
+    height: 60px;
+    line-height: 1;
+    color: $dark-slate-blue;
+
+    &::after {
+      content: "level";
+      position: absolute;
+      top: 35px;
+      left: 15px;
+      opacity: 0.4;
+      font-size: 14px;
+      color: $black;
+      font-weight: normal;
+    }
+
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 20px;
+    //   left: 0;
+    //   width: 100px;
+    //   height: 10px;
+    //   color: $black;
+    //   opacity: 0.4;
+    // }
+  }
+}

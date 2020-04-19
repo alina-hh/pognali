@@ -1,33 +1,102 @@
 .calendar__table {
+  margin-left: 5px;
   margin-bottom: 23px;
   border-collapse: collapse;
+  width: 220px;
 }
 
 .calendar__header-cells {
-  background-color: lavender;
-
-
   th {
+    padding: 0;
+    padding-left: 4px;
     width: 30px;
     height: 30px;
+
+    span {
+      display: none;
+    }
   }
 }
 
-.calendar__cells {
-  table-layout: fixed;
-}
-
 .calendar__cell {
-  background-color: $white;
+  bottom: 0;
+  padding: 0;
   border: 1px solid $light-blue-grey-five;
+
+  span {
+    visibility: hidden;
+  }
 }
 
 .calendar__button {
   display: block;
-  padding-top: 9px;
-  padding-bottom: 10px;
   width: 30px;
   height: 30px;
   text-align: center;
   border: none;
+  background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .calendar__table {
+    margin-left: 0;
+    margin-bottom: 23px;
+    border-collapse: collapse;
+    width: 530px;
+  }
+
+  .calendar__header-cells {
+    th {
+      padding: 0;
+      padding-bottom: 2px;
+      font-size: 20px;
+      line-height: 1.67;
+      letter-spacing: 1.8px;
+      font-weight: $fw-normal;
+      text-align: center;
+
+      span {
+        display: inline-block;
+        margin-left: -8px;
+      }
+    }
+  }
+
+  .calendar__button {
+    width: 73px;
+    height: 68px;
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar__table {
+    margin-bottom: 57px;
+    width: 999px;
+  }
+
+  .calendar__header-cells {
+    th {
+      padding-bottom: 12px;
+      padding-left: 18px;
+      text-align: left;
+    }
+  }
+
+  .calendar__cell {
+    span {
+      visibility: visible;
+    }
+  }
+
+  .calendar__button {
+    padding-bottom: 28px;
+    padding-left: 16px;
+    width: 137px;
+    height: 70px;
+    text-align: left;
+    font-size: 18px;
+  }
 }

@@ -1,15 +1,77 @@
 .pagination {
-  margin: 0 auto;
   padding-bottom: 46px;
-  width: 320px;
-  min-height: 50px;
   background-color: $pale-grey;
+}
 
-  &__wrapper {
-    margin: 0 auto;
-    width: 270px;
-    min-height: 50px;
-    border-radius: 20px;
-    background-color: $white;
+.pagination__wrapper {
+  @include container;
+  min-height: 50px;
+  border-radius: 20px;
+  background-color: $white;
+}
+
+.pagination__list {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    padding-bottom: 136px;
+    padding-top: 34px;
+  }
+
+  .pagination__wrapper {
+    @include container-tablet;
+    padding-left: 27px;
+    padding-right: 33px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+    width: 688px;
+  }
+
+  .pagination__list {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    min-width: 200px;
+  }
+
+  .pagination__item {
+    text-align: center;
+  }
+
+  .pagination__link {
+    display: block;
+    padding-top: 13px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: $dark-two;
+    font-weight: $fw-bold;
+
+    &--active {
+      background-color: $light-gold;
+      border-radius: 50%;
+    }
+  }
+
+  .pagination__wrapper-bottom {
+    width: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    padding-bottom: 30px;
+    padding-top: 82px;
+  }
+
+  .pagination__wrapper {
+    @include container-desktop;
+    padding-left: 27px;
+    padding-right: 33px;
+    width: 950px;
   }
 }

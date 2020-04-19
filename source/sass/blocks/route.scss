@@ -1,24 +1,152 @@
-.route {
-  @include container-inside;
-}
-
 .route__wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
-  padding-left: 24px;
-  padding-right: 24px;
+  margin-top: 23px;
+  margin-bottom: 0;
+  padding-left: 5px;
+
 
   &:last-child {
     margin-bottom: 25px;
   }
 }
 
-.roude__country {
+.route__country {
   margin: 0;
   padding: 12px;
-  border: none;
   border-radius: 4px;
-  // border: solid 1px $cloudy-blue;
+  border: solid 1px $cloudy-blue;
   background-color: transparent;
+  min-width: 160px;
+}
+
+.route__choose,
+.route__add {
+  width: 220px;
+}
+
+.route__add {
+  background-color: $pale-grey;
+}
+
+.route__flag {
+  width: 61px;
+  border-top: solid 1px $cloudy-blue;
+  border-bottom: solid 1px $cloudy-blue;
+  border-right: solid 1px $cloudy-blue;
+  border-radius: 4px;
+}
+
+.route__button-close {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  border: none;
+  background-color: $pale-grey;
+}
+
+.route__button-open-popup,
+.route__button-add {
+  position: absolute;
+  right: 0;
+  width: 52px;
+  border: none;
+  min-height: 40px;
+  background-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .route {
+    margin-top: 77px;
+  }
+
+  .route__wrapper {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 0;
+
+    &:last-child {
+      margin-bottom: 47px;
+    }
+  }
+
+  .route__country {
+    margin-right: 30px;
+    padding: 12px;
+    padding-left: 30px;
+    min-width: 369px;
+    min-height: 70px;
+  }
+
+  .route__flag {
+    width: 75px;
+    border: none;
+  }
+
+  .route__button-close {
+    position: relative;
+    right: 0;
+    top: 22px;
+    width: 21px;
+    height: 21px;
+    background-color: transparent;
+  }
+
+  .route__button-open-popup,
+  .route__button-add {
+    position: absolute;
+    right: 0;
+    width: 52px;
+    border: none;
+    min-height: 40px;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .route {
+    margin-top: 118px;
+    width: 999px;
+  }
+
+  .route__wrapper {
+    &:last-child {
+      margin-bottom: 55px;
+    }
+  }
+
+  .route__country {
+    // margin-right: 30px;
+    // padding: 12px;
+    // padding-left: 30px;
+    min-width: 730px;
+  }
+
+  // .route__flag {
+  //   width: 75px;
+  //   border: none;
+  // }
+
+  // .route__button-close {
+  //   position: relative;
+  //   right: 0;
+  //   top: 22px;
+  //   width: 21px;
+  //   height: 21px;
+  //   background-color: transparent;
+  // }
+
+  // .route__button-open-popup,
+  // .route__button-add {
+  //   position: absolute;
+  //   right: 0;
+  //   width: 52px;
+  //   border: none;
+  //   min-height: 40px;
+  //   background-color: transparent;
+  // }
 }

@@ -1,18 +1,17 @@
 .plans {
-  @include container;
   background-color: $pale-grey-two;
 }
 
 .plans__title {
-  @include container-inside;
+  @include container;
   margin-bottom: 30px;
-  padding-top: 25px;
+  padding-top: 8px;
 }
 
 .plans__list {
   @include list-reset;
-  @include container-inside;
-  padding-bottom: 19px;
+  @include container;
+  padding-bottom: 40px;
 }
 
 .plans__item {
@@ -25,7 +24,7 @@
 .plans__country {
   margin: 0;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: $fw-bold;
   line-height: 1;
   color: $dark-slate-blue;
 }
@@ -56,4 +55,115 @@
   text-transform: uppercase;
   color: $black;
   opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .plans__title {
+    @include container-tablet;
+    margin-bottom: 45px;
+    padding-top: 22px;
+    padding-left: 75px;
+    font-size: 36px;
+    line-height: 1.39;
+  }
+
+  .plans__list {
+    @include container-tablet;
+    padding: 0;
+    padding-bottom: 89px;
+    width: 618px;
+    min-height: 155px;
+  }
+
+  .plans__item {
+    margin-bottom: 10px;
+    padding: 37px 33px 17px 33px;
+  }
+
+  .plans__country {
+    position: relative;
+    margin-bottom: 55px;
+    padding-left: 3px;
+    font-size: 24px;
+
+    span {
+      position: absolute;
+      right: -3px;
+      top: 3px;
+      font-size: 20px;
+    }
+  }
+
+  .plans__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .plans__companions,
+  .plans__date {
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .plans__companions {
+    min-width: 140px;
+  }
+
+  .plans__button {
+    margin-left: 33px;
+    min-width: 104px;
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plans__title {
+    @include container-desktop;
+    margin-bottom: 45px;
+    padding-top: 3px;
+    padding-left: 131px;
+  }
+
+  .plans__list {
+    @include container-desktop;
+    padding: 0;
+    padding-left: 123px;
+    padding-bottom: 90px;
+  }
+
+  .plans__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 35px 33px 17px 33px;
+    width: 1256px;
+    min-height: 97px;
+  }
+
+  .plans__country {
+    margin-bottom: 0;
+    padding-left: 10px;
+
+    span {
+      position: relative;
+      padding-right: 30px;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .plans__wrapper {
+    padding-top: 5px;
+    width: 595px;
+  }
+
+  .plans__button {
+    margin-left: 91px;
+    margin-right: 5px;
+    min-width: 103px;
+  }
 }

@@ -7,7 +7,7 @@
 }
 
 .business-rates__wrapper {
-  @include container-inside;
+  @include container;
   height: 443px;
   border-radius: 20px;
   background-color: $white;
@@ -38,7 +38,7 @@
 }
 
 .business-rates__button-wrapper {
-  @include container-inside;
+  @include container;
   margin-top: 23px;
   min-height: 59px;
   background-color: $pale-grey-five;

@@ -22,21 +22,6 @@
   padding-right: 60px;
 }
 
-@mixin container-inside {
-  // width: 270px;
-  // margin: 0 auto;
-}
-
-@mixin container-inside-tablet {
-  // width: 688px;
-  // margin: 0 auto;
-}
-
-@mixin container-inside-desktop {
-  // width: 1320px;
-  // margin: 0 auto;
-}
-
 @mixin list-reset {
   margin: 0;
   padding: 0;

@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Погнали</title>
   <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
 </head>
 
 <body>
@@ -74,63 +76,75 @@
     </div>
   </header>
 
-
   <main>
-    <h1 class="main-title">Направления</h1>
+    <div class="main-inner">
+      <div class="main-inner__wrapper">
+        <h1 class="main-inner__title">Направления</h1>
+        <p class="main-inner__button">
+          <a class="main-inner__link" href="index.html">На главную</a>
+        </p>
+      </div>
+    </div>
+
     <form action="https://echo.htmlacademy.ru" method="get">
 
       <section class="info">
-        <h2 class="visually-hidden">Информация об аккаунте</h2>
-        <div class="info__top-wrapper">
-          <div class="info__level">
-            <p class="info__number">80</p>
-            <p class="info__text">level</p>
+        <div class="info__wrapper">
+          <h2 class="visually-hidden">Информация об аккаунте</h2>
+          <div class="info__top-wrapper">
+            <div class="info__level">
+              <p class="info__number">80</p>
+              <p class="info__text">level</p>
+            </div>
+
+            <p class="info__img-wrapper">
+              <img class="info__img" src="img/demin-mobile@1x.jpg" alt="Фото пользователя" width="99" height="100">
+            </p>
+          </div>
+          <button class="info__button button button--blue" type="button">
+            <span>Сменить</span>
+            фото
+          </button>
+
+          <div class="info__tags-wrapper">
+            <p class="info__tags">Тэги</p>
+            <textarea class="info__user-tags" name="tags" cols="5" rows="2"
+              placeholder="#бургер #бар #футбол #концерт #крафт">#бургер #бар #футбол #концерт #крафт</textarea>
           </div>
 
-          <p class="info__img-wrapper">
-            <img class="info__img" src="img/demin-mobile@1x.jpg" alt="Фото пользователя" width="99" height="100">
-          </p>
-        </div>
-        <button class="info__button button button--blue" type="button">Сменить фото</button>
-
-        <div class="info__tags-wrapper">
-          <p class="info__tags">Тэги</p>
-          <textarea class="info__user-tags" name="tags" cols="5" rows="2"
-            placeholder="#бургер #бар #футбол #концерт #крафт">#бургер #бар #футбол #концерт #крафт</textarea>
-        </div>
-
-        <div class="info__transport">
-          <p class="info__title">Транспорт</p>
-          <ul class="info__list transport">
-            <li class="transport__item transport__item--active transport__item--fly">
-              <label>
-                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                  name="transport" value="fly" checked>
-                <span class="visually-hidden">Самолёт</span>
-              </label>
-            </li>
-            <li class="transport__item transport__item--active   transport__item--train">
-              <label>
-                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                  name="transport" value="train" checked>
-                <span class="visually-hidden">Поезд</span>
-              </label>
-            </li>
-            <li class="transport__item  transport__item--bike">
-              <label>
-                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                  name="transport" value="bike">
-                <span class="visually-hidden">Велосипед</span>
-              </label>
-            </li>
-            <li class="transport__item transport__item--active   transport__item--walk">
-              <label>
-                <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                  name="transport" value="walk" checked>
-                <span class="visually-hidden">Пешком</span>
-              </label>
-            </li>
-          </ul>
+          <div class="info__transport">
+            <p class="info__title">Транспорт</p>
+            <ul class="info__list transport">
+              <li class="transport__item transport__item--active transport__item--fly">
+                <label>
+                  <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                    name="transport" value="fly" checked>
+                  <span class="visually-hidden">Самолёт</span>
+                </label>
+              </li>
+              <li class="transport__item transport__item--active   transport__item--train">
+                <label>
+                  <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                    name="transport" value="train" checked>
+                  <span class="visually-hidden">Поезд</span>
+                </label>
+              </li>
+              <li class="transport__item  transport__item--bike">
+                <label>
+                  <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                    name="transport" value="bike">
+                  <span class="visually-hidden">Велосипед</span>
+                </label>
+              </li>
+              <li class="transport__item transport__item--active   transport__item--walk">
+                <label>
+                  <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
+                    name="transport" value="walk" checked>
+                  <span class="visually-hidden">Пешком</span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -138,16 +152,26 @@
         <h2 class="plans__title">Мои планы:</h2>
         <ul class="plans__list">
           <li class="plans__item">
-            <p class="plans__country">1. Франция, Италия</p>
-            <p class="plans__companions">3 попутчика</p>
-            <p class="plans__date">26 мар — 29 мар</p>
-            <a class="plans__button" href="edit.html">Изменить</a>
+            <p class="plans__country">
+              <span>1.</span>
+              Франция, Италия
+            </p>
+            <div class="plans__wrapper">
+              <p class="plans__companions">3 попутчика</p>
+              <p class="plans__date">26 мар — 29 мар</p>
+              <a class="plans__button" href="edit.html">Изменить</a>
+            </div>
           </li>
           <li class="plans__item">
-            <p class="plans__country">2. Таиланд, Индонезия</p>
-            <p class="plans__companions">1 попутчик</p>
-            <p class="plans__date">1 июл — 15 июл</p>
-            <a class="plans__button" href="edit.html">Изменить</a>
+            <p class="plans__country">
+              <span>2.</span>
+              Таиланд, Индонезия
+            </p>
+            <div class="plans__wrapper">
+              <p class="plans__companions">1 попутчик</p>
+              <p class="plans__date">1 июл — 15 июл</p>
+              <a class="plans__button" href="edit.html">Изменить</a>
+            </div>
           </li>
         </ul>
       </section>
@@ -168,45 +192,52 @@
           </ul>
         </div>
 
-        <section id="step1" class="details-steps">
-          <h3 class="details-steps__title">Шаг 1.<br>Даты пребывания</h3>
+        <section id="step1" class="details-steps details-steps-1">
+          <h3 class="details-steps__title">
+            <span class="details-steps__title-top">Шаг 1.</span>
+            <span class="details-steps__title-bottom">Даты пребывания</span>
+          </h3>
           <p class="details-steps__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
             позвать в поездку и ее предполагаемую длительность.</p>
 
           <div class="details-steps__term term">
-            <div class="term__group">
-              <label class="term__title" for="people">Ищу попутчиков:
-                <span>чел.</span>
-              </label>
-              <div class="term__wrapper">
-                <button class="term__button-minus" type="button">
-                  <span class="visually-hidden">Уменьшить</span>
-                </button>
-                <input class="term__quantity" type="number" name="people" min="0" step="1" value="2" id="people">
-                <button class="term__button-plus" type="button">
-                  <span class="visually-hidden">Увеличить</span>
-                </button>
-              </div>
-            </div>
+            <div class="term__wrapper-top">
 
-            <div class="term__group">
-              <label class="term__title" for="days">Длительность:
-                <span>дн.</span>
-              </label>
-              <div class="term__wrapper">
-                <button class="term__button-minus" type="button">
-                  <span class="visually-hidden">Уменьшить</span>
-                </button>
-                <input class="term__quantity" type="number" name="people" min="0" step="1" value="2" id="days">
-                <button class="term__button-plus" type="button">
-                  <span class="visually-hidden">Увеличить</span>
-                </button>
+              <div class="term__group term__group-people">
+                <label class="term__title" for="people">Ищу попутчиков:
+                  <span>чел.</span>
+                </label>
+                <div class="term__wrapper">
+                  <button class="term__button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить</span>
+                  </button>
+                  <input class="term__quantity" type="number" name="people" min="0" step="1" value="2" id="people">
+                  <button class="term__button-plus" type="button">
+                    <span class="visually-hidden">Увеличить</span>
+                  </button>
+                </div>
               </div>
-            </div>
 
-            <div class="term__group term-kids">
-              <input class="visually-hidden term-kids__choose " type="checkbox" name="with-kids" id="kids" checked>
-              <label class="term-kids__title" for="kids">Можно с детьми</label>
+              <div class="term__group term__group-date">
+                <label class="term__title" for="days">Длительность:
+                  <span>дн.</span>
+                </label>
+                <div class="term__wrapper">
+                  <button class="term__button-minus" type="button">
+                    <span class="visually-hidden">Уменьшить</span>
+                  </button>
+                  <input class="term__quantity" type="number" name="people" min="0" step="1" value="2" id="days">
+                  <button class="term__button-plus" type="button">
+                    <span class="visually-hidden">Увеличить</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="term__group term-kids">
+                <input class="visually-hidden term-kids__choose " type="checkbox" name="with-kids" id="kids" checked>
+                <label class="term-kids__title" for="kids">Можно с детьми</label>
+              </div>
+
             </div>
 
             <div class="term__group term-calendar">
@@ -223,13 +254,27 @@
               <div class="term-calendar__calendar calendar">
                 <table class="calendar__table">
                   <tr class="calendar__header-cells">
-                    <th>П</th>
-                    <th>В</th>
-                    <th>С</th>
-                    <th>Ч</th>
-                    <th>П</th>
-                    <th>С</th>
-                    <th>В</th>
+                    <th>П
+                      <span>н</span>
+                    </th>
+                    <th>В
+                      <span>т</span>
+                    </th>
+                    <th>С
+                      <span>р</span>
+                    </th>
+                    <th>Ч
+                      <span>т</span>
+                    </th>
+                    <th>П
+                      <span>т</span>
+                    </th>
+                    <th>С
+                      <span>б</span>
+                    </th>
+                    <th>В
+                      <span>с</span>
+                    </th>
                   </tr>
                   <tr class="calendar__cells">
                     <td class="calendar__cell">
@@ -251,7 +296,9 @@
                       <button class="calendar__button calendar__button--disabled" type="button" disabled>28</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>1</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled>1
+                        <span>мар</span>
+                      </button>
                     </td>
                   </tr>
                   <tr class="calendar__cells">
@@ -355,7 +402,9 @@
                       <button class="calendar__button" type="button">31</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button" type="button">1</button>
+                      <button class="calendar__button" type="button">1
+                        <span>апр</span>
+                      </button>
                     </td>
                     <td class="calendar__cell">
                       <button class="calendar__button" type="button">2</button>
@@ -379,8 +428,11 @@
           <a class="details-steps__button button" href="#step2">Следующий шаг</a>
         </section>
 
-        <section id="step2" class="details-steps">
-          <h3 class="details-steps__title">Шаг 2.<br>Маршрут</h3>
+        <section id="step2" class="details-steps details-steps-2">
+          <h3 class="details-steps__title">
+            <span class="details-steps__title-top">Шаг 2.</span>
+            <span class="details-steps__title-bottom">Маршрут</span>
+          </h3>
           <p class="details-steps__description">Укажите страны, которые вы хотели посетить. Это может быть одна или
             сразу
             несколько.</p>
@@ -401,7 +453,7 @@
               </button>
             </div>
             <div class="route__wrapper">
-              <input class="route__country" type="text" name="country" value="Выберите страну">
+              <input class="route__country route__choose" type="text" name="country" value="Выберите страну">
               <button class="route__button-open-popup" type="button">
                 <span class="visually-hidden">Открыть</span>
               </button>
@@ -409,7 +461,6 @@
                 <span class="visually-hidden">Закрыть</span>
               </button>
             </div>
-
             <div class="pop-up-choose">
               <!-- <div class="pop-up-choose__wrapper">
                 <input class="pop-up-choose__country" type="text" name="country" value="Выберите страну" readonly>
@@ -537,22 +588,26 @@
                 </div>
               </div>
             </div>
-
             <div class="route__wrapper">
-              <input class="roude__country route__country--active" type="text" name="country" value="Добавить страну"
-                readonly>
-              <button class="roude__button-add" type="button">
+              <input class="route__country route__add route__country--active" type="text" name="country"
+                value="Добавить страну" readonly>
+              <button class="route__button-add" type="button">
                 <span class="visually-hidden">Добавить</span>
               </button>
             </div>
           </div>
-
-          <a class="details-steps__button button" href="#step3">Следующий шаг</a>
-          <a class="details-steps__button button button--transparent" href="#step1">На шаг назад</a>
+          <div class="details-steps__button-wrapper">
+            <a class="details-steps__button button" href="#step3">Следующий шаг</a>
+            <a class="details-steps__button details-steps__button-back  button button--transparent" href="#step1">На шаг
+              назад</a>
+          </div>
         </section>
 
-        <section id="step3" class="details-steps">
-          <h3 class="details-steps__title">Шаг 3.<br>Развлечения</h3>
+        <section id="step3" class="details-steps details-steps-3">
+          <h3 class="details-steps__title">
+            <span class="details-steps__title-top">Шаг 3.</span>
+            <span class="details-steps__title-bottom">Развлечения</span>
+          </h3>
           <p class="details-steps__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
             свободной
             форме и ставить тэги.</p>
@@ -571,11 +626,13 @@
               </li>
             </ul>
           </div>
-
-          <button class="details-steps__button button" type="submit">
-            <span class="">Отправить</span>
-          </button>
-          <a class="details-steps__button button button--transparent" href="#step2">На шаг назад</a>
+          <div class="details-steps__button-wrapper">
+            <button class="details-steps__button button" type="submit">
+              <span class="">Отправить</span>
+            </button>
+            <a class="details-steps__button details-steps__button-back  button button--transparent" href="#step2">На шаг
+              назад</a>
+          </div>
         </section>
       </div>
     </form>

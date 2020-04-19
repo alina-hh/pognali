@@ -1,6 +1,7 @@
 .term-kids {
   margin-top: 25px;
   margin-bottom: 25px;
+  padding-left: 5px;
   width: 220px;
 }
 
@@ -8,4 +9,34 @@
   padding-left: 40px;
   font-size: 15px;
   line-height: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .term-kids {
+    order: -1;
+    margin-bottom: 56px;
+    width: 250px;
+  }
+
+  .term-kids__title {
+    padding-left: 54px;
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    font-weight: $fw-medium;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .term-kids {
+    order: 0;
+    margin-bottom: 0;
+  }
+
+  .term-kids__title {
+    position: relative;
+    top: -85px;
+    padding-left: 59px;
+  }
 }
