@@ -1,14 +1,20 @@
 .business-rates {
-  @include container;
+  position: absolute;
   display: none;
   padding: 0;
-  min-height: 480px;
-  background-color: $pale-grey;
+
+  min-height: 443px;
+  z-index: 100;
 }
 
 .business-rates__wrapper {
   @include container;
+  position: absolute;
+  padding: 0;
+  top: -423px;
+  left: -25px;
   height: 443px;
+  width: 270px;
   border-radius: 20px;
   background-color: $white;
 }
@@ -27,34 +33,155 @@
 
 .business-rates__list {
   @include list-reset;
+  position: relative;
   margin-left: 25px;
   width: 161px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    width: 219px;
+    height: 1px;
+    opacity: 0.05;
+    background-color: $black;
+  }
+}
+
+.business-rates__item {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -11px;
+    width: 219px;
+    height: 1px;
+    opacity: 0.05;
+    background-color: $black;
+  }
 }
 
 .business-rates__text {
   min-height: 66px;
   margin: 0;
   line-height: 1.38;
+
+  span {
+    display: block;
+  }
 }
 
 .business-rates__button-wrapper {
   @include container;
   margin-top: 23px;
   min-height: 59px;
+  width: 270px;
   background-color: $pale-grey-five;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
 .business-rates__button {
-  padding-top: 22px;
+  padding-right: 58px;
+  padding-top: 20px;
   width: 270px;
   min-height: 39px;
   background-color: transparent;
   border: none;
+  font-size: 14px;
   font-weight: $fw-bold;
   line-height: 1.5;
   text-transform: uppercase;
   text-align: center;
   color: $dark-slate-blue;
+}
+
+@media (min-width: $tablet-width) {
+  .business-rates__wrapper {
+    @include container-tablet;
+    padding: 0;
+    top: -464px;
+    left: -95px;
+    width: 688px;
+    min-height: 526px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px 0 $light-periwinkle;
+  }
+
+  .business-rates__title {
+    padding-top: 44px;
+    margin-bottom: 62px;
+    font-size: 45px;
+  }
+
+  .business-rates__list {
+    margin-left: 93px;
+    width: 506px;
+
+    &::after {
+      width: 508px;
+    }
+  }
+
+  .business-rates__item {
+    &::after {
+      width: 508px;
+    }
+  }
+
+  .business-rates__text {
+    display: flex;
+    justify-content: space-between;
+    min-height: 56px;
+    width: 506px;
+    font-size: 22px;
+    line-height: 1.27;
+  }
+
+  .business-rates__button-wrapper {
+    @include container;
+    margin-top: 43px;
+    width: 688px;
+    min-height: 108px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  .business-rates__button {
+    padding-right: 55px;
+    padding-top: 37px;
+    width: 688px;
+    min-height: 39px;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    text-transform: initial;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .business-rates__wrapper {
+    @include container-desktop;
+    padding: 0;
+    top: -464px;
+    left: 160px;
+    width: 750px;
+    min-height: 526px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px 0 $light-periwinkle;
+  }
+
+  .business-rates__list {
+    margin-left: 123px;
+    width: 750px;
+  }
+
+  .business-rates__button-wrapper {
+    width: 750px;
+  }
+
+  .business-rates__button {
+    width: 750px;
+  }
 }

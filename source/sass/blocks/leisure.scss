@@ -1,23 +1,67 @@
 .leisure__list {
   @include list-reset;
+  margin-top: 28px;
+  margin-bottom: 17px;
 }
 
 .leisure__item {
   @include container;
+  width: 220px;
   padding: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .leisure__title {
+  position: relative;
   display: block;
-  margin-left: 16px;
-  margin-top: 22px;
+  margin-left: 15px;
+  margin-top: 20px;
   margin-bottom: 18px;
   width: 220px;
   color: $dark-slate-blue;
   font-size: 18px;
   font-weight: $fw-medium;
   line-height: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -26px;
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $dark-slate-blue;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $dark-slate-blue;
+  }
+
+  &--bosnia {
+    content: url("../img/flag-bosnia.svg");
+    position: absolute;
+    top: -4px;
+    right: 12px;
+    width: 35px;
+    height: 24px;
+  }
+
+  &--czech {
+    content: url("../img/flag-czech.svg");
+    position: absolute;
+    top: -4px;
+    right: 12px;
+    width: 35px;
+    height: 24px;
+  }
 }
 
 .leisure__text {
@@ -27,15 +71,46 @@
   padding-top: 8px;
   padding-left: 10px;
   line-height: 1.38;
+  letter-spacing: -1px;
   font-size: 16px;
   border-radius: 4px;
   border: solid 1px $cloudy-blue;
   background-color: transparent;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.leisure__decor {
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    left: -11px;
+    width: 2px;
+    height: 280px;
+    border-radius: 1px;
+    background-color: $dark-slate-blue;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .leisure__list {
+    position: relative;
     margin-top: 75px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -42px;
+      width: 532px;
+      height: 1px;
+      background-color: $light-blue-grey-two;
+    }
   }
 
   .leisure__item {
@@ -55,6 +130,25 @@
     width: 293px;
     font-size: 30px;
     line-height: 0.6;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      top: 3px;
+      left: 519px;
+      width: 15px;
+      height: 15px;
+    }
+
+    &--bosnia,
+    &--czech {
+      top: -14px;
+      right: -206px;
+      width: 70px;
+      height: 47px;
+    }
   }
 
   .leisure__text {
@@ -66,11 +160,26 @@
     line-height: 1.2;
     font-size: 20px;
   }
+
+  .leisure__decor {
+    &::before {
+      top: -192px;
+      left: 524px;
+      width: 4px;
+      height: 249px;
+      background-color: $dark-slate-blue;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .leisure__list {
     margin-top: 140px;
+
+    &::before {
+      top: -84px;
+      width: 1010px;
+    }
   }
 
   .leisure__item {
@@ -83,7 +192,31 @@
     }
   }
 
+  .leisure__title {
+    &::after {
+      top: 4px;
+      left: 769px;
+    }
+
+    &--bosnia,
+    &--czech {
+      top: -9px;
+      right: -592px;
+      width: 70px;
+      height: 47px;
+    }
+  }
+
   .leisure__text {
     width: 730px;
+    padding-top: 25px;
+    padding-left: 25px;
+    letter-spacing: -2px;
+  }
+
+  .leisure__decor {
+    &::before {
+      left: 774px;
+    }
   }
 }

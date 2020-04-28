@@ -19,10 +19,56 @@
   color: $dark-slate-blue;
 }
 
-.term-calendar__button-minus,
-.term-calendar__button-plus {
+.term-calendar--button-minus,
+.term-calendar--button-plus {
+  position: relative;
   background-color: transparent;
   border: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+}
+
+.term-calendar--button-minus {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 6px;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/month-arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+  }
+}
+
+.term-calendar--button-plus {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 4px;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/month-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -38,9 +84,27 @@
     font-size: 36px;
   }
 
-  .term-calendar__button-minus,
-  .term-calendar__button-plus {
+  .term-calendar--button-minus,
+  .term-calendar--button-plus {
     padding: 0;
+  }
+
+  .term-calendar--button-minus {
+    &::before {
+      top: 25px;
+      left: 15px;
+      width: 19px;
+      height: 34px;
+    }
+  }
+
+  .term-calendar--button-plus {
+    &::before {
+      top: 25px;
+      left: -36px;
+      width: 19px;
+      height: 34px;
+    }
   }
 }
 
@@ -54,5 +118,21 @@
     margin-bottom: 10px;
     width: 1000px;
     min-height: 87px;
+  }
+
+  .term-calendar--button-minus {
+    &::before {
+      top: 28px;
+      left: 2px;
+    }
+  }
+
+  .term-calendar--button-plus {
+    &::before {
+      top: 28px;
+      left: -17px;
+      width: 19px;
+      height: 34px;
+    }
   }
 }

@@ -9,35 +9,133 @@
 }
 
 .steps__item {
-  min-height: 80px;
-
-  &:first-child {
+  &:nth-child(1) {
+    position: relative;
+    padding-top: 21px;
+    padding-left: 25px;
+    padding-bottom: 23px;
     background-color: $mango;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    min-height: 85px;
+
+    &::before {
+      content: "1";
+      position: absolute;
+      top: 19px;
+      right: 20px;
+      font-size: 18px;
+      color: $white;
+      font-weight: $fw-bold;
+    }
   }
 
   &:nth-child(2) {
+    position: relative;
+    padding-top: 16px;
+    padding-left: 25px;
+    padding-bottom: 23px;
     background-color: $mango-three;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    min-height: 80px;
+
+    &::before {
+      content: "2";
+      position: absolute;
+      top: 14px;
+      right: 20px;
+      font-size: 18px;
+      color: $white;
+      font-weight: $fw-bold;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 270px;
+      height: 10px;
+      background-color: $mango-three;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
   }
 
   &:nth-child(3) {
+    position: relative;
+    padding-top: 16px;
+    padding-left: 25px;
+    padding-bottom: 23px;
     background-color: $mango-two;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    min-height: 80px;
+
+    &::before {
+      content: "3";
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 18px;
+      color: $white;
+      font-weight: $fw-bold;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 270px;
+      height: 10px;
+      background-color: $mango-two;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
   }
 
-  &:last-child {
+  &:nth-child(4) {
+    position: relative;
+    padding-top: 16px;
+    padding-left: 25px;
+    padding-bottom: 23px;
     background-color: $light-gold;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    min-height: 60px;
+
+    &::before {
+      content: "4";
+      position: absolute;
+      top: 13px;
+      right: 20px;
+      font-size: 18px;
+      color: $white;
+      font-weight: $fw-bold;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 270px;
+      height: 10px;
+      background-color: $light-gold;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
   }
 }
 
 .steps__description {
   margin: 0;
-  padding-top: 21px;
-  padding-left: 25px;
-  padding-bottom: 23px;
-  width: 163px;
+  padding: 0;
+  width: 140px;
   font-size: 18px;
   font-weight: $fw-bold;
   line-height: 1;
@@ -57,32 +155,91 @@
   }
 
   .steps__item {
-    min-height: 140px;
-    width: 344px;
-
-    &:first-child {
+    &:nth-child(1) {
+      padding-top: 28px;
+      padding-left: 34px;
       border-top-left-radius: 20px;
       border-top-right-radius: 0;
+      width: 359px;
+      min-height: 140px;
+
+      &::before {
+        top: 83px;
+        right: 310px;
+        font-size: 30px;
+      }
     }
 
     &:nth-child(2) {
+      padding-top: 28px;
+      padding-left: 19px;
       border-top-right-radius: 20px;
+      width: 329px;
+      min-height: 140px;
+
+      &::before {
+        top: 83px;
+        right: 294px;
+        font-size: 30px;
+      }
+
+      &::after {
+        top: 0;
+        left: -15px;
+        width: 27px;
+        height: 140px;
+        background-color: $mango-three;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 0;
+      }
     }
 
     &:nth-child(3) {
+      padding-top: 28px;
+      padding-left: 34px;
       border-bottom-left-radius: 20px;
+      width: 359px;
+      min-height: 140px;
+
+      &::before {
+        top: 83px;
+        right: 310px;
+        font-size: 30px;
+      }
+
+      &::after {
+        display: none;
+      }
     }
 
-    &:last-child {
+    &:nth-child(4) {
+      padding-top: 28px;
+      padding-left: 19px;
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 20px;
+      width: 329px;
+      min-height: 140px;
+
+      &::before {
+        top: 83px;
+        right: 294px;
+        font-size: 30px;
+      }
+
+      &::after {
+        top: 0;
+        left: -15px;
+        width: 27px;
+        height: 140px;
+        background-color: $light-gold;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 80px;
+      }
     }
   }
 
   .steps__description {
-    padding-top: 29px;
-    padding-left: 34px;
-    width: 220px;
+    width: 190px;
     font-size: 24px;
   }
 }
@@ -100,29 +257,83 @@
   }
 
   .steps__item {
-    min-height: 107px;
-    width: 330px;
+    z-index: 10;
 
-    &:first-child {
+    &:nth-child(1) {
       border-bottom-left-radius: 20px;
+      min-height: 107px;
+      width: 330px;
+
+      &::before {
+        top: 25px;
+        right: 49px;
+        font-size: 24px;
+      }
     }
 
     &:nth-child(2) {
       border-top-right-radius: 0;
+      min-height: 107px;
+      width: 340px;
+      padding-left: 14px;
+
+      &::before {
+        top: 25px;
+        right: 43px;
+        font-size: 24px;
+      }
+
+      &::after {
+        top: 0;
+        left: -15px;
+        width: 27px;
+        height: 107px;
+        border-bottom-left-radius: 80px;
+      }
     }
 
     &:nth-child(3) {
       border-bottom-left-radius: 0;
+      min-height: 107px;
+      width: 345px;
+      padding-left: 20px;
+
+      &::before {
+        top: 25px;
+        right: 42px;
+        font-size: 24px;
+      }
+
+      &::after {
+        display: block;
+        top: 0;
+        left: -10px;
+        width: 27px;
+        height: 107px;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+      }
     }
 
-    &:last-child {
+    &:nth-child(4) {
       border-top-right-radius: 20px;
-    }
-  }
+      min-height: 107px;
+      width: 305px;
 
-  .steps__description {
-    padding-top: 29px;
-    padding-left: 34px;
-    width: 220px;
+      &::before {
+        top: 25px;
+        right: 34px;
+        font-size: 24px;
+      }
+
+      &::after {
+        top: 0;
+        left: -10px;
+        width: 27px;
+        height: 107px;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+      }
+    }
   }
 }

@@ -1,5 +1,17 @@
 .intro {
+  position: relative;
   background-color: $dark-two;
+}
+
+.intro__decor {
+  position: absolute;
+  top: 80px;
+  margin: 0 auto;
+  background-image: url("../img/globe-back-desktop@1x.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 321px;
+  width: 100%;
 }
 
 .intro__wrapper {
@@ -22,7 +34,6 @@
 }
 
 .intro__wrapper-bg-img {
-  position: relative;
   padding-left: 54px;
 }
 
@@ -76,6 +87,7 @@
 }
 
 .intro__button {
+  padding-top: 12px;
   width: 189px;
   z-index: 1;
 }
@@ -95,8 +107,11 @@
 }
 
 @media (min-width: $tablet-width) {
-  .intro {
-    background-color: $dark-blue-grey;
+  .intro__decor {
+    position: absolute;
+    top: 130px;
+    height: 600px;
+    width: 100%;
   }
 
   .intro__wrapper {
@@ -108,7 +123,7 @@
   .intro__title {
     padding: 0;
     margin: 0 auto;
-    margin-bottom: 12px;
+    margin-bottom: 60px;
     width: 395px;
     font-size: 60px;
     line-height: 1.17;
@@ -116,14 +131,16 @@
 
   .intro__wrapper-bg-img {
     position: relative;
-    padding-left: 54px;
-    margin-bottom: 59px;
+    padding-left: 0;
   }
 
   .intro__bg-img {
-    width: 0;
-    height: 0;
-    // background-image: url("../img/traveller-illustration-tablet@1x.png");
+    position: absolute;
+    top: -24px;
+    right: 70px;
+    width: 373px;
+    height: 451px;
+    background-image: url("../img/traveller-illustration-tablet@1x.png");
   }
 
   .intro__wrapper-contact {
@@ -141,14 +158,7 @@
   }
 
   .intro__button {
-    position: relative;
-    top: -387px;
-    left: 499px;
-    display: block;
-    padding-top: 13px;
-    padding-left: 30px;
-    font-size: 20px;
-    height: 50px;
+    display: none;
   }
 
   .intro__review {
@@ -171,8 +181,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .intro {
-    background-color: $dark-two;
+  .intro__decor {
+    position: absolute;
+    top: -100px;
+    height: 750px;
+    z-index: 1;
   }
 
   .intro__wrapper {
@@ -192,42 +205,14 @@
     text-align: left;
   }
 
-  .intro__wrapper-bg-img {
-    display: none;
-  }
-
-  .intro__wrapper-contact {
+  .intro__bg-img {
     position: absolute;
-    top: -51px;
-    right: -76px;
-    width: 425px;
-  }
-
-  .intro__tel {
-    display: block;
-    width: 50px;
-    height: 50px;
-
-    &::after {
-      top: 15px;
-      left: 17px;
-    }
-  }
-
-  .intro__mail {
-    display: block;
-    width: 50px;
-    height: 50px;
-
-    &::after {
-      top: 16px;
-      left: 17px;
-    }
-  }
-
-  .intro__button {
-    top: 0;
-    left: 0;
+    top: -80px;
+    right: -320px;
+    width: 431px;
+    height: 640px;
+    background-image: url("../img/traveller-illustration-desktop@1x.png");
+    z-index: -1;
   }
 
   .intro__review {

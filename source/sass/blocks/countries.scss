@@ -1,24 +1,25 @@
 .countries {
-  background-color: $pale-grey;
-}
-
-.countries__wrapper {
-  @include container;
   position: relative;
-  padding-top: 99px;
-  min-height: 990px;
+  background-color: $pale-grey;
 
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    bottom: -29px;
     left: 0;
-    width: 320px;
+    width: 100%;
     height: 29px;
-    background-color: $dark-blue-grey;
+    background-color: $pale-grey;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
+    z-index: 1;
   }
+}
+
+.countries__wrapper {
+  @include container;
+  padding-top: 99px;
+  min-height: 990px;
 }
 
 .countries__title {
@@ -42,16 +43,42 @@
 }
 
 @media (min-width: $tablet-width) {
+  .countries {
+    &::after {
+      bottom: -82px;
+      height: 83px;
+      border-bottom-right-radius: 80px;
+      border-bottom-left-radius: 80px;
+    }
+  }
+
   .countries__wrapper {
     @include container-tablet;
+    position: relative;
     min-height: 1093px;
     padding-top: 159px;
 
+    div {
+      z-index: 10;
+    }
+
     &::after {
-      width: 768px;
-      height: 89px;
-      border-bottom-right-radius: 60px;
-      border-bottom-left-radius: 60px;
+      content: url("../img/flags-back@1x.png");
+      position: absolute;
+      top: 171px;
+      right: 40px;
+      width: 289px;
+      height: 575px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 495px;
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      background-color: $pale-grey-four;
     }
   }
 
@@ -71,6 +98,13 @@
 }
 
 @media (min-width: $desktop-width) {
+  .countries {
+    &::after {
+      bottom: -55px;
+      height: 56px;
+    }
+  }
+
   .countries__wrapper {
     @include container-desktop;
     min-height: 700px;
@@ -79,10 +113,13 @@
     justify-content: space-between;
 
     &::after {
-      width: 1440px;
-      height: 55px;
-      border-bottom-right-radius: 90px;
-      border-bottom-left-radius: 90px;
+      top: 145px;
+      right: 60px;
+    }
+
+    &::before {
+      top: 145px;
+      left: 60px;
     }
   }
 

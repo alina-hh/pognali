@@ -8,21 +8,69 @@
   font-weight: bold;
   font-style: normal;
   letter-spacing: normal;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
   background-color: $light-gold;
   border-radius: 25px;
   border: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $mango-two;
+  }
+
+  &:active {
+    color: rgba($color: $dark-two, $alpha: 0.3);
+  }
 }
 
 .button--transparent {
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: rgba($color: $dark-two, $alpha: 0.6);
+  }
+
+  &:active {
+    color: rgba($color: $dark-two, $alpha: 0.3);
+  }
 }
 
 .button--blue {
-  background-color: $light-blue-grey-three;
+  background-color: $light-periwinkle;
+
+
+  &:hover,
+  &:focus {
+    background-color: $light-blue-grey-two;
+  }
+
+  &:active {
+    color: rgba($color: $dark-two, $alpha: 0.3);
+  }
 }
 
 .button--white {
   background-color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+  }
+
+  &:active {
+    background-color: $light-gold-two;
+    color: rgba($color: $dark-two, $alpha: 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 15px 10px;
+    font-size: 20px;
+  }
 }

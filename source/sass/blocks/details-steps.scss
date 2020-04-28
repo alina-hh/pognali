@@ -1,5 +1,6 @@
 .details-steps {
   @include container;
+  position: relative;
   padding-left: 20px;
   margin-top: 10px;
   background-color: $white;
@@ -7,8 +8,16 @@
   width: 270px;
 }
 
-.details-steps-1 {
-  padding-bottom: 21px;
+.details-steps--1 {
+  padding-bottom: 22px;
+}
+
+.details-steps--2 {
+  padding-bottom: 0;
+}
+
+.details-steps--3 {
+  padding-bottom: 0;
 }
 
 .details-steps__title {
@@ -33,21 +42,26 @@
 
 .details-steps__description {
   padding-left: 5px;
-  margin-bottom: 21px;
+  margin-bottom: 25px;
   font-size: 16px;
   line-height: 1.38;
 }
 
+.details-steps__list {
+  display: none;
+}
+
 .details-steps__button {
   display: block;
+  padding-top: 12px;
   width: 230px;
 }
 
-.details-steps__button-back {
+.details-steps__button--back {
   display: block;
   margin-bottom: 0;
-  padding-top: 5px;
-  margin-top: 11px;
+  padding-top: 7px;
+  margin-top: 10px;
 }
 
 @media (min-width: $tablet-width) {
@@ -60,12 +74,28 @@
     padding-bottom: 28px;
   }
 
-  .details-steps-1 {
+  .details-steps--1 {
     padding-bottom: 55px;
   }
 
-  .details-steps-2 {
-    margin-bottom: 50px;
+  .details-steps--2 {
+    margin-bottom: 49px;
+  }
+
+  .details-steps--3 {
+    padding-bottom: 20px;
+  }
+
+  .details-steps--2 .details-steps__description {
+    width: 406px;
+  }
+
+  .details-steps--3 .details-steps__title {
+    padding-top: 44px;
+  }
+
+  .details-steps--3 .details-steps__description {
+    margin-bottom: 80px;
   }
 
   .details-steps__title {
@@ -78,7 +108,7 @@
 
   .details-steps__description {
     padding: 0;
-    margin-bottom: 64px;
+    margin-bottom: 68px;
     font-size: 20px;
     line-height: 1.2;
     width: 505px;
@@ -88,27 +118,58 @@
     margin-bottom: 45px;
   }
 
-  .details-steps__button {
-    padding: 26px 70px 24px 26px;
-    font-size: 24px;
-    text-transform: none;
-    width: 285px;
-    min-height: 81px;
-    border-radius: 20px;
-  }
-
   .details-steps__button-wrapper {
     display: flex;
     justify-content: space-between;
     width: 533px;
   }
 
-  .details-steps__button-back {
+  .details-steps__button {
+    padding: 28px 70px 24px 26px;
+    font-size: 24px;
+    text-transform: none;
+    width: 285px;
+    min-height: 82px;
+    border-radius: 20px;
+  }
+
+  .details-steps__button--next {
+    position: relative;
+
+    &::after {
+      content: url("../img/triangle-arrow-right.svg");
+      position: absolute;
+      top: 29px;
+      right: 36px;
+      width: 10px;
+      height: 14px;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+
+  .details-steps__button--back {
+    position: relative;
     width: 200px;
     padding-top: 0;
-    margin-top: 27px;
+    margin-top: 30px;
     padding-right: 0;
     padding-left: 50px;
+
+    &::before {
+      content: url("../img/triangle-arrow-left.svg");
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 10px;
+      height: 14px;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -122,10 +183,18 @@
     width: 1320px;
   }
 
-  .details-steps-2,
-  .details-steps-3 {
-    padding-bottom: 36px;
-    margin-bottom: 46px;
+  .details-steps--2,
+  .details-steps--3 {
+    padding-bottom: 34px;
+    margin-bottom: 45px;
+  }
+
+  .details-steps--3 .details-steps__title {
+    padding-top: 94px;
+  }
+
+  .details-steps--3 {
+    margin-bottom: 60px;
   }
 
   .details-steps__title {
@@ -139,8 +208,46 @@
   }
 
   .details-steps__description {
-    margin-bottom: 88px;
+    margin-bottom: 85px;
     width: 550px;
+  }
+
+  .details-steps__list {
+    @include list-reset;
+    position: absolute;
+    top: 110px;
+    right: 205px;
+    display: block;
+  }
+
+  .details-steps__item {
+    position: relative;
+    margin-bottom: 31px;
+    font-size: 20px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    line-height: 0.69;
+    letter-spacing: 2px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: -44px;
+      width: 6px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $dark-slate-blue;
+      opacity: 0.6;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+
+    &--active::before {
+      opacity: 1;
+    }
   }
 
   .details-steps__term {

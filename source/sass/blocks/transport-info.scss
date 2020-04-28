@@ -1,8 +1,29 @@
 .transport-info__title {
+  position: relative;
   margin: 0;
   margin-bottom: 16px;
   text-transform: lowercase;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -40px;
+    width: 90px;
+    height: 1px;
+    background-color: $pale-grey;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -26px;
+    width: 15px;
+    height: 1px;
+    background-color: $pale-grey;
+  }
 }

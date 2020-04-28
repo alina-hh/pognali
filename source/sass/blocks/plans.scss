@@ -1,5 +1,18 @@
 .plans {
+  position: relative;
   background-color: $pale-grey-two;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background-color: $pale-grey-two;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
 }
 
 .plans__title {
@@ -23,7 +36,7 @@
 
 .plans__country {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   font-weight: $fw-bold;
   line-height: 1;
   color: $dark-slate-blue;
@@ -55,9 +68,28 @@
   text-transform: uppercase;
   color: $black;
   opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .plans {
+    &::before {
+      top: -25px;
+      height: 40px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+  }
+
   .plans__title {
     @include container-tablet;
     margin-bottom: 45px;
@@ -70,8 +102,9 @@
   .plans__list {
     @include container-tablet;
     padding: 0;
+    padding-left: 2px;
     padding-bottom: 89px;
-    width: 618px;
+    width: 621px;
     min-height: 155px;
   }
 
@@ -121,6 +154,15 @@
 }
 
 @media (min-width: $desktop-width) {
+  .plans {
+    &::before {
+      top: -43px;
+      height: 43px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+  }
+
   .plans__title {
     @include container-desktop;
     margin-bottom: 45px;

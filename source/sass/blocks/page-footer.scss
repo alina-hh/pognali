@@ -1,31 +1,32 @@
 .page-footer {
   background-color: $white;
-}
-
-.page-footer__wrapper {
-  @include container;
-  min-height: 210px;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    top: -20px;
+    top: -18px;
     left: 0;
-    width: 320px;
-    height: 30px;
+    width: 100%;
+    height: 18px;
     background-color: $white;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
   }
 }
 
+.page-footer__wrapper {
+  @include container;
+  min-height: 220px;
+}
 
 .page-footer__logo {
+  display: block;
   margin: 0 auto;
   margin-bottom: 33px;
   padding-top: 20px;
   width: 100px;
+  min-height: 19px;
 }
 
 .page-footer__social {
@@ -33,10 +34,21 @@
 }
 
 .page-footer__copyright {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    width: 270px;
+    height: 1px;
+    opacity: 0.05;
+    background-color: $black;
+  }
 }
 
 .page-footer__text {
@@ -51,34 +63,40 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    margin-top: -30px;
+    &::after {
+      top: -75px;
+      height: 79px;
+      border-top-right-radius: 180px;
+      border-top-left-radius: 180px;
+    }
   }
 
   .page-footer__wrapper {
     @include container-tablet;
-    min-height: 80px;
+    position: relative;
+    top: -30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: 100px;
     padding-top: 0;
     margin-top: 0;
     padding-bottom: 50px;
     background-color: $white;
-
-    &::after {
-      top: -45px;
-      width: 768px;
-      height: 45px;
-      border-top-right-radius: 180px;
-      border-top-left-radius: 180px;
-      background-color: $white;
-    }
+    z-index: 10;
   }
 
   .page-footer__logo {
     margin: 0;
-    padding-top: 0;
-    width: 220px;
+    margin-right: 48px;
+    padding-top: 5px;
+    width: 173px;
+    min-height: 42px;
+  }
+
+  .page-footer__logo-img {
+    width: 173px;
+    height: 42px;
   }
 
   .page-footer__social {
@@ -87,6 +105,10 @@
 
   .page-footer__copyright {
     width: 220px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .page-footer__text {
@@ -102,13 +124,18 @@
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    margin-top: 23px;
+    &::after {
+      top: -53px;
+      height: 54px;
+      border-top-right-radius: 180px;
+      border-top-left-radius: 180px;
+    }
   }
 
   .page-footer__wrapper {
     @include container-desktop;
-    min-height: 155px;
-    padding-top: 42px;
+    min-height: 110px;
+    top: -35px;
 
     &::after {
       top: -25px;
@@ -120,6 +147,21 @@
     }
   }
 
+  .page-footer__logo {
+    margin-right: 20px;
+    padding-top: 7px;
+    width: 200px;
+    min-height: 52px;
+  }
+
+  .page-footer__logo-img {
+    width: 200px;
+    height: 52px;
+  }
+
+  .page-footer__social {
+    padding-top: 5px;
+  }
 
   .page-footer__text {
     padding-left: 65px;

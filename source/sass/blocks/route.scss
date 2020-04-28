@@ -6,19 +6,59 @@
   margin-bottom: 0;
   padding-left: 5px;
 
+  &::after {
+    content: url("../img/small-arrow.svg");
+    position: absolute;
+    top: 43px;
+    right: 50px;
+    width: 6px;
+    height: 18px;
+    opacity: 0.3;
+  }
 
   &:last-child {
     margin-bottom: 25px;
+  }
+
+  &:last-child::after {
+    display: none;
   }
 }
 
 .route__country {
   margin: 0;
-  padding: 12px;
+  padding: 11px;
   border-radius: 4px;
   border: solid 1px $cloudy-blue;
   background-color: transparent;
   min-width: 160px;
+
+
+  &[value] {
+    font-size: 13px;
+    line-height: 1.29;
+    letter-spacing: 1;
+    text-transform: uppercase;
+    font-weight: $fw-bold;
+    color: $dark-slate-blue;
+  }
+}
+
+.route__decor {
+  display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 50px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid $dark-slate-blue;
+    opacity: 0.3;
+  }
 }
 
 .route__choose,
@@ -28,14 +68,45 @@
 
 .route__add {
   background-color: $pale-grey;
+  border: 1px solid $pale-grey;
 }
 
 .route__flag {
+  position: relative;
   width: 61px;
   border-top: solid 1px $cloudy-blue;
   border-bottom: solid 1px $cloudy-blue;
   border-right: solid 1px $cloudy-blue;
   border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $dark-slate-blue;
+  }
+
+  &--bosnia {
+    content: url("../img/flag-bosnia.svg");
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    width: 35px;
+    height: 24px;
+  }
+
+  &--czech {
+    content: url("../img/flag-czech.svg");
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    width: 35px;
+    height: 24px;
+  }
 }
 
 .route__button-close {
@@ -47,21 +118,98 @@
   border-radius: 50%;
   border: none;
   background-color: $pale-grey;
+
+  &::after {
+    content: url("../img/small-cross.svg");
+    position: absolute;
+    top: 2px;
+    left: 7px;
+    width: 9px;
+    height: 9px;
+    opacity: 0.3;
+  }
 }
 
-.route__button-open-popup,
+.route__button-open {
+  position: absolute;
+  top: 1px;
+  right: 55px;
+  width: 50px;
+  border: none;
+  min-height: 39px;
+  background-color: transparent;
+  background-image: linear-gradient(to right, transparent, $white 45%);
+
+  &::after {
+    content: url("../img/dropdown-form.svg");
+    position: absolute;
+    top: 12px;
+    left: 28px;
+    width: 12px;
+    height: 7px;
+    opacity: 0.3;
+  }
+}
+
+.route__button--open-popup,
 .route__button-add {
   position: absolute;
+  top: 1px;
   right: 0;
   width: 52px;
   border: none;
-  min-height: 40px;
+  min-height: 39px;
   background-color: transparent;
+}
+
+.route__button--open-popup {
+  &::after {
+    content: url("../img/dropdown-form.svg");
+    position: absolute;
+    top: 12px;
+    left: 26px;
+    width: 12px;
+    height: 7px;
+    opacity: 0.3;
+  }
+}
+
+.route__button-add {
+  &::after {
+    content: url("../img/show-more-plus.svg");
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    width: 14px;
+    height: 14px;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .route {
+    position: relative;
     margin-top: 77px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: 6px;
+      width: 529px;
+      height: 1px;
+      background-color: $pale-grey;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: 138px;
+      width: 1px;
+      height: 410px;
+      background-color: $pale-grey;
+    }
   }
 
   .route__wrapper {
@@ -72,19 +220,73 @@
     &:last-child {
       margin-bottom: 47px;
     }
+
+    &::after {
+      display: none;
+    }
   }
 
   .route__country {
     margin-right: 30px;
     padding: 12px;
-    padding-left: 30px;
+    padding-top: 19px;
+    padding-left: 22px;
     min-width: 369px;
     min-height: 70px;
+
+    &[value] {
+      font-size: 20px;
+      line-height: 0.9;
+      letter-spacing: 1;
+    }
+  }
+
+  .route__decor {
+    &::before {
+      top: 27px;
+      right: 53px;
+      width: 15px;
+      height: 15px;
+      background-color: $white;
+    }
+
+    &--last {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 27px;
+        right: 131px;
+        width: 15px;
+        height: 15px;
+        background-color: $pale-grey;
+        border-radius: 50%;
+        border: 1px solid $cloudy-blue;
+      }
+    }
   }
 
   .route__flag {
     width: 75px;
     border: none;
+
+    &::before {
+      top: 27px;
+      left: -31px;
+      width: 15px;
+      height: 15px;
+    }
+
+    &--bosnia,
+    &--czech {
+      top: 14px;
+      left: 2px;
+      width: 70px;
+      height: 47px;
+    }
   }
 
   .route__button-close {
@@ -94,6 +296,22 @@
     width: 21px;
     height: 21px;
     background-color: transparent;
+
+    &::after {
+      top: 4px;
+      left: 3px;
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  .route__button-open {
+    &::after {
+      top: 29px;
+      left: -105px;
+      width: 17px;
+      height: 9px;
+    }
   }
 
   .route__button-open-popup,
@@ -105,12 +323,46 @@
     min-height: 40px;
     background-color: transparent;
   }
+
+  .route__button--open-popup {
+    &::after {
+      top: 29px;
+      left: -157px;
+      width: 17px;
+      height: 9px;
+    }
+  }
+
+  .route__button-add {
+    &::after {
+      top: 25px;
+      left: -160px;
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .route {
     margin-top: 118px;
     width: 999px;
+
+    &::after {
+      top: -61px;
+      right: 3px;
+      width: 997px;
+      height: 1px;
+      background-color: $light-blue-grey-two;
+    }
+
+    &::before {
+      top: -60px;
+      right: 221px;
+      width: 1px;
+      height: 482px;
+      background-color: $light-blue-grey-two;
+    }
   }
 
   .route__wrapper {
@@ -120,33 +372,55 @@
   }
 
   .route__country {
-    // margin-right: 30px;
-    // padding: 12px;
-    // padding-left: 30px;
     min-width: 730px;
   }
 
-  // .route__flag {
-  //   width: 75px;
-  //   border: none;
-  // }
+  .route__decor {
+    &::before {
+      right: 85px;
+    }
 
-  // .route__button-close {
-  //   position: relative;
-  //   right: 0;
-  //   top: 22px;
-  //   width: 21px;
-  //   height: 21px;
-  //   background-color: transparent;
-  // }
+    &--last {
+      &::after {
+        right: 215px;
+      }
+    }
+  }
 
-  // .route__button-open-popup,
-  // .route__button-add {
-  //   position: absolute;
-  //   right: 0;
-  //   width: 52px;
-  //   border: none;
-  //   min-height: 40px;
-  //   background-color: transparent;
-  // }
+  .route__flag {
+    &::before {
+      top: 29px;
+      left: -63px;
+    }
+
+    &--bosnia,
+    &--czech {
+      left: -16px;
+    }
+  }
+
+  .route__button-close {
+    &::after {
+      top: 5px;
+      left: 1px;
+    }
+  }
+
+  .route__button-open {
+    &::after {
+      left: -207px;
+    }
+  }
+
+  .route__button--open-popup {
+    &::after {
+      left: -260px;
+    }
+  }
+
+  .route__button-add {
+    &::after {
+      left: -260px;
+    }
+  }
 }

@@ -1,27 +1,115 @@
 .future-travel {
-  margin-bottom: 11px;
+  margin-bottom: 13px;
+  min-height: 85px;
 }
 
 .future-travel__title {
+  position: relative;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 17px;
   text-transform: lowercase;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 140px;
+    height: 1px;
+    background-color: $pale-grey;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -26px;
+    width: 15px;
+    height: 1px;
+    background-color: $pale-grey;
+  }
 }
 
 .future-travel__list {
   @include list-reset;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .future-travel__item {
-  margin-bottom: 9px;
+  position: relative;
+  margin-bottom: 8px;
   padding-left: 38px;
   color: $dark-slate-blue;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 1.2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 27px;
+    height: 18px;
+  }
+
+  &--sri-lanka::before {
+    background-image: url("../img/flag-sri-lanka.svg");
+    background-size: cover;
+  }
+
+  &--thailand::before {
+    background-image: url("../img/flag-thailand.svg");
+    background-size: cover;
+  }
+
+  &--seychelles::before {
+    background-image: url("../img/flag-seychelles.svg");
+    background-size: cover;
+  }
+
+  &--belgium::before {
+    background-image: url("../img/flag-belgium.svg");
+    background-size: cover;
+  }
+
+  &--czech::before {
+    background-image: url("../img/flag-czech.svg");
+    background-size: cover;
+  }
+
+  &--usa::before {
+    background-image: url("../img/flag-usa.svg");
+    background-size: cover;
+  }
+
+  &--australia::before {
+    background-image: url("../img/flag-australia.svg");
+    background-size: cover;
+  }
+
+  &--dominica::before {
+    background-image: url("../img/flag-dominica.svg");
+    background-size: cover;
+  }
+
+  &--united-kingdom::before {
+    background-image: url("../img/flag-united-kingdom.svg");
+    background-size: cover;
+  }
+
+  &--germany::before {
+    top: -3px;
+    background-image: url("../img/flag-germany.svg");
+    background-size: cover;
+    height: 22px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -32,6 +120,18 @@
   .future-travel__title {
     margin-bottom: 17px;
     padding-left: 45px;
+
+    &::after {
+      top: 10px;
+      right: -40px;
+      width: 500px;
+    }
+
+    &::before {
+      top: 10px;
+      left: -45px;
+      width: 77px;
+    }
   }
 
   .future-travel__list {
@@ -44,6 +144,18 @@
     padding-left: 45px;
     line-height: 1.5;
     font-size: 20px;
+
+    &::before {
+      top: 1px;
+      left: -2px;
+      width: 35px;
+      height: 24px;
+    }
+
+    &--germany::before {
+      top: -4px;
+      height: 29px;
+    }
   }
 }
 
@@ -60,5 +172,14 @@
   .future-travel__item {
     margin-right: 0;
     padding-left: 45px;
+
+    &::before {
+      top: 4px;
+      left: -8px;
+    }
+
+    &--germany::before {
+      top: -4px;
+    }
   }
 }

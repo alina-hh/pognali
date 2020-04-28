@@ -1,5 +1,19 @@
 .authorization {
+  position: relative;
   background-color: $dark-blue-grey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -29px;
+    left: 0;
+    width: 100%;
+    height: 29px;
+    background-color: $dark-blue-grey;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    z-index: 1;
+  }
 }
 
 .authorization__wrapper-top {
@@ -83,6 +97,15 @@
   span {
     display: none;
   }
+
+  &::after {
+    content: url("../img/triangle-arrow-right.svg");
+    position: absolute;
+    top: 25px;
+    right: 23px;
+    width: 10px;
+    height: 14px;
+  }
 }
 
 .authorization__questions {
@@ -96,32 +119,81 @@
 }
 
 .authorization__tel {
+  position: relative;
   display: block;
   margin-bottom: 25px;
   padding-left: 61px;
   font-weight: $fw-bold;
   color: $light-gold;
+
+  &::before {
+    content: url("../img/contacts-phone.svg");
+    position: absolute;
+    top: 0;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+    z-index: 11;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $dark-blue-grey-two;
+    z-index: 10;
+  }
 }
 
+
 .authorization__mail {
+  position: relative;
   display: block;
   padding-left: 61px;
   font-weight: $fw-bold;
   color: $light-gold;
   text-transform: uppercase;
+
+  &::before {
+    content: url("../img/contacts-mail.svg");
+    position: absolute;
+    top: 2px;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+    z-index: 11;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $dark-blue-grey-two;
+    z-index: 10;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .authorization {
+    &::after {
+      bottom: -78px;
+      height: 79px;
+      border-bottom-right-radius: 80px;
+      border-bottom-left-radius: 80px;
+    }
+  }
+
   .authorization__wrapper-top {
     @include container-tablet;
     min-height: 714px;
-
-    &::after {
-      width: 768px;
-      height: 80px;
-      border-bottom-right-radius: 60px;
-      border-bottom-left-radius: 60px;
-    }
   }
 
   .authorization__title {
@@ -177,6 +249,11 @@
     border-radius: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+
+    &::after {
+      top: 33px;
+      right: 37px;
+    }
   }
 
   .authorization__questions {
@@ -190,25 +267,52 @@
     margin-bottom: 33px;
     padding-left: 125px;
     font-size: 28px;
+
+    &::before {
+      left: 55px;
+      width: 27px;
+      height: 27px;
+    }
+
+    &::after {
+      top: -20px;
+      left: 34px;
+      width: 67px;
+      height: 67px;
+    }
   }
 
   .authorization__mail {
     padding-left: 125px;
     font-size: 28px;
+
+    &::before {
+      top: 0;
+      left: 55px;
+      width: 27px;
+      height: 27px;
+    }
+
+    &::after {
+      top: -20px;
+      left: 34px;
+      width: 67px;
+      height: 67px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .authorization {
+    &::after {
+      bottom: -53px;
+      height: 54px;
+    }
+  }
+
   .authorization__wrapper-top {
     @include container-desktop;
     min-height: 751px;
-
-    &::after {
-      width: 1440px;
-      height: 53px;
-      border-bottom-right-radius: 60px;
-      border-bottom-left-radius: 60px;
-    }
   }
 
   .authorization__title {
@@ -230,6 +334,16 @@
 
   .authorization__button {
     width: 325px;
+
+    span {
+      display: block;
+      position: relative;
+      left: -59px;
+      font-size: 24px;
+      font-weight: $fw-bold;
+      letter-spacing: -1px;
+      color: $dark-slate-blue;
+    }
   }
 
   .authorization__questions {
@@ -240,7 +354,41 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-
     width: 875px;
+  }
+
+  .authorization__tel {
+    padding-left: 120px;
+
+    &::before {
+      left: 29px;
+      width: 36px;
+      height: 36px;
+    }
+
+    &::after {
+      top: -28px;
+      left: 2px;
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .authorization__mail {
+    padding-right: 5px;
+
+    &::before {
+      top: 4px;
+      left: 32px;
+      width: 36px;
+      height: 36px;
+    }
+
+    &::after {
+      top: -28px;
+      left: 4px;
+      width: 90px;
+      height: 90px;
+    }
   }
 }

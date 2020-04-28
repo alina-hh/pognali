@@ -11,6 +11,16 @@
   border-radius: 50%;
   background-color: $white;
 
+  // &:hover,
+  // &:focus {
+  //   background-color: transparent;
+  //   color: rgba($color: $dark-two, $alpha: 0.6);
+  // }
+
+  // &:active {
+  //   color: rgba($color: $dark-two, $alpha: 0.3);
+  // }
+
   &--grey {
     background-color: $pale-grey;
   }

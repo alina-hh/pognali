@@ -1,10 +1,21 @@
 .level__title {
+  position: relative;
   margin: 0;
   margin-bottom: 8px;
   text-transform: lowercase;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: -14px;
+    width: 10px;
+    height: 1px;
+    background-color: $pale-grey;
+  }
 }
 
 .level__number {
@@ -58,5 +69,22 @@
     //   color: $black;
     //   opacity: 0.4;
     // }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level {
+    padding-top: 2px;
+    margin-right: 8px;
+  }
+
+  .level__number {
+    padding-top: 9px;
+    padding-left: 13px;
+
+    &::after {
+      top: 36px;
+      left: 14px;
+    }
   }
 }

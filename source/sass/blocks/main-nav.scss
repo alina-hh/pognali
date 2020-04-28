@@ -1,18 +1,17 @@
 .main-nav {
   margin: 0;
   padding: 0;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
 }
 
 .main-nav__list {
   @include list-reset;
   @include container;
-  padding-top: 48px;
-  padding-left: 0;
+  padding-top: 38px;
+  padding-left: 26px;
 }
 
 .main-nav__item {
-  width: 270px;
   text-align: center;
 }
 
@@ -32,11 +31,10 @@
   .main-nav__list {
     @include container-tablet;
     padding-top: 48px;
-    padding-left: 57px;
+    padding-left: 95px;
   }
 
   .main-nav__item {
-    width: 368px;
     text-align: left;
   }
 
@@ -48,30 +46,56 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    margin-bottom: 0;
-    width: 600px;
+    position: absolute;
+    top: -72px;
+    left: 70px;
+    padding: 0;
+    margin: 0;
+    min-height: 15px;
+    background-color: $dark-two;
   }
 
   .main-nav__list {
     @include container-desktop;
+    position: relative;
     display: flex;
-    margin-left: 0;
-    margin-top: -2px;
-    padding-top: 0;
-    padding-left: 0;
-    width: 630px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    max-width: 630px;
+    min-height: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: -104px;
+      width: 60px;
+      height: 2px;
+      background-color: $white;
+    }
   }
 
   .main-nav__item {
     display: block;
+    min-width: 100px;
+    margin-right: 30px;
   }
 
   .main-nav__link {
     display: block;
-    width: 120px;
     min-height: 18px;
     font-size: 20px;
     line-height: 1.5;
     color: $white;
+
+    &:hover,
+    &:focus {
+      color: $light-gold;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

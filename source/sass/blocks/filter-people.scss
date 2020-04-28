@@ -34,6 +34,7 @@
 }
 
 .filter-people__title {
+  position: relative;
   margin: 0;
   padding: 0;
   padding-top: 12px;
@@ -44,12 +45,36 @@
   font-weight: $fw-bold;
   line-height: 1.13;
   color: $dark-slate-blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 220px;
+    height: 1px;
+    background-color: $light-gold-two;
+  }
 }
 
 .filter-people__button-pop-up {
   display: block;
-  width: 2px;
-  height: 2px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--close {
+    position: relative;
+
+    &::after {
+      content: url("../img/dropdown.svg");
+      position: absolute;
+      top: 26px;
+      right: 5px;
+      width: 8px;
+      height: 4px;
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .filter-people__list {
@@ -62,9 +87,49 @@
   margin-bottom: 10px;
 }
 
-.filter-people__item label {
+.filter-people__label {
+  position: relative;
   font-size: 15px;
   line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-people__input + .filter-people__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -26px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: $white;
+}
+
+.filter-people__input + .filter-people__label:hover::before,
+.filter-people__input + .filter-people__label:focus::before {
+  outline: none;
+  opacity: 0.6;
+}
+
+.filter-people__input + .filter-people__label:active::before {
+  opacity: 0.3;
+}
+
+.filter-people__input:checked + .filter-people__label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -21px;
+  width: 9px;
+  height: 9px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-people__input:checked + .filter-people__label:active::after {
+  opacity: 0.2;
 }
 
 .filter-transport {
@@ -81,8 +146,8 @@
   margin-bottom: 10px;
 }
 
-.min-level input,
-.max-level input {
+.filter-people__level--min input,
+.filter-people__level--max input {
   padding: 0;
   margin: 0;
   padding-left: 15px;
@@ -100,21 +165,50 @@
   background-color: #ffffff;
 }
 
-.min-level input {
+.filter-people__level--min input {
+  width: 111px;
   border-left: solid 1px $cloudy-blue;
+  border-right: solid 1px $cloudy-blue;
 }
 
-.max-level input {
+.filter-people__level--min {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    width: 20px;
+    height: 14px;
+    background-color: $white;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 102px;
+    width: 16px;
+    height: 1px;
+    background-color: $cloudy-blue;
+    z-index: 2;
+  }
+}
+
+.filter-people__level--max input {
   border-right: solid 1px $cloudy-blue;
 }
 
 .filter-people__controls {
   position: relative;
-  padding-top: 15px;
-  margin-bottom: 1px;
+  padding-top: 13px;
+  margin-bottom: 25px;
+  width: 270px;
 }
 
-.scale {
+.filter-people__scale {
   margin: 0;
   padding: 0;
   width: 220px;
@@ -124,20 +218,41 @@
   background-color: $dark-slate-blue;
 }
 
-// .bar {
-//   margin: 0;
-//   padding: 0;
-//   width: 20%;
-//   height: 2px;
-//   border-radius: 1px;
-//   opacity: 1;
-//   background: $dark-slate-blue;
-//   z-index: 3;
-// }
+.filter-people__bar {
+  position: absolute;
+  top: 13px;
+  left: 70px;
+  width: 150px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: $dark-slate-blue;
+}
+
+.filter-people__toggle {
+  border: none;
+  border-radius: 50%;
+  width: 8px;
+  height: 10px;
+  background-color: $dark-slate-blue;
+}
+
+.filter-people__toggle--min {
+  position: absolute;
+  top: 9px;
+  left: 66px;
+}
+
+.filter-people__toggle--max {
+  position: absolute;
+  top: 9px;
+  left: 209px;
+}
 
 .filter-people__button {
   display: block;
-  width: 230px;
+  margin: 0 auto;
+  width: 224px;
+  margin-bottom: 5px;
 }
 
 @media (min-width: $tablet-width) {
@@ -147,11 +262,29 @@
 
   .filter-people__wrapper {
     @include container-tablet;
+    position: relative;
     padding-top: 35px;
     padding-left: 35px;
     padding-right: 35px;
     padding-bottom: 39px;
     width: 688px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 618px;
+      height: 1px;
+      background-color: $light-gold-two;
+    }
+
+    &::before {
+      top: 103px;
+    }
+
+    &::after {
+      bottom: 125px;
+    }
   }
 
   .filter-people__main-title {
@@ -179,6 +312,10 @@
     &::after {
       content: ":";
     }
+
+    &::before {
+      display: none;
+    }
   }
 
   .filter-people__button-pop-up {
@@ -205,8 +342,22 @@
     padding-top: 2px;
   }
 
-  .filter-people__item label {
+  .filter-people__label {
     font-size: 20px;
+  }
+
+  .filter-people__input + .filter-people__label::before {
+    top: 2px;
+    left: -36px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .filter-people__input:checked + .filter-people__label::after {
+    top: 8px;
+    left: -31px;
+    width: 12px;
+    height: 12px;
   }
 
   .filter-people__range {
@@ -222,33 +373,72 @@
     margin-bottom: 10px;
   }
 
-  .min-level input,
-  .max-level input {
+  .filter-people__level--min input,
+  .filter-people__level--max input {
     margin-top: -10px;
-    width: 74px;
+    width: 75px;
     height: 45px;
     font-size: 20px;
     letter-spacing: 2px;
+  }
+
+  .filter-people__level--min {
+    &::after {
+      top: 5px;
+      left: 70px;
+      height: 16px;
+    }
+
+    &::before {
+      top: 12px;
+      left: 63px;
+      width: 22px;
+      height: 1px;
+    }
   }
 
   .filter-people__controls {
     position: relative;
     padding-top: 15px;
     margin-bottom: 1px;
+    width: 300px;
   }
 
-  .scale {
-    margin: 0;
-    padding: 0;
-    width: 220px;
-    height: 2px;
-    opacity: 0.2;
-    border-radius: 0.5px;
-    background-color: $dark-slate-blue;
+  .filter-people__scale {
+    position: relative;
+    top: -5px;
+    left: 6px;
+    width: 277px;
+    height: 3px;
+    border-radius: 1.5px;
+  }
+
+  .filter-people__bar {
+    top: 10px;
+    left: 76px;
+    width: 205px;
+    height: 3px;
+    border-radius: 1.5px;
+  }
+
+  .filter-people__toggle {
+    width: 13px;
+    height: 13px;
+  }
+
+  .filter-people__toggle--min {
+    top: 5px;
+    left: 76px;
+  }
+
+  .filter-people__toggle--max {
+    top: 5px;
+    left: 274px;
   }
 
   .filter-people__button {
     margin-top: 52px;
+    margin-bottom: 0;
     width: 100%;
     min-height: 50px;
     font-size: 20px;
@@ -264,9 +454,13 @@
   .filter-people__wrapper {
     padding-top: 45px;
     padding-left: 48px;
-    //
     padding-bottom: 39px;
     width: 285px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .filter-people__main-title {
@@ -284,10 +478,6 @@
     display: flex;
   }
 
-  .filter-people__button-pop-up {
-    display: block;
-  }
-
   .filter-people__title {
     width: 175px;
     margin-bottom: 15px;
@@ -299,6 +489,19 @@
     margin-bottom: 31px;
     width: 225px;
     min-height: 25px;
+  }
+
+  .filter-people__button-pop-up {
+    display: block;
+
+    &--close {
+      &::after {
+        top: 15px;
+        right: -4px;
+        width: 10px;
+        height: 5px;
+      }
+    }
   }
 
   .filter-people__item {
@@ -320,23 +523,77 @@
   .filter-people__range {
     display: block;
     width: 190px;
-    margin-bottom: 0;
+    margin-bottom: 42px;
   }
 
   .filter-people__level {
     margin-bottom: 21px;
   }
 
-  .min-level input,
-  .max-level input {
+  .filter-people__level--min input,
+  .filter-people__level--max input {
     margin-top: 2px;
     width: 95px;
+    height: 45px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .filter-people__level--min {
+    &::after {
+      top: 16px;
+      left: 80px;
+      height: 16px;
+      width: 30px;
+    }
+
+    &::before {
+      top: 23px;
+      left: 83px;
+    }
+  }
+
+  .filter-people__controls {
+    padding-top: 15px;
+    margin-bottom: 0;
+    width: 200px;
+  }
+
+  .filter-people__scale {
+    top: 0;
+    left: 0;
+    width: 191px;
+  }
+
+  .filter-people__bar {
+    top: 15px;
+    left: 60px;
+    width: 125px;
+  }
+
+  .filter-people__toggle {
+    width: 13px;
+    height: 13px;
+  }
+
+  .filter-people__toggle--min {
+    top: 9px;
+    left: 58px;
+  }
+
+  .filter-people__toggle--max {
+    top: 9px;
+    left: 178px;
   }
 
   .filter-people__button {
-    margin-top: 24px;
+    margin-top: 0;
     margin-bottom: 10px;
+    padding-top: 12px;
+    padding-left: 6px;
     width: 195px;
     min-height: 50px;
+    font-size: 19px;
+    letter-spacing: -1px;
   }
 }

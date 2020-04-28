@@ -16,8 +16,13 @@
   margin-bottom: 10px;
   padding-bottom: 22px;
   width: 270px;
+  min-height: 393px;
   border-radius: 20px;
   background-color: $white;
+
+  &:last-child {
+    margin-bottom: 15px;
+  }
 }
 
 .users__top-wrapper {
@@ -38,24 +43,78 @@
 }
 
 .users__name {
+  position: relative;
+  top: -2px;
   margin: 0;
-  margin-bottom: 5px;
-  width: 80px;
+  margin-bottom: 6px;
+  width: 60px;
   font-size: 20px;
   font-weight: $fw-bold;
   line-height: 1;
   color: $dark-slate-blue;
+
+  &--status {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: -84px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+  }
+
+  &--status-off::after {
+    background-color: $salmon;
+  }
+
+  &--status-on::after {
+    background-color: $green-apple;
+  }
 }
 
 .users__popular {
   position: absolute;
-  top: 60px;
+  top: 61px;
   left: 105px;
   margin: 0;
   color: $dark-two;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: $fw-bold;
   line-height: 1.5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -38px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-color: $pale-grey;
+  }
+
+  &::after {
+    content: url("../img/heart.svg");
+    position: absolute;
+    top: -1px;
+    left: -29px;
+    width: 13px;
+    height: 11px;
+    opacity: 0.3;
+  }
+
+  &--top::before {
+    background-color: $very-light-pink-two;
+  }
+
+  &--top::after {
+    content: url("../img/heart-active.svg");
+    opacity: 1;
+  }
 }
 
 .users__tags {
@@ -84,14 +143,32 @@
 }
 
 .users__level {
-  padding-right: 17px;
-  padding-top: 2px;
   margin: 0;
+  margin-right: 14px;
+  width: 50px;
+  min-height: 70px;
 }
 
 .users__button {
+  padding-top: 12px;
   margin: 0 auto;
   width: 230px;
+  min-height: 20px;
+}
+
+.users__button-more {
+  position: relative;
+  padding-left: 70px;
+  min-height: 20px;
+
+  &::before {
+    content: url("../img/show-more-plus.svg");
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -114,11 +191,15 @@
     padding-right: 25px;
     width: 688px;
     min-height: 332px;
+
+    &:last-child {
+      margin-bottom: 38px;
+    }
   }
 
   .users__top-wrapper {
     padding-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 13px;
   }
 
   .users__img-wrapper {
@@ -133,9 +214,43 @@
   }
 
   .users__name {
+    top: 0;
     margin-bottom: 0;
-    width: 300px;
+    width: 230px;
+    height: 28px;
     font-size: 30px;
+
+    &--status {
+      &::after {
+        top: 13px;
+        width: 7px;
+        height: 7px;
+      }
+
+      &-account-1 {
+        &::after {
+          right: 13px;
+        }
+      }
+
+      &-account-2 {
+        &::after {
+          right: 43px;
+        }
+      }
+
+      &-account-3 {
+        &::after {
+          right: 23px;
+        }
+      }
+
+      &-account-4 {
+        &::after {
+          right: -13px;
+        }
+      }
+    }
   }
 
   .users__popular {
@@ -146,14 +261,17 @@
     width: 50px;
 
     &::before {
-      content: "";
-      position: absolute;
       top: -10px;
       left: -56px;
       width: 50px;
       height: 50px;
-      background-color: #f9eaea;
-      border-radius: 50%;
+    }
+
+    &::after {
+      top: 3px;
+      left: -42px;
+      width: 20px;
+      height: 17px;
     }
   }
 
@@ -212,8 +330,8 @@
     top: 175px;
     left: 255px;
     margin: 0 auto;
-    padding-top: 13px;
-    padding-left: 30px;
+    padding-top: 15px;
+    padding-left: 8px;
     width: 150px;
     min-height: 50px;
     font-size: 20px;
@@ -222,8 +340,15 @@
   .users__button-more {
     position: relative;
     top: -3px;
-    left: 26px;
+    left: 22px;
     width: 300px;
+
+    &::before {
+      top: 11px;
+      left: 30px;
+      width: 27px;
+      height: 27px;
+    }
   }
 }
 
@@ -240,6 +365,7 @@
 
   .users__top-wrapper {
     width: 660px;
+    margin-bottom: 0;
   }
 
   .users__item {
@@ -251,6 +377,7 @@
 
   .users__img-wrapper {
     display: block;
+
     margin-right: 40px;
     padding-left: 0;
     padding-top: 0;
@@ -259,6 +386,7 @@
   }
 
   .users__img {
+
     border-radius: 0%;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -269,6 +397,15 @@
   .users__name {
     margin-top: 45px;
     margin-left: 20px;
+
+    &--status {
+      &::after {
+        top: 12px;
+        left: -26px;
+        width: 7px;
+        height: 7px;
+      }
+    }
   }
 
   .users__popular {
@@ -282,8 +419,20 @@
   }
 
   .users__future-travel {
+    position: relative;
     padding-left: 22px;
     width: 250px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: -30px;
+      width: 1px;
+      height: 160px;
+      opacity: 0.1;
+      background-color: $black;
+    }
   }
 
   .users__wrapper-bottom {
@@ -313,7 +462,7 @@
   }
 
   .users__button-more {
-    top: 24px;
-    left: -7px;
+    top: 15px;
+    left: -10px;
   }
 }

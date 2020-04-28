@@ -1,38 +1,93 @@
 .alphabet {
   margin-left: 25px;
-  margin-bottom: 13px;
+  margin-bottom: 280px;
   width: 220px;
+}
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.alphabet__list {
+  @include list-reset;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.alphabet__link {
+  display: block;
+  width: 44px;
+  height: 41px;
+  border: 1px solid $cloudy-blue;
+  background-color: $white;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-weight: $fw-medium;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  text-align: center;
+  color: $dark-blue-grey;
+  text-transform: uppercase;
+
+  &--active {
+    padding-top: 11px;
+    padding-left: 4px;
+    background-color: $dark-blue-grey;
+    color: $white;
+    border: 1px solid $cloudy-blue;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .alphabet {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    width: 400px;
   }
 
+  .alphabet__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-  &__link {
+  .alphabet__link {
     display: block;
-    width: 44px;
-    height: 41px;
-    border: 1px solid $cloudy-blue;
-    background-color: $white;
-    padding-top: 10px;
-    padding-left: 5px;
-    font-weight: 500;
-    line-height: 1.29;
-    letter-spacing: 1.4px;
-    text-align: center;
-    color: $dark-blue-grey;
-    text-transform: uppercase;
+    width: 77px;
+    height: 83px;
+    border: none;
+    background-color: transparent;
+    padding: 24px;
+    font-size: 60px;
+    font-weight: $fw-bold;
+    line-height: 0.4;
+    color: rgba(25, 33, 68, 0.2);
+
 
     &--active {
-      padding-top: 11px;
-      padding-left: 4px;
-      background-color: $dark-blue-grey;
-      color: $white;
-      border: 1px solid $cloudy-blue;
+      padding: 24px;
+      background-color: transparent;
+      color: $dark-blue-grey;
+      border: none;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .alphabet {
+    margin-top: 32px;
+    margin-left: 14px;
+    margin-bottom: 0;
+    width: 1250px;
+  }
+
+  .alphabet__item {
+    margin-bottom: 54px;
+    width: 250px;
+    min-height: 315px;
+  }
+
+  .alphabet__link {
+    width: 77px;
+    height: 83px;
+    color: $dark-blue-grey;
   }
 }

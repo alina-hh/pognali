@@ -1,20 +1,67 @@
 .term-kids {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 24px;
+  margin-bottom: 19px;
   padding-left: 5px;
   width: 220px;
+  min-height: 26px;
 }
 
 .term-kids__title {
+  position: relative;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 40px;
   font-size: 15px;
   line-height: 1;
+  min-height: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.term__input--checkbox + .term-kids__title::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  border: 1px solid $cloudy-blue;
+}
+
+.term__input--checkbox + .term-kids__title:hover::before,
+.term__input--checkbox + .term-kids__title:focus::before {
+  outline: none;
+  border-color: $cloudy-blue-two;
+}
+
+.term__input--checkbox + .term-kids__title:active::before {
+  background-color: $pale-grey-four;
+  border-color: $pale-grey-four;
+}
+
+.term__input--checkbox:checked + .term-kids__title::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  width: 9px;
+  height: 9px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.term__input--checkbox:checked + .term-kids__title:active::after {
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {
   .term-kids {
     order: -1;
-    margin-bottom: 56px;
+    margin-bottom: 54px;
+    margin-top: 20px;
     width: 250px;
   }
 
@@ -26,6 +73,20 @@
     font-weight: $fw-medium;
     text-transform: uppercase;
   }
+
+  .term__input--checkbox + .term-kids__title::before {
+    top: -4px;
+    left: -4px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .term__input--checkbox:checked + .term-kids__title::after {
+    top: 7px;
+    left: 8px;
+    width: 12px;
+    height: 12px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -36,7 +97,18 @@
 
   .term-kids__title {
     position: relative;
-    top: -85px;
+    top: -83px;
     padding-left: 59px;
+  }
+
+  .term__input--checkbox + .term-kids__title::before {
+    left: 3px;
+  }
+
+  .term__input--checkbox:checked + .term-kids__title::after {
+    top: 9px;
+    left: 16px;
+    width: 12px;
+    height: 12px;
   }
 }

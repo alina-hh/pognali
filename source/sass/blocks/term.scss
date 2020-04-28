@@ -21,19 +21,70 @@
   margin-left: 5px;
   margin-bottom: 21px;
   width: 220px;
-  min-height: 41px;
+  min-height: 42px;
   border-radius: 4px;
   border: 1px solid $cloudy-blue;
+
+  &:hover,
+  &:focus {
+    border-color: $cloudy-blue-two;
+  }
+
+  &:active {
+    border-color: $dark-two;
+  }
 }
 
 .term__button-minus,
 .term__button-plus {
+  position: relative;
   display: block;
   padding: 0;
   width: 40px;
   height: 40px;
   border: none;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    outline: none;
+    opacity: 0.4;
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
+}
+
+.term__button-minus {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    width: 15px;
+    height: 2px;
+    background-image: url("../img/qty-minus-mobile.svg");
+    opacity: 0.3;
+  }
+}
+
+.term__button-plus {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/qty-plus-mobile.svg");
+    opacity: 0.3;
+  }
 }
 
 .term__quantity {
@@ -45,6 +96,11 @@
   line-height: 0.9;
   letter-spacing: 1.5px;
   border: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -63,11 +119,21 @@
   }
 
   .term__title {
+    position: relative;
     padding-left: 0;
     margin-bottom: 26px;
     font-size: 20px;
     line-height: 0.9;
     letter-spacing: 2px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -22px;
+      width: 532px;
+      height: 1px;
+      background-color: $light-blue-grey-two;
+    }
   }
 
   .term__wrapper {
@@ -89,6 +155,24 @@
     background-color: transparent;
   }
 
+  .term__button-minus {
+    &::after {
+      top: 33px;
+      left: 22px;
+      width: 20px;
+      height: 3px;
+    }
+  }
+
+  .term__button-plus {
+    &::after {
+      top: 24px;
+      left: 2px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   .term__quantity {
     width: 130px;
     padding: 0;
@@ -98,6 +182,10 @@
     line-height: 0.9;
     letter-spacing: 1.5px;
     border: none;
+
+    &[value] {
+      font-size: 20px;
+    }
   }
 }
 
@@ -105,7 +193,7 @@
   .term__wrapper-top {
     justify-content: space-between;
     width: 1000px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 
   .term__group {
@@ -113,9 +201,19 @@
   }
 
   .term__group-people {
+    position: relative;
     order: 0;
     margin-bottom: 15px;
     width: 530px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      width: 1002px;
+      height: 1px;
+      background-color: $light-blue-grey-two;
+    }
   }
 
   .term__group-date {
@@ -125,15 +223,18 @@
 
   .term__title {
     position: relative;
-    margin-top: 23px;
+    margin-top: 25px;
     margin-right: 20px;
     margin-bottom: 0;
     width: 200px;
 
+    &::before {
+      display: none;
+    }
 
     span {
       position: absolute;
-      left: 440px;
+      left: 439px;
       opacity: 1;
     }
   }
@@ -143,5 +244,18 @@
     margin-bottom: 0;
     width: 180px;
     min-height: 70px;
+  }
+
+  .term__button-minus {
+    &::after {
+      left: 20px;
+    }
+  }
+
+  .term__button-plus {
+    &::after {
+      top: 26px;
+      left: -12px;
+    }
   }
 }

@@ -1,16 +1,49 @@
 .countries-info {
-  margin-left: 27px;
+  position: absolute;
+  top: 215px;
+  left: 2px;
   margin-bottom: 30px;
   width: 220px;
+}
 
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.countries-info__list {
+  @include list-reset;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.countries-info__link {
+  color: inherit;
+  line-height: 1.38;
+}
+
+@media (min-width: $tablet-width) {
+  .countries-info {
+    top: 3px;
+    left: 468px;
+    margin-bottom: 0;
   }
 
-  &__link {
-    color: inherit;
-    line-height: 1.38;
+  .countries-info__link {
+    line-height: 1.5;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .countries-info {
+    position: relative;
+    top: 15px;
+    left: 22px;
+    margin-bottom: 0;
+    width: 254px;
+  }
+
+  .countries-info__list {
+    @include list-reset;
+    display: block;
   }
 }

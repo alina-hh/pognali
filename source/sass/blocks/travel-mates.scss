@@ -1,22 +1,49 @@
 .travel-mates {
+  position: relative;
   background-color: $dark-blue-grey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -29px;
+    left: 0;
+    width: 100%;
+    height: 29px;
+    background-color: $dark-blue-grey;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    z-index: 1;
+  }
 }
 
 .travel-mates__wrapper {
   @include container;
   position: relative;
   min-height: 1322px;
+  z-index: 100;
 
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 65px;
     left: 0;
-    width: 320px;
-    height: 29px;
-    background-color: $pale-grey;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
+    width: 113px;
+    height: 132px;
+    border-top-right-radius: 20px;
+    background-color: $dark-blue-grey-four;
+    z-index: -10;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 68px;
+    right: 25px;
+    width: 143px;
+    height: 143px;
+    background-image: url("../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    z-index: -10;
   }
 }
 
@@ -51,19 +78,56 @@
   width: 192px;
   line-height: 1.38;
   color: $white;
+  z-index: 100;
+}
+
+.travel-mates__list {
+  position: relative;
+  z-index: 100;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: -25px;
+    width: 60px;
+    height: 70px;
+    background-image: url("../img/rogovaya-back-mobile@1x.png");
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    z-index: -10;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .travel-mates {
+    &::after {
+      bottom: -81px;
+      height: 83px;
+      border-bottom-right-radius: 80px;
+      border-bottom-left-radius: 80px;
+    }
+  }
+
   .travel-mates__wrapper {
     @include container-tablet;
     min-height: 1255px;
     padding-top: 81px;
 
     &::after {
-      width: 768px;
-      height: 80px;
-      border-bottom-right-radius: 60px;
-      border-bottom-left-radius: 60px;
+      top: 160px;
+      left: 40px;
+      width: 213px;
+      height: 213px;
+      border-radius: 20px;
+    }
+
+    &::before {
+      top: 160px;
+      right: 75px;
+      width: 285px;
+      height: 285px;
+      background-image: url("../img/rogovaya-back-desktop@1x.png");
     }
   }
 
@@ -88,10 +152,29 @@
     font-size: 21px;
     width: 252px;
     line-height: 1.19;
+    position: relative;
+  }
+
+  .travel-mates__list {
+    &::before {
+      display: none;
+      top: -95px;
+      left: 0;
+      width: 143px;
+      height: 143px;
+      background-image: url("../img/smolov-back-desktop@1x.png");
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .travel-mates {
+    &::after {
+      bottom: -42px;
+      height: 43px;
+    }
+  }
+
   .travel-mates__wrapper {
     @include container-desktop;
     display: flex;
@@ -99,10 +182,13 @@
     min-height: 730px;
 
     &::after {
-      width: 1440px;
-      height: 56px;
-      border-bottom-right-radius: 200px;
-      border-bottom-left-radius: 200px;
+      top: 125px;
+      left: 60px;
+    }
+
+    &::before {
+      top: 440px;
+      left: 190px;
     }
   }
 
@@ -118,5 +204,13 @@
 
   .travel-mates__slogan {
     margin-left: 70px;
+  }
+
+  .travel-mates__list {
+    &::before {
+      display: block;
+      top: 190px;
+      left: -205px;
+    }
   }
 }

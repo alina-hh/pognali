@@ -21,6 +21,7 @@
 }
 
 .travel-mates-profile__wrapper {
+  position: relative;
   margin: 0;
   padding: 0;
   min-height: 157px;
@@ -29,7 +30,51 @@
   border-bottom-left-radius: 10px;
 }
 
+.travel-mates-profile__flag-list {
+  @include list-reset;
+  display: flex;
+}
+
+.travel-mates-profile__flag-item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    width: 35px;
+    height: 24px;
+    background-size: cover;
+  }
+
+  &--flag-sri-lanka::before {
+    background-image: url("../img/flag-sri-lanka.svg");
+    left: 63px;
+  }
+
+  &--flag-thailand::before {
+    background-image: url("../img/flag-thailand.svg");
+    left: 117px;
+  }
+
+  &--flag-seychelles::before {
+    background-image: url("../img/flag-seychelles.svg");
+    left: 170px;
+  }
+
+  &--flag-belgium::before {
+    background-image: url("../img/flag-belgium.svg");
+    left: 90px;
+  }
+
+  &--flag-czech::before {
+    background-image: url("../img/flag-czech.svg");
+    left: 142px;
+  }
+}
+
 .travel-mates-profile__user-name {
+  position: relative;
   display: block;
   margin: 0 auto;
   margin-bottom: 14px;
@@ -39,6 +84,25 @@
   font-weight: $fw-bold;
   color: $dark-slate-blue;
   text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+
+  &--off::before {
+    background-color: $salmon;
+  }
+
+  &--on::before {
+    background-color: $green-apple;
+    left: 18px;
+  }
 }
 
 .travel-mates-profile__tags {
@@ -50,6 +114,7 @@
 }
 
 .travel-mates-profile__show-all {
+  position: relative;
   display: block;
   padding-top: 20px;
   padding-left: 23px;
@@ -59,6 +124,15 @@
   color: $dark-slate-blue;
   background-color: $light-gold;
   border-radius: 10px;
+
+  &::after {
+    content: url("../img/triangle-arrow-right.svg");
+    position: absolute;
+    top: 21px;
+    right: 24px;
+    width: 10px;
+    height: 14px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -92,11 +166,44 @@
     border-bottom-left-radius: 20px;
   }
 
+  .travel-mates-profile__flag-item {
+    &--flag-sri-lanka::before {
+      left: 73px;
+    }
+
+    &--flag-thailand::before {
+      left: 127px;
+    }
+
+    &--flag-seychelles::before {
+      left: 180px;
+    }
+
+    &--flag-belgium::before {
+      left: 100px;
+    }
+
+    &--flag-czech::before {
+      left: 152px;
+    }
+  }
+
   .travel-mates-profile__user-name {
     margin-bottom: 21px;
     padding-top: 30px;
     line-height: 1;
     font-size: 24px;
+
+    &::before {
+      top: 39px;
+      left: -5px;
+      width: 7px;
+      height: 7px;
+    }
+
+    &--on::before {
+      left: 3px;
+    }
   }
 
   .travel-mates-profile__tags {
@@ -120,6 +227,11 @@
     font-size: 24px;
     line-height: 1;
     border-radius: 20px;
+
+    &::after {
+      top: 28px;
+      right: 35px;
+    }
   }
 }
 
@@ -128,6 +240,32 @@
     margin-top: 190px;
     width: 630px;
     margin-bottom: 0;
+  }
+
+  .travel-mates-profile__flag-item {
+    &::before {
+      top: -13px;
+    }
+
+    &--flag-sri-lanka::before {
+      left: 71px;
+    }
+
+    &--flag-thailand::before {
+      left: 126px;
+    }
+
+    &--flag-seychelles::before {
+      left: 179px;
+    }
+
+    &--flag-belgium::before {
+      left: 99px;
+    }
+
+    &--flag-czech::before {
+      left: 151px;
+    }
   }
 
   .travel-mates-profile__show-all {

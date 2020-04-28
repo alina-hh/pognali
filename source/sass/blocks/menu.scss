@@ -1,26 +1,31 @@
 .menu {
   display: none;
   position: absolute;
-  top: 68px;
+  top: 77px;
   left: 50%;
   transform: translateX(-50%);
   background-color: $white;
-  z-index: 100;
+  width: 100%;
+  z-index: 1000;
   min-height: 500px;
-}
-
-.menu__wrapper {
-  @include container;
 }
 
 .menu__contact {
   margin: 0;
   padding: 0;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
 }
 
 .menu__button-wrapper {
-  margin-bottom: 67px;
+  margin: 0;
+  margin-bottom: 65px;
+}
+
+.menu__button {
+  margin: 0 auto;
+  padding: 18px 24px;
+  width: 270px;
+  min-height: 50px;
 }
 
 .menu__list {
@@ -29,14 +34,14 @@
 }
 
 .menu__item {
-  margin-bottom: 20px;
-  padding-top: 4px;
+  margin-bottom: 26px;
+  padding-left: 25px;
 }
 
 .menu__link {
   padding: 0;
   margin: 0;
-  padding-left: 37px;
+  padding-left: 36px;
   font-weight: $fw-bold;
   color: $dark-blue-grey;
   text-transform: uppercase;
@@ -59,11 +64,12 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: -14px;
+    top: 1px;
+    left: -11px;
     width: 18px;
     height: 18px;
     background-image: url("../img/contacts-phone.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -84,11 +90,12 @@
   &::after {
     content: "";
     position: absolute;
-    top: 2px;
-    left: -14px;
+    top: 4px;
+    left: -11px;
     width: 18px;
-    height: 18px;
-    background-image: url("../../img/contacts-mail.svg");
+    height: 14px;
+    background-image: url("../img/contacts-mail.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -104,7 +111,7 @@
   }
 
   .menu__contact {
-    margin-bottom: 132px;
+    margin-bottom: 133px;
   }
 
   .menu__button-wrapper {
@@ -119,11 +126,11 @@
 
   .menu__list {
     @include container-tablet;
-    padding-left: 55px;
+    padding-left: 69px;
   }
 
   .menu__item {
-    margin-bottom: 35px;
+    margin-bottom: 34px;
     padding-top: 4px;
   }
 
@@ -151,39 +158,34 @@
 
   .menu__mail {
     &::before {
-      top: -18px;
+      top: -17px;
       left: 3px;
       width: 67px;
       height: 67px;
     }
 
     &::after {
-      top: 5px;
+      top: 8px;
       left: 24px;
       width: 27px;
-      height: 19px;
+      height: 22px;
     }
   }
 
   .menu__social {
     margin: 0;
-    margin-left: 15px;
+    margin-left: 55px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu {
+    min-height: 0;
     display: block;
-    background-color: $dark-two;
-    min-height: 10px;
-    margin-top: -70px;
-    margin-left: -105px;
-    padding: 0;
-    width: 500px;
   }
 
-  .page-header__menu-open {
-    display: none;
+  .menu__wrapper {
+    position: relative;
   }
 
   .menu__contact {
