@@ -1,41 +1,23 @@
 .map {
-  @include container;
-  min-height: 320px;
   padding: 0;
   z-index: -1;
-}
-
-.map__img {
-  margin: 0;
 }
 
 .map__wrapper {
   border: 0;
   z-index: -1;
+  width: 100%;
+  min-height: 320px;
 }
 
 @media (min-width: $tablet-width) {
-  .map {
-    @include container-tablet;
-    padding: 0;
-    min-height: 610px;
-  }
-
   .map__wrapper {
     min-height: 610px;
-    width: 768px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .map {
-    @include container-desktop;
-    padding: 0;
-    min-height: 495px;
-  }
-
   .map__wrapper {
     min-height: 495px;
-    width: 1440px;
   }
 }
