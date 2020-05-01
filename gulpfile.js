@@ -14,7 +14,7 @@
   var server = require("browser-sync").create();
 
   gulp.task("css", function () {
-   return gulp.src("source/sass/style.scss")
+    return gulp.src("source/sass/style.scss")
       .pipe(plumber())
       .pipe(sourcemap.init())
       .pipe(sass())
@@ -70,10 +70,10 @@
         "source/js/**",
         "source/*.ico",
         "source/*.html"
-       ], {
+        ], {
         base: "source"
       })
-     .pipe(gulp.dest("build"));
+      .pipe(gulp.dest("build"));
    });
 
   gulp.task("clean", function () {
