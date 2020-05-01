@@ -1,7 +1,7 @@
-	"use strict";
+  "use strict";
 
-	var gulp = require("gulp");
-	var plumber = require("gulp-plumber");
+  var gulp = require("gulp");
+  var plumber = require("gulp-plumber");
   var sourcemap = require("gulp-sourcemaps");
   var rename = require("gulp-rename");
   var sass = require("gulp-sass");
