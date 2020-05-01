@@ -44,6 +44,11 @@
     background-image: url("../img/smolov-back-desktop@1x.png");
     background-repeat: no-repeat;
     z-index: -10;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/smolov-back-desktop@2x.png");
+      background-size: 143px auto;
+    }
   }
 }
 
@@ -96,6 +101,27 @@
     background-repeat: no-repeat;
     border-top-right-radius: 5px;
     z-index: -10;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rogovaya-back-mobile@2x.png");
+      background-size: 60px auto;
+    }
+  }
+}
+
+@media (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
+  .travel-mates__wrapper {
+    &::before {
+      background-image: url("../img/smolov-back-desktop@2x.png");
+      background-size: 143px auto;
+    }
+  }
+
+  .travel-mates__list {
+    &::before {
+      background-image: url("../img/rogovaya-back-mobile@2x.png");
+      background-size: 60px auto;
+    }
   }
 }
 
@@ -128,6 +154,11 @@
       width: 285px;
       height: 285px;
       background-image: url("../img/rogovaya-back-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/rogovaya-back-desktop@2x.png");
+        background-size: 285px auto;
+      }
     }
   }
 
@@ -163,6 +194,27 @@
       width: 143px;
       height: 143px;
       background-image: url("../img/smolov-back-desktop@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/smolov-back-desktop@2x.png");
+        background-size: 143px auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .travel-mates__wrapper {
+    &::before {
+      background-image: url("../img/rogovaya-back-desktop@2x.png");
+      background-size: 285px auto;
+    }
+  }
+
+  .travel-mates__list {
+    &::before {
+      background-image: url("../img/smolov-back-desktop@2x.png");
+      background-size: 143px auto;
     }
   }
 }

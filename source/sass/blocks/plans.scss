@@ -125,6 +125,17 @@
       top: 3px;
       font-size: 20px;
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 60px;
+      width: 619px;
+      height: 1px;
+      opacity: 0.3;
+      background-color: $cloudy-blue;
+    }
   }
 
   .plans__wrapper {
@@ -195,6 +206,10 @@
       padding-right: 30px;
       right: 0;
       top: 0;
+    }
+
+    &::after {
+      display: none;
     }
   }
 

@@ -134,7 +134,7 @@
     left: 7px;
     width: 9px;
     height: 9px;
-    opacity: 0.3;
+    opacity: 0.1;
   }
 }
 
@@ -276,9 +276,10 @@
     min-height: 70px;
 
     &[value] {
-      font-size: 20px;
+      font-size: 19px;
       line-height: 0.9;
       letter-spacing: 1;
+      font-weight: $fw-normal;
     }
   }
 
@@ -347,7 +348,6 @@
   }
 
   .route__button-close--active {
-
     &::after,
     &::before {
       top: 13px;
@@ -410,7 +410,7 @@
 
     &::before {
       top: -60px;
-      right: 221px;
+      right: 222px;
       width: 1px;
       height: 482px;
       background-color: $light-blue-grey-two;
@@ -459,7 +459,6 @@
   }
 
   .route__button-close--active {
-
     &::after,
     &::before {
       top: 13px;

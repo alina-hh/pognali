@@ -86,6 +86,43 @@
   }
 }
 
+.transport--travel-mates .transport__item {
+  &--fly {
+    &::after {
+      top: 3px;
+      left: 4px;
+      width: 19px;
+      height: 16px;
+    }
+  }
+
+  &--train {
+    &::after {
+      top: 3px;
+      left: 7px;
+      width: 17px;
+      height: 21px;
+    }
+  }
+
+  &--bike {
+    &::after {
+      top: 3px;
+      left: 5px;
+      width: 24px;
+      height: 21px;
+    }
+  }
+
+  &--walk {
+    &::after {
+      top: 3px;
+      left: 6px;
+      width: 20px;
+      height: 21px;
+    }
+  }
+}
 
 @media (min-width: $tablet-width) {
   .transport {
@@ -129,6 +166,36 @@
         top: 11px;
         width: 20px;
         height: 21px;
+      }
+    }
+  }
+
+  .transport--travel-mates .transport__item {
+    &--fly {
+      &::after {
+        top: 10px;
+        left: 6px;
+      }
+    }
+
+    &--train {
+      &::after {
+        top: 10px;
+        left: 8px;
+      }
+    }
+
+    &--bike {
+      &::after {
+        top: 10px;
+        left: 6px;
+      }
+    }
+
+    &--walk {
+      &::after {
+        top: 10px;
+        left: 7px;
       }
     }
   }

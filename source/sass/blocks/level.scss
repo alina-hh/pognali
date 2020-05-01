@@ -9,7 +9,7 @@
 
   &--99::before {
     top: 26px;
-    left: 0px;
+    left: 0;
     width: 45px;
     height: 45px;
     background-image: url("../img/bar-99.png");
@@ -17,7 +17,7 @@
 
   &--80::before {
     top: 26px;
-    left: 0px;
+    left: 0;
     width: 45px;
     height: 45px;
     background-image: url("../img/bar-80.png");
@@ -38,7 +38,6 @@
     height: 47px;
     background-image: url("../img/bar-50.png");
   }
-
 }
 
 .level__title {
@@ -72,8 +71,6 @@
   font-weight: $fw-bold;
   line-height: 0.75;
   color: $dark-slate-blue;
-
-
 }
 
 @media (min-width: $tablet-width) {
@@ -107,7 +104,6 @@
       height: 60px;
       background-image: url("../img/bar-50-tablet.png");
     }
-
   }
 
   .level__title {
@@ -172,7 +168,6 @@
       top: 4px;
       left: 29px;
     }
-
   }
 
   .level__number {

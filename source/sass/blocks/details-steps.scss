@@ -133,6 +133,11 @@
     width: 285px;
     min-height: 82px;
     border-radius: 20px;
+
+    &--leisure-decor {
+      padding: 25px 98px 24px 0;
+      letter-spacing: -1px;
+    }
   }
 
   .details-steps__button--next {

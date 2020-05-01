@@ -42,6 +42,11 @@
     height: 99px;
     background-image: url("../img/rates@1x.png");
     background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/rates@2x.png");
+      background-size: 143px auto;
+    }
   }
 }
 
@@ -155,6 +160,15 @@
 .rates__button {
   font-weight: $fw-bold;
   color: $dark-blue-grey;
+}
+
+@media (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
+  .rates__title {
+    &::after {
+      background-image: url("../img/rates@2x.png");
+      background-size: 143px auto;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
