@@ -17,7 +17,7 @@
 }
 
 .details-steps--3 {
-  padding-bottom: 0;
+  padding-bottom: 2px;
 }
 
 .details-steps__title {
@@ -42,7 +42,7 @@
 
 .details-steps__description {
   padding-left: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.38;
 }
@@ -79,11 +79,13 @@
   }
 
   .details-steps--2 {
+    padding-bottom: 24px;
     margin-bottom: 49px;
   }
 
   .details-steps--3 {
     padding-bottom: 20px;
+    margin-bottom: 75px;
   }
 
   .details-steps--2 .details-steps__description {
@@ -100,7 +102,7 @@
 
   .details-steps__title {
     padding-left: 0;
-    padding-top: 47px;
+    padding-top: 45px;
     margin-bottom: 34px;
     font-size: 36px;
     line-height: 1;
@@ -108,7 +110,7 @@
 
   .details-steps__description {
     padding: 0;
-    margin-bottom: 68px;
+    margin-bottom: 64px;
     font-size: 20px;
     line-height: 1.2;
     width: 505px;

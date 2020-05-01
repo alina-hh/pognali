@@ -27,7 +27,7 @@
 
 .route__country {
   margin: 0;
-  padding: 11px;
+  padding: 12px;
   border-radius: 4px;
   border: solid 1px $cloudy-blue;
   background-color: transparent;
@@ -64,6 +64,14 @@
 .route__choose,
 .route__add {
   width: 220px;
+}
+
+.route__choose--active {
+  background-color: $dark-slate-blue;
+
+  &[value] {
+    color: $white;
+  }
 }
 
 .route__add {
@@ -130,6 +138,33 @@
   }
 }
 
+.route__button-close--active {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  background-color: transparent;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 29px;
+    left: -17px;
+    width: 12px;
+    height: 1px;
+    background-color: $white;
+    opacity: 1;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+}
+
 .route__button-open {
   position: absolute;
   top: 1px;
@@ -162,15 +197,21 @@
   background-color: transparent;
 }
 
-.route__button--open-popup {
-  &::after {
-    content: url("../img/dropdown-form.svg");
-    position: absolute;
-    top: 12px;
-    left: 26px;
-    width: 12px;
-    height: 7px;
-    opacity: 0.3;
+.route__button {
+  &--open-popup {
+    &::after {
+      content: url("../img/dropdown-form.svg");
+      position: absolute;
+      top: 12px;
+      left: 26px;
+      width: 12px;
+      height: 7px;
+      opacity: 0.3;
+    }
+  }
+
+  &--active::after {
+    display: none;
   }
 }
 
@@ -305,6 +346,17 @@
     }
   }
 
+  .route__button-close--active {
+
+    &::after,
+    &::before {
+      top: 13px;
+      left: -192px;
+      width: 25px;
+      height: 2px;
+    }
+  }
+
   .route__button-open {
     &::after {
       top: 29px;
@@ -403,6 +455,17 @@
     &::after {
       top: 5px;
       left: 1px;
+    }
+  }
+
+  .route__button-close--active {
+
+    &::after,
+    &::before {
+      top: 13px;
+      left: -295px;
+      width: 25px;
+      height: 2px;
     }
   }
 

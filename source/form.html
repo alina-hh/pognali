@@ -19,10 +19,10 @@
     <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
-          <img class="page-header__logo-img" src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="100"
-            height="19">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png">
+          <img class="page-header__logo-img" src="img/logo-mobile-white@1x.png, img/logo-mobile-white@2x.png"
+            alt="Логотип Погнали" width="100" height="19">
         </picture>
       </a>
       <button class="page-header__menu-open page-header__menu-close" type="button">
@@ -119,9 +119,10 @@
 
             <p class="info__img-wrapper">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
-                <img class="info__img" src="img/demin-mobile@1x.jpg" alt="Фото пользователя" width="99" height="100">
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg">
+                <img class="info__img" src="img/demin-mobile@1x.jpg, img/demin-mobile@2x.jpg" alt="Фото пользователя"
+                  width="99" height="100">
               </picture>
             </p>
           </div>
@@ -506,142 +507,133 @@
               </button>
             </div>
             <div class="route__wrapper">
-              <input class="route__country route__choose" type="text" name="country" value="Выберите страну">
+              <input class="route__country route__choose route__choose--active" type="text" name="country"
+                value="Выберите страну">
               <span class="route__decor"></span>
-              <button class="route__button route__button--open-popup" type="button">
+              <button class="route__button route__button--open-popup route__button--active" type="button">
                 <span class="visually-hidden">Открыть</span>
               </button>
-              <button class="route__button-close" type="button">
+              <button class="route__button-close route__button-close--active" type="button">
                 <span class="visually-hidden">Закрыть</span>
               </button>
-            </div>
-            <div class="pop-up-choose">
-              <!-- <div class="pop-up-choose__wrapper">
-                <input class="pop-up-choose__country" type="text" name="country" value="Выберите страну" readonly>
-                <button class="pop-up-choose__button-close" type="button">
-                  <span class="visually-hidden">Закрыть</span>
-                </button>
-              </div> -->
-              <div class="pop-up-choose__hidden">
-                <div class="pop-up-choose__alphabet alphabet">
-                  <ul class="alphabet__list">
-                    <li class="alphabet__item">
-                      <a class="alphabet__link alphabet__link--active" href="#">А</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Б</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">В</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Г</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Д</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Е</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">З</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">И</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">К</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Л</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">М</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Н</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">О</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">П</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Р</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">С</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Т</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">У</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Ф</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Х</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Ч</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Ш</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Э</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Ю</a>
-                    </li>
-                    <li class="alphabet__item">
-                      <a class="alphabet__link" href="#">Я</a>
-                    </li>
-                  </ul>
-                </div>
 
-                <div class="pop-up-choose__countries countries-info">
-                  <ul class="countries-info__list">
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="europe/australia">Австралия</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Австрия</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Азербайджан</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Албания</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Алжир</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Ангола</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Андорра</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Антигуа и Барбуда</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Аргентина</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Армения</a>
-                    </li>
-                    <li class="countries-info__item">
-                      <a class="countries-info__link" href="#">Афганистан</a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="pop-up-choose">
+                <ul class="pop-up-choose__list">
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link pop-up-choose__link--active" href="#">А</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Б</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">В</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Г</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Д</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Е</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">З</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">И</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">К</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Л</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">М</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Н</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">О</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">П</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Р</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">С</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Т</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">У</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Ф</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Х</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Ч</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Ш</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Э</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Ю</a>
+                  </li>
+                  <li class="pop-up-choose__item">
+                    <a class="pop-up-choose__link" href="#">Я</a>
+                  </li>
+                </ul>
+                <ul class="pop-up-choose-country__list">
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link " href="europe/australia">Австралия</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Австрия</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Азербайджан</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Албания</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Алжир</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Ангола</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Андорра</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Антигуа и Барбуда</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Аргентина</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Армения</a>
+                  </li>
+                  <li class="pop-up-choose-country__item">
+                    <a class="pop-up-choose-country__link" href="#">Афганистан</a>
+                  </li>
+                </ul>
               </div>
+
             </div>
+
             <div class="route__wrapper">
               <input class="route__country route__add route__country--active" type="text" name="country"
                 value="Добавить страну">
@@ -706,10 +698,10 @@
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-          <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100"
-            height="19">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png">
+          <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png, img/logo-mobile-blue@2x.png"
+            alt="Логотип Погнали" width="100" height="19">
         </picture>
       </a>
 

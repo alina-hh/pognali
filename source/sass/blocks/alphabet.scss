@@ -1,7 +1,5 @@
 .alphabet {
   margin-left: 25px;
-  margin-bottom: 280px;
-  width: 220px;
 }
 
 .alphabet__list {
@@ -9,6 +7,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  width: 220px;
 }
 
 .alphabet__link {
@@ -40,13 +39,16 @@
     margin-top: 15px;
     margin-left: 10px;
     margin-bottom: 50px;
-    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
   }
 
   .alphabet__list {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    width: 500px;
   }
 
   .alphabet__link {
@@ -73,16 +75,24 @@
 
 @media (min-width: $desktop-width) {
   .alphabet {
-    margin-top: 32px;
+    margin-top: 25px;
     margin-left: 14px;
     margin-bottom: 0;
     width: 1250px;
   }
 
+  .alphabet__list {
+    width: 1250px;
+  }
+
   .alphabet__item {
-    margin-bottom: 54px;
+    margin-bottom: 60px;
     width: 250px;
     min-height: 315px;
+
+    &--decor {
+      margin-bottom: 55px;
+    }
   }
 
   .alphabet__link {

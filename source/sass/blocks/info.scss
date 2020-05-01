@@ -18,9 +18,22 @@
   padding-top: 32px;
   width: 100px;
   height: 100px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/status-bar-80.png");
+    background-repeat: no-repeat;
+  }
 }
 
 .info__number {
+  position: relative;
   margin: 0;
   margin-bottom: 3px;
   color: $dark-two;
@@ -28,6 +41,16 @@
   font-weight: $fw-bold;
   line-height: 1;
   text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 37px;
+    left: 25px;
+    width: 49px;
+    height: 2px;
+    background-color: $cloudy-blue;
+  }
 }
 
 .info__text {
@@ -140,6 +163,21 @@
 
   .info__level {
     padding-right: 9px;
+
+    &::before {
+      top: 13px;
+      left: 0;
+      width: 94px;
+      height: 94px;
+      background-size: cover;
+    }
+  }
+
+  .info__number {
+    &::after {
+      top: 38px;
+      left: 22px;
+    }
   }
 
   .info__img-wrapper {
@@ -230,12 +268,19 @@
   .info__level {
     padding-top: 60px;
     padding-right: 6px;
+
+    &::before {
+      top: 43px;
+      z-index: 15;
+    }
   }
 
   .info__number,
   .info__text {
     color: $white;
   }
+
+
 
   .info__img-wrapper {
     margin-top: 0;
