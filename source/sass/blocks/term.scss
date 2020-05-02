@@ -210,7 +210,7 @@
 
 @media (min-width: $desktop-width) {
   .term__wrapper-top {
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 1000px;
     margin-bottom: 32px;
 
