@@ -84,7 +84,7 @@
   border-right: solid 1px $cloudy-blue;
   border-radius: 4px;
 
-  &--bosnia {
+  &-bosnia {
     content: "";
     position: absolute;
     top: 8px;
@@ -96,7 +96,7 @@
     background-size: cover;
   }
 
-  &--czech {
+  &-czech {
     content: "";
     position: absolute;
     top: 8px;
@@ -246,6 +246,8 @@
   }
 
   .route__wrapper {
+    display: flex;
+    justify-content: start;
     margin-top: 0;
     margin-bottom: 15px;
     padding-left: 0;
@@ -303,8 +305,8 @@
     width: 75px;
     border: none;
 
-    &--bosnia,
-    &--czech {
+    &-bosnia,
+    &-czech {
       top: 14px;
       left: 2px;
       width: 70px;
@@ -313,6 +315,7 @@
   }
 
   .route__button-close {
+    margin-left: auto;
     position: relative;
     right: 0;
     top: 22px;
@@ -339,10 +342,16 @@
     }
   }
 
+  .route__flag {
+    margin-left: 20px;
+  }
+
   .route__button-open {
+    right: 190px;
+
     &::after {
       top: 29px;
-      left: -105px;
+      right: 20px;
       width: 17px;
       height: 9px;
     }
@@ -381,6 +390,7 @@
   .route {
     margin-top: 118px;
     width: 999px;
+
 
     &::after {
       top: -61px;
@@ -440,14 +450,12 @@
   }
 
   .route__flag {
-
-    &--bosnia,
-    &--czech {
-      left: -16px;
-    }
+    margin-left: 50px;
   }
 
   .route__button-close {
+
+
     &::after {
       top: 5px;
       left: 1px;
@@ -464,10 +472,16 @@
       height: 2px;
     }
   }
+  .route__flag {
+    margin-left: 50px;
+  }
 
   .route__button-open {
+    right: 275px;
+
     &::after {
-      left: -207px;
+      top: 25px;
+      left: 10px;
     }
   }
 
