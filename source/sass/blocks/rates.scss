@@ -163,7 +163,7 @@
   color: $dark-blue-grey;
 }
 
-@media (min-width: 320px) and (min-resolution: 144dpi),(min-width: 320px) and (min-resolution: 1.5dppx) {
+@media (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
   .rates__title {
     &::after {
       background-image: url("../img/rates@2x.png");
