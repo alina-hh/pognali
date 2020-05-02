@@ -63,15 +63,17 @@
     }
 
     &::after {
-      content: url("../img/flags-back@1x.png");
+      content: "";
       position: absolute;
       top: 171px;
       right: 40px;
       width: 289px;
       height: 575px;
+      background-image: url("../img/flags-back@1x.png");
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        content: url("../img/flags-back@2x.png");
+        background-image: url("../img/flags-back@2x.png");
+        background-size: 289px auto;
       }
     }
 
@@ -104,7 +106,8 @@
 @media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .countries__wrapper {
     &::after {
-      content: url("../img/flags-back@2x.png");
+      background-image: url("../img/flags-back@2x.png");
+        background-size: 289px auto;
     }
   }
 }

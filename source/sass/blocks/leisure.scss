@@ -47,21 +47,27 @@
   }
 
   &--bosnia {
-    content: url("../img/flag-bosnia.svg");
+    content: "";
     position: absolute;
     top: -4px;
     right: 12px;
     width: 35px;
     height: 24px;
+    background-image: url("../img/flag-bosnia.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &--czech {
-    content: url("../img/flag-czech.svg");
+    content: "";
     position: absolute;
     top: -4px;
     right: 12px;
     width: 35px;
     height: 24px;
+    background-image: url("../img/flag-czech.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -117,6 +123,7 @@
   .leisure__item {
     @include container-tablet;
     padding: 0;
+    width: 499px;
     margin-bottom: 53px;
 
     &:last-child {
@@ -176,6 +183,7 @@
 @media (min-width: $desktop-width) {
   .leisure__list {
     margin-top: 140px;
+   
 
     &::before {
       top: -84px;
@@ -186,7 +194,9 @@
   .leisure__item {
     @include container-desktop;
     padding: 0;
+    width: 730px;
     margin-bottom: 53px;
+    margin-left: 0;
 
     &:last-child {
       margin-bottom: 53px;

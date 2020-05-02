@@ -16,6 +16,20 @@
     opacity: 0.3;
   }
 
+  &--decor {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 50px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $dark-slate-blue;
+      z-index: 10;
+    }
+  }
+
   &:last-child {
     margin-bottom: 25px;
   }
@@ -41,23 +55,6 @@
     text-transform: uppercase;
     font-weight: $fw-bold;
     color: $dark-slate-blue;
-  }
-}
-
-.route__decor {
-  display: block;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    right: 50px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: 1px solid $dark-slate-blue;
-    opacity: 0.3;
   }
 }
 
@@ -87,33 +84,28 @@
   border-right: solid 1px $cloudy-blue;
   border-radius: 4px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: -4px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: $dark-slate-blue;
-  }
-
   &--bosnia {
-    content: url("../img/flag-bosnia.svg");
+    content: "";
     position: absolute;
     top: 8px;
     left: 9px;
     width: 35px;
     height: 24px;
+    background-image: url("../img/flag-bosnia.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &--czech {
-    content: url("../img/flag-czech.svg");
+    content: "";
     position: absolute;
     top: 8px;
     left: 9px;
     width: 35px;
     height: 24px;
+    background-image: url("../img/flag-czech.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -258,6 +250,30 @@
     margin-bottom: 15px;
     padding-left: 0;
 
+    &--decor {
+      &::before {
+        top: 27px;
+        right: 130px;
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &--decor-white {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 27px;
+        right: 130px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid $dark-slate-blue;
+        opacity: 0.3;
+        background-color: $white;
+      }
+    }
+
     &:last-child {
       margin-bottom: 47px;
     }
@@ -283,44 +299,9 @@
     }
   }
 
-  .route__decor {
-    &::before {
-      top: 27px;
-      right: 53px;
-      width: 15px;
-      height: 15px;
-      background-color: $white;
-    }
-
-    &--last {
-      &::before {
-        display: none;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 27px;
-        right: 131px;
-        width: 15px;
-        height: 15px;
-        background-color: $pale-grey;
-        border-radius: 50%;
-        border: 1px solid $cloudy-blue;
-      }
-    }
-  }
-
   .route__flag {
     width: 75px;
     border: none;
-
-    &::before {
-      top: 27px;
-      left: -31px;
-      width: 15px;
-      height: 15px;
-    }
 
     &--bosnia,
     &--czech {
@@ -348,6 +329,7 @@
   }
 
   .route__button-close--active {
+
     &::after,
     &::before {
       top: 13px;
@@ -418,6 +400,32 @@
   }
 
   .route__wrapper {
+    &--decor {
+      &::before {
+        right: 215px;
+      }
+    }
+
+    &--decor-white {
+      &::before {
+        right: 215px;
+      }
+    }
+
+    &--decor-blue {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 27px;
+        right: 215px;
+        width: 15px;
+        height: 15px;
+        background-color: $pale-grey;
+        border-radius: 50%;
+        border: 1px solid $cloudy-blue;
+      }
+    }
+
     &:last-child {
       margin-bottom: 55px;
     }
@@ -427,23 +435,11 @@
     min-width: 730px;
   }
 
-  .route__decor {
-    &::before {
-      right: 85px;
-    }
-
-    &--last {
-      &::after {
-        right: 215px;
-      }
-    }
+  .route__add {
+    display: none;
   }
 
   .route__flag {
-    &::before {
-      top: 29px;
-      left: -63px;
-    }
 
     &--bosnia,
     &--czech {
@@ -459,6 +455,7 @@
   }
 
   .route__button-close--active {
+
     &::after,
     &::before {
       top: 13px;

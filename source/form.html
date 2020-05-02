@@ -17,7 +17,8 @@
 
 <body>
   <div style="display:none">
-    <include src="build/img/sprite.svg"></include>
+    <include src="build/img/sprite.svg">
+    </include>
   </div>
 
   <header class="page-header">
@@ -42,10 +43,11 @@
       <div class="page-header__contact">
         <ul class="page-header__list">
           <li class="page-header__item">
-            <a class="page-header__link page-header__tel" href="tel:88005558628"></a>
+            <a class="page-header__link page-header__tel" href="tel:88005558628" aria-label="Позвонить по телефону"></a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link page-header__mail" href="mailto:mail@htmlacademy.ru"></a>
+            <a class="page-header__link page-header__mail" href="mailto:mail@htmlacademy.ru"
+              aria-label="Написать на почту"></a>
           </li>
         </ul>
         <p class="page-header__button-wrapper">
@@ -499,7 +501,7 @@
             <li class="details-steps__item ">Развлечения</li>
           </ul>
           <div class="details-steps__route route">
-            <div class="route__wrapper">
+            <div class="route__wrapper route__wrapper--decor">
               <input class="route__country" type="text" name="country" value="Босния и Герцеговина">
               <button class="route__button-open" type="button">
                 <span class="visually-hidden">Открыть</span>
@@ -511,7 +513,7 @@
                 <span class="visually-hidden">Закрыть</span>
               </button>
             </div>
-            <div class="route__wrapper">
+            <div class="route__wrapper route__wrapper--decor">
               <input class="route__country" type="text" name="country" value="Чехия">
               <button class="route__button-open" type="button">
                 <span class="visually-hidden">Открыть</span>
@@ -523,7 +525,7 @@
                 <span class="visually-hidden">Закрыть</span>
               </button>
             </div>
-            <div class="route__wrapper">
+            <div class="route__wrapper route__wrapper--decor-white">
               <input class="route__country route__choose route__choose--active" type="text" name="country"
                 value="Выберите страну">
               <span class="route__decor"></span>
@@ -650,11 +652,9 @@
               </div>
 
             </div>
-
-            <div class="route__wrapper">
+            <div class="route__wrapper route__wrapper--decor-blue">
               <input class="route__country route__add route__country--active" type="text" name="country"
                 value="Добавить страну">
-              <span class="route__decor route__decor--last"></span>
               <button class="route__button-add" type="button">
                 <span class="visually-hidden">Добавить</span>
               </button>
@@ -753,11 +753,7 @@
       <div class="page-footer__copyright">
         <p class="page-footer__text">Разработано</p>
         <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34" alt="Логотип htmlacademy" width="27" height="34">
-            <path
-              d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z"
-              fill="#231f20"></path>
-          </svg>
+          <use xlink:href="#logo-html"></use>
         </a>
       </div>
     </div>

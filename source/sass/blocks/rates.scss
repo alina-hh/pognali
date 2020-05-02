@@ -42,10 +42,12 @@
     height: 99px;
     background-image: url("../img/rates@1x.png");
     background-size: cover;
+    background-repeat: no-repeat;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/rates@2x.png");
-      background-size: 143px auto;
+      background-size: 99px auto;
     }
   }
 }
@@ -162,11 +164,12 @@
   color: $dark-blue-grey;
 }
 
-@media (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
+@media (min-width: 320px) and (min-resolution: 144dpi),
+(min-width: 320px) and (min-resolution: 1.5dppx) {
   .rates__title {
     &::after {
       background-image: url("../img/rates@2x.png");
-      background-size: 143px auto;
+      background-size: 99px auto;
     }
   }
 }
@@ -321,6 +324,12 @@
       width: 198px;
       height: 198px;
       z-index: 10;
+
+      @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+        background-image: url("../img/rates@2x.png");
+        background-size: 198px auto;
+      }
     }
   }
 
@@ -348,6 +357,16 @@
 
     &::after {
       left: -56px;
+    }
+  }
+}
+
+@media (min-width: 1440px) and (min-resolution: 144dpi),
+(min-width: 1440px) and (min-resolution: 1.5dppx) {
+  .rates__title {
+    &::after {
+      background-image: url("../img/rates@2x.png");
+      background-size: 198px auto;
     }
   }
 }
