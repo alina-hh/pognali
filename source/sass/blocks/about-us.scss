@@ -30,8 +30,7 @@
     left: 19px;
     z-index: -1;
 
-    @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       content: url("../img/about-mobile@2x.png");
     }
   }
@@ -84,8 +83,7 @@
   display: none;
 }
 
-@media (min-width: 320px) and (min-resolution: 144dpi),
-(min-width: 320px) and (min-resolution: 1.5dppx) {
+@media (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
   .about-us__wrapper {
     &::after {
       content: url("../img/about-mobile@2x.png");
@@ -114,8 +112,7 @@
       top: 143px;
       left: 385px;
 
-      @media (min-resolution: $retina-dpi),
-      (min-resolution: $retina-dppx) {
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         content: url("../img/about-tablet@2x.png");
       }
     }
@@ -175,8 +172,7 @@
   }
 }
 
-@media (min-width: 768px) and (min-resolution: 144dpi),
-(min-width: 768px) and (min-resolution: 1.5dppx) {
+@media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .about-us__wrapper {
     &::after {
       content: url("../img/about-tablet@2x.png");
@@ -204,8 +200,7 @@
       top: 115px;
       left: 750px;
 
-      @media (min-resolution: $retina-dpi),
-      (min-resolution: $retina-dppx) {
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         content: url("../img/about-desktop@2x.png");
       }
     }
@@ -237,8 +232,7 @@
   }
 }
 
-@media (min-width: 1440px) and (min-resolution: 144dpi),
-(min-width: 1440px) and (min-resolution: 1.5dppx) {
+@media (min-width: 1440px) and (min-resolution: 144dpi), (min-width: 1440px) and (min-resolution: 1.5dppx) {
   .about-us__wrapper {
     &::after {
       content: url("../img/about-desktop@2x.png");

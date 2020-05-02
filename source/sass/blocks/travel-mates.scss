@@ -45,8 +45,7 @@
     background-repeat: no-repeat;
     z-index: -10;
 
-    @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/smolov-back-desktop@2x.png");
       background-size: 143px auto;
     }
@@ -87,8 +86,6 @@
   color: $white;
   z-index: 100;
 
-
-
   &::before {
     content: "";
     position: absolute;
@@ -101,8 +98,7 @@
     border-top-right-radius: 5px;
     z-index: -10;
 
-    @media (min-resolution: $retina-dpi),
-    (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/rogovaya-back-mobile@2x.png");
       background-size: 60px auto;
     }
@@ -115,8 +111,7 @@
 }
 
 
-@media (min-width: 320px) and (min-resolution: 144dpi),
-(min-width: 320px) and (min-resolution: 1.5dppx) {
+@media (min-width: 320px) and (min-resolution: 144dpi), (min-width: 320px) and (min-resolution: 1.5dppx) {
   .travel-mates__wrapper {
     &::before {
       background-image: url("../img/smolov-back-desktop@2x.png");
@@ -162,8 +157,7 @@
       height: 285px;
       background-image: url("../img/rogovaya-back-desktop@1x.png");
 
-      @media (min-resolution: $retina-dpi),
-      (min-resolution: $retina-dppx) {
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/rogovaya-back-desktop@2x.png");
         background-size: 285px auto;
       }
@@ -209,8 +203,7 @@
       background-image: url("../img/smolov-back-desktop@1x.png");
 
 
-      @media (min-resolution: $retina-dpi),
-      (min-resolution: $retina-dppx) {
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/smolov-back-desktop@2x.png");
         background-size: 286px auto;
       }
@@ -218,8 +211,7 @@
   }
 }
 
-@media (min-width: 768px) and (min-resolution: 144dpi),
-(min-width: 768px) and (min-resolution: 1.5dppx) {
+@media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
   .travel-mates__wrapper {
     &::before {
       background-image: url("../img/rogovaya-back-desktop@2x.png");
