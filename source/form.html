@@ -5,20 +5,30 @@
   <meta charset="UTF-8">
   <title>Погнали</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/bloggersans-bold.woff2" as="fonts">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <script>
     document.createElement("picture");
 
   </script>
-  <script src="js/picturefill.js" async></script>
+  <script src="js/picturefill.js" async=""></script>
 </head>
 
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html">
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+          <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
           <source media="(min-width: 1440px)"
             srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
@@ -120,6 +130,12 @@
 
             <p class="info__img-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
                 <img class="info__img" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x"
@@ -144,14 +160,14 @@
               <li class="transport__item transport__item--active transport__item--fly">
                 <label>
                   <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                    name="transport" value="fly" checked>
+                    name="transport" value="fly" checked="">
                   <span class="visually-hidden">Самолёт</span>
                 </label>
               </li>
               <li class="transport__item transport__item--active   transport__item--train">
                 <label>
                   <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                    name="transport" value="train" checked>
+                    name="transport" value="train" checked="">
                   <span class="visually-hidden">Поезд</span>
                 </label>
               </li>
@@ -165,7 +181,7 @@
               <li class="transport__item transport__item--active   transport__item--walk">
                 <label>
                   <input class="visually-hidden transport__input transport__input--checkbox" type="checkbox"
-                    name="transport" value="walk" checked>
+                    name="transport" value="walk" checked="">
                   <span class="visually-hidden">Пешком</span>
                 </label>
               </li>
@@ -233,7 +249,7 @@
           <div class="details-steps__term term">
             <div class="term__wrapper-top">
 
-              <div class="term__group term__group-people">
+              <div class="term__group term__group-people term__group-people--decor">
                 <label class="term__title" for="people">Ищу попутчиков:
                   <span>чел.</span>
                 </label>
@@ -265,7 +281,7 @@
 
               <div class="term__group term-kids">
                 <input class="visually-hidden term__input term__input--checkbox " type="checkbox" name="with-kids"
-                  id="kids" checked>
+                  id="kids" checked="">
                 <label class="term-kids__title" for="kids">Можно с детьми</label>
               </div>
 
@@ -316,107 +332,107 @@
                   </tr>
                   <tr class="calendar__cells">
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>23</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">23</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>24</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">24</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>25</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">25</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>26</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">26</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>27</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">27</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>28</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">28</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>1
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">1
                         <span>мар</span>
                       </button>
                     </td>
                   </tr>
                   <tr class="calendar__cells">
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>2</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">2</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>3</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">3</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>4</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">4</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>5</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">5</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>6</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">6</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>7</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">7</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>8</button>
-                    </td>
-                  </tr>
-                  <tr class="calendar__cells">
-                    <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>9</button>
-                    </td>
-                    <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>10</button>
-                    </td>
-                    <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>11</button>
-                    </td>
-                    <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>12</button>
-                    </td>
-                    <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>13</button>
-                    </td>
-                    <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>14</button>
-                    </td>
-                    <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>15</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">8</button>
                     </td>
                   </tr>
                   <tr class="calendar__cells">
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>16</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">9</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>17</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">10</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>18</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">11</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>19</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">12</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>20</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">13</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>21</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">14</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>22</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">15</button>
                     </td>
                   </tr>
                   <tr class="calendar__cells">
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>23</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">16</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>24</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">17</button>
                     </td>
                     <td class="calendar__cell">
-                      <button class="calendar__button calendar__button--disabled" type="button" disabled>25</button>
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">18</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">19</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">20</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">21</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">22</button>
+                    </td>
+                  </tr>
+                  <tr class="calendar__cells">
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">23</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">24</button>
+                    </td>
+                    <td class="calendar__cell">
+                      <button class="calendar__button calendar__button--disabled" type="button" disabled="">25</button>
                     </td>
                     <td class="calendar__cell calendar__cell--current">
                       <button class="calendar__button calendar__button--active" type="button">26
@@ -685,7 +701,9 @@
             </ul>
           </div>
           <div class="details-steps__button-wrapper">
-            <button class="details-steps__button details-steps__button--leisure-decor details-steps__button--next button" type="submit">Отправить</button>
+            <button
+              class="details-steps__button details-steps__button--leisure-decor details-steps__button--next button"
+              type="submit">Отправить</button>
             <a class="details-steps__button details-steps__button--back  button button--transparent" href="#step2">На
               шаг
               назад</a>
@@ -699,6 +717,12 @@
     <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)"
+            srcset="img/logo-desktop-blue@1x.webp 1x, imglogo-desktop-blue@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+          <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
           <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
@@ -729,7 +753,11 @@
       <div class="page-footer__copyright">
         <p class="page-footer__text">Разработано</p>
         <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="img/htmlacademy.svg" alt="Логотип htmlacademy" width="27" height="34">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 34" alt="Логотип htmlacademy" width="27" height="34">
+            <path
+              d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6 0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9 3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2 11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z"
+              fill="#231f20"></path>
+          </svg>
         </a>
       </div>
     </div>

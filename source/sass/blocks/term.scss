@@ -105,8 +105,27 @@
 
 @media (min-width: $tablet-width) {
   .term__wrapper-top {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -24px;
+      width: 532px;
+      height: 1px;
+      background-color: $light-blue-grey-two;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 197px;
+      width: 532px;
+      height: 1px;
+      background-color: $light-blue-grey-two;
+    }
   }
 
   .term__group-people {
@@ -126,14 +145,14 @@
     line-height: 0.9;
     letter-spacing: 2px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -22px;
-      width: 532px;
-      height: 1px;
-      background-color: $light-blue-grey-two;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: -22px;
+    //   width: 532px;
+    //   height: 1px;
+    //   background-color: $light-blue-grey-two;
+    // }
   }
 
   .term__wrapper {
@@ -194,6 +213,15 @@
     justify-content: space-between;
     width: 1000px;
     margin-bottom: 32px;
+
+    &::before {
+      top: -30px;
+      width: 1000px;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .term__group {
@@ -205,15 +233,6 @@
     order: 0;
     margin-bottom: 15px;
     width: 530px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -30px;
-      width: 1002px;
-      height: 1px;
-      background-color: $light-blue-grey-two;
-    }
   }
 
   .term__group-date {
@@ -227,10 +246,6 @@
     margin-right: 20px;
     margin-bottom: 0;
     width: 200px;
-
-    &::before {
-      display: none;
-    }
 
     span {
       position: absolute;
